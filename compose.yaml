@@ -1,0 +1,95 @@
+name: nexora-one
+services:
+  control-db:
+    image: postgres:17.6
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nexora
+      POSTGRES_USER: nexora
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes: [control-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexora -d nexora"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  identity:
+    image: quay.io/keycloak/keycloak:26.3.5
+    command: ["start-dev", "--import-realm", "--health-enabled=true"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN:?Set KEYCLOAK_ADMIN in .env}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:?Set KEYCLOAK_ADMIN_PASSWORD in .env}
+      KC_SPI_THEME_CACHE_THEMES: "false"
+      KC_SPI_THEME_CACHE_TEMPLATES: "false"
+      KC_SPI_THEME_STATIC_MAX_AGE: "-1"
+    depends_on:
+      mailpit: { condition: service_started }
+    ports: ["127.0.0.1:8080:8080"]
+    volumes: ["identity-data:/opt/keycloak/data", "./identity/realm:/opt/keycloak/data/import:ro", "./identity/themes:/opt/keycloak/themes:ro"]
+  mailpit:
+    image: axllent/mailpit:v1.27.8
+    restart: unless-stopped
+    ports: ["127.0.0.1:8025:8025"]
+
+  api:
+    build: ./services/api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://nexora:${POSTGRES_PASSWORD}@control-db:5432/nexora
+      OIDC_ISSUER: http://localhost:8080/realms/nexora
+      OIDC_JWKS_URL: http://identity:8080/realms/nexora/protocol/openid-connect/certs
+      OIDC_AUDIENCE: nexora-web
+      WEB_ORIGIN: http://localhost:3000
+      ODOO_BASE_URL: ${ODOO_BASE_URL:-http://odoo:8069}
+      ODOO_MASTER_PASSWORD: ${ODOO_MASTER_PASSWORD}
+      ODOO_GATEWAY_SECRET: ${ODOO_GATEWAY_SECRET:?Set ODOO_GATEWAY_SECRET in .env}
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      MAIL_FROM: noreply@nexora.local
+      PUBLIC_WEB_URL: http://localhost:3000
+      ATTENDANCE_DEVICE_MASTER_KEY: ${ATTENDANCE_DEVICE_MASTER_KEY:-}
+      DOCUMENT_STORAGE_ROOT: /var/lib/nexora/documents
+      ALLOW_LOCAL_OIDC_HTTP: "true"
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      control-db: { condition: service_healthy }
+      identity: { condition: service_started }
+      mailpit: { condition: service_started }
+    volumes: [nexora-documents:/var/lib/nexora/documents]
+
+  odoo-db:
+    image: postgres:17.6
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: ${ODOO_DB_PASSWORD:?Set ODOO_DB_PASSWORD in .env}
+    volumes: [odoo-db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  odoo:
+    image: odoo:19.0-20260926
+    restart: unless-stopped
+    depends_on:
+      odoo-db: { condition: service_healthy }
+    environment:
+      HOST: odoo-db
+      USER: odoo
+      PASSWORD: ${ODOO_DB_PASSWORD}
+      ODOO_GATEWAY_SECRET: ${ODOO_GATEWAY_SECRET}
+      ADMIN_PASSWD: ${ODOO_MASTER_PASSWORD:?Set ODOO_MASTER_PASSWORD in .env}
+    ports: ["127.0.0.1:8069:8069"]
+    volumes: [odoo-data:/var/lib/odoo, ./odoo/addons:/mnt/extra-addons:ro]
+    command: ["--addons-path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons", "--http-interface=0.0.0.0", "--admin-passwd=${ODOO_MASTER_PASSWORD}"]
+
+volumes:
+  control-data:
+  identity-data:
+  odoo-db-data:
+  odoo-data:
+  nexora-documents:

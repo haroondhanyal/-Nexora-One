@@ -1,0 +1,61 @@
+{
+  "realm": "nexora",
+  "enabled": true,
+  "displayName": "Nexora One",
+  "loginTheme": "nexora-one",
+  "emailTheme": "nexora-one",
+  "sslRequired": "external",
+  "registrationAllowed": true,
+  "registrationEmailAsUsername": true,
+  "rememberMe": true,
+  "verifyEmail": true,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "bruteForceProtected": true,
+  "failureFactor": 5,
+  "waitIncrementSeconds": 60,
+  "maxFailureWaitSeconds": 900,
+  "otpPolicyType": "totp",
+  "otpPolicyAlgorithm": "HmacSHA1",
+  "otpPolicyDigits": 6,
+  "otpPolicyPeriod": 30,
+  "otpPolicyLookAheadWindow": 1,
+  "requiredActions": [
+    {"alias":"VERIFY_EMAIL","name":"Verify Email","providerId":"VERIFY_EMAIL","enabled":true,"defaultAction":true,"priority":10},
+    {"alias":"CONFIGURE_TOTP","name":"Configure OTP","providerId":"CONFIGURE_TOTP","enabled":true,"defaultAction":true,"priority":20}
+  ],
+  "clients": [
+    {
+      "clientId":"nexora-web",
+      "name":"Nexora One Web",
+      "enabled":true,
+      "publicClient":true,
+      "protocol":"openid-connect",
+      "standardFlowEnabled":true,
+      "implicitFlowEnabled":false,
+      "directAccessGrantsEnabled":false,
+      "serviceAccountsEnabled":false,
+      "redirectUris":["http://localhost:3000/*"],
+      "webOrigins":["http://localhost:3000"],
+      "attributes":{"pkce.code.challenge.method":"S256","post.logout.redirect.uris":"http://localhost:3000/*"},
+      "protocolMappers":[
+        {"name":"Nexora API audience","protocol":"openid-connect","protocolMapper":"oidc-audience-mapper","consentRequired":false,"config":{"included.client.audience":"nexora-web","id.token.claim":"false","access.token.claim":"true"}}
+      ]
+    }
+  ],
+  "smtpServer": {
+    "host":"mailpit",
+    "port":"1025",
+    "from":"noreply@nexora.local",
+    "fromDisplayName":"Nexora One",
+    "ssl":"false",
+    "starttls":"false",
+    "auth":"false"
+  },
+  "eventsEnabled":true,
+  "eventsListeners":["jboss-logging"],
+  "internationalizationEnabled":true,
+  "supportedLocales":["en","ur"],
+  "defaultLocale":"en"
+}

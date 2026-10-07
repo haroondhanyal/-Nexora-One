@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+venv/
+.next/
+out/
+dist/
+build/
+.env
+.env.*
+!.env.example
+npm-debug.log*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store

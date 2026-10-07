@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Nexora API (local demo)",
+      "type": "process",
+      "command": "${workspaceFolder}/services/api/.venv/bin/uvicorn",
+      "args": ["app.main:app", "--reload", "--host", "127.0.0.1", "--port", "8000"],
+      "options": {
+        "cwd": "${workspaceFolder}/services/api",
+        "env": {
+          "LOCAL_DEMO_MODE": "true",
+          "DATABASE_URL": "postgresql+psycopg://${env:USER}@localhost:5432/nexora_local",
+          "WEB_ORIGIN": "http://localhost:3000",
+          "PUBLIC_WEB_URL": "http://localhost:3000"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Nexora Web (local demo)",
+      "type": "npm",
+      "script": "dev",
+      "path": "apps/web",
+      "options": {
+        "env": { "NEXT_PUBLIC_LOCAL_DEMO": "true" }
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Nexora One: Local (no Docker)",
+      "dependsOn": ["Nexora API (local demo)", "Nexora Web (local demo)"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

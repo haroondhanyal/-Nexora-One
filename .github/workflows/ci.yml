@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.13"
+      - name: Install API dependencies
+        run: python -m pip install -r services/api/requirements.txt
+      - name: Check Python syntax
+        run: python -m compileall -q services/api/app services/api/migrations odoo/addons/nexora_gateway services/api/tests
+      - name: Check provider-neutral domain calculations
+        env:
+          PYTHONPATH: services/api
+        run: python -m unittest discover -s services/api/tests -v
+      - name: Validate Compose configuration
+        run: docker compose --env-file .env.example config -q
+      - name: Install web dependencies
+        working-directory: apps/web
+        run: npm ci --no-audit --no-fund
+      - name: Lint web application
+        working-directory: apps/web
+        run: npm run lint
+      - name: Build web application
+        working-directory: apps/web
+        run: npm run build

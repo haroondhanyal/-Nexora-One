@@ -1,0 +1,53 @@
+%PDF-1.4
+%Nexora demo file
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 409 >>
+stream
+BT
+/F1 20 Tf
+72 748 Td
+(Nexora One — Sample Purchase Order) Tj
+/F1 11 Tf
+0 -32 Td
+(DEMO DOCUMENT — illustrative values only) Tj
+0 -20 Td
+(Purchase order: NXO-208) Tj
+0 -20 Td
+(Supplier: Meridian Office Supplies) Tj
+0 -20 Td
+(Branch: Karachi Central) Tj
+0 -20 Td
+(Items: Workspace equipment and office supplies) Tj
+0 -20 Td
+(Expected delivery: 2026-10-15) Tj
+0 -20 Td
+(Total: PKR 92,450.00) Tj
+0 -20 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000027 00000 n 
+0000000076 00000 n 
+0000000133 00000 n 
+0000000259 00000 n 
+0000000329 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+788
+%%EOF
