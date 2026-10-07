@@ -49,6 +49,8 @@ These profiles are development configurations. Neither represents a production d
 
 The API is a modular monolith. Route modules are separated by domain, but share one process, SQLAlchemy session pattern and PostgreSQL database. `main.py` remains the composition point and still owns several core domains; a future refactor can move those routes into focused routers without introducing network service boundaries.
 
+The workspace offers Ocean Light, Midnight Dark, Emerald Light, Plum Dark and System palettes. Palette variables are scoped to the app shell. System observes device color preference changes; the selected theme restores from browser storage and syncs to the per-user preference endpoint when an API session is available.
+
 ## Data ownership
 
 - **PostgreSQL control plane:** tenants, memberships, branches, profile preferences, invitations, audit events, idempotency receipts, HR/payroll entities and flexible phase 4–5 resources.

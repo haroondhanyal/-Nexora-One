@@ -184,3 +184,26 @@ button,a,input,select,textarea{transition:background-color .16s ease,border-colo
 @media(max-width:1120px){.overview-visual{right:1%;opacity:.65}.overview-welcome-copy{max-width:510px}.overview-lower-grid{grid-template-columns:minmax(0,1fr) minmax(320px,.9fr)}}
 @media(max-width:900px){.overview-visual{right:-80px;opacity:.36}.overview-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.overview-lower-grid{grid-template-columns:1fr}.overview-activity{min-height:220px}}
 @media(max-width:600px){.nexora-overview{gap:12px}.overview-welcome{min-height:294px;padding:23px 20px 36px;border-radius:13px}.overview-visual{right:-112px;top:54%;opacity:.22}.overview-welcome h2{font-size:31px}.overview-welcome-text{max-width:340px;font-size:11px}.overview-welcome-actions{gap:13px;margin-top:16px}.overview-primary-action,.overview-secondary-action{font-size:9px}.overview-service-note{left:20px;right:auto;bottom:13px;font-size:7px}.overview-metrics{gap:8px}.overview-metric{min-height:82px;gap:8px;padding:10px}.overview-metric-icon{width:30px;height:30px;flex-basis:30px}.overview-metric-copy b{font-size:18px}.overview-metric-copy small{font-size:8px}.overview-metric-copy>span{font-size:7px}.overview-metric-arrow{width:13px}.overview-panel,.overview-areas{padding:15px 13px}.overview-section-heading h3{font-size:13px}.overview-section-heading p{max-width:220px;font-size:8px}.overview-link{font-size:8px}.overview-empty-activity{min-height:135px;padding:12px}.overview-area-grid{grid-template-columns:1fr}.overview-area-card{min-height:61px}.overview-slogan{display:none}.overview-setup-copy small{font-size:7px}}
+.app-shell[data-palette="emerald"]{--bg:#f2f8f5;--surface:#fff;--surface-soft:#edf6f1;--text:#183126;--muted:#75897e;--muted-dark:#53675c;--border:#dce9e1;--primary:#13805d;--primary-deep:#0d684c;--primary-soft:#e4f3eb;--green:#13805d;--green-soft:#e4f3eb;--shadow:0 8px 26px rgba(20,67,46,.045)}
+.app-shell[data-palette="midnight"]{--primary:#86a0ff;--primary-deep:#718ce9;--primary-soft:#293657;--green:#52c39b;--green-soft:#203a36}
+.app-shell[data-palette="plum"]{--bg:#181420;--surface:#211b2b;--surface-soft:#292235;--text:#f3eef8;--muted:#a79aaf;--muted-dark:#c9bed1;--border:#3a3046;--primary:#b39af4;--primary-deep:#9d80e8;--primary-soft:#362b4a;--green:#67c9a6;--green-soft:#243d38;--shadow:0 8px 26px rgba(0,0,0,.2)}
+.app-shell .nav-item.active{background:var(--primary-soft);color:var(--primary);}
+.app-shell .nav-item.active svg,.app-shell .plan-icon,.app-shell .theme-option>svg{color:var(--primary)}
+.app-shell .plan-icon{background:var(--primary-soft)}
+.app-shell .pagination.current{background:var(--primary-soft);color:var(--primary);border-color:var(--border)}
+.app-shell .theme-option.selected{border-color:var(--primary);box-shadow:0 0 0 2px var(--primary-soft)}
+.app-shell[data-theme="dark"] .theme-option.selected{background:var(--surface)}
+.app-shell[data-palette="plum"] .nav-item:hover,.app-shell[data-palette="plum"] .plan-card,.app-shell[data-palette="plum"] .search-box,.app-shell[data-palette="plum"] th{background:#30263d}
+.app-shell[data-palette="plum"] .overview-welcome{background:linear-gradient(115deg,#38284b,#292139 70%,#211b2b)}
+.app-shell[data-palette="emerald"] .overview-welcome{background:linear-gradient(115deg,#176c53,#168365 65%,#32a27b)}
+.app-shell[data-palette="emerald"] .nav-count{background:#e4f3eb;color:#137653}
+.app-shell[data-palette="emerald"] .overview-primary-action{background:#e2f5eb;border-color:#9dd5b9;color:#145d45;box-shadow:0 5px 16px #073e2926}
+.app-shell[data-palette="emerald"] .overview-primary-action:hover{background:#c9ecd9}
+.app-shell[data-palette="midnight"] .overview-primary-action{background:#9bb0ff;border-color:#becbff;color:#17213d}
+.app-shell[data-palette="plum"] .overview-primary-action{background:#c3aff7;border-color:#d6c9ff;color:#2b203a;box-shadow:0 5px 16px #100b1d66}
+.app-shell[data-palette="plum"] .overview-primary-action:hover{background:#d0c0fb}
+.theme-0 i:nth-child(2){background:#5576df}
+.theme-1{background:#171e2c;border-color:#303b50}.theme-1 i{background:#52679e!important}.theme-1 i:nth-child(2){background:#86a0ff!important}
+.theme-2{background:#f2f8f5;border-color:#dce9e1}.theme-2 i{background:#b9ddc9}.theme-2 i:nth-child(2){background:#13805d!important}
+.theme-3{background:#211b2b;border-color:#3a3046}.theme-3 i{background:#65527f!important}.theme-3 i:nth-child(2){background:#b39af4!important}
+.theme-4{background:linear-gradient(135deg,#f7f8fb 0 48%,#20283a 50%);border-color:#c9cfdb}.theme-4 i:nth-child(2){background:linear-gradient(90deg,#5977dc 0 48%,#8ba2ff 50%)!important}

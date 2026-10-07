@@ -45,6 +45,7 @@ The current code boundaries, data ownership, tenant security rules and remaining
 |---|---|
 | Brand logo, dark logo and favicon | Implemented as original SVG assets |
 | Responsive Phase 1–3 workspace UI | Connected to API for implemented administration, ERP, HR, attendance and limited payroll workflows |
+| Workspace appearance | Five selectable palettes: Ocean Light, Midnight Dark, Emerald Light, Plum Dark and OS-following System; preferences persist per user |
 | Login, signup, verification, MFA and recovery | Keycloak OIDC realm/client configured for local development |
 | API, database and migrations | FastAPI, PostgreSQL and Alembic baseline implemented |
 | Tenant isolation and authorization | Membership, role, branch and PostgreSQL RLS checks implemented; security verification remains |
@@ -481,6 +482,8 @@ npm install
 Open the repository in VS Code and run **Nexora One: Local (no Docker)** from **Terminal → Run Task**. It starts the API and Next.js together. Open `http://localhost:3000`, choose **Continue as local owner**, then create a local workspace. The database persists in Homebrew PostgreSQL. The demo owner is a fixed local identity with no password prompt, so use this only on a trusted development machine. Odoo backed ERP posting, Keycloak sign-in/MFA, and Mailpit email are not part of this profile.
 
 The local demo also includes 12 illustrative records per data module, saved in browser storage, a generated demo-owner portrait, and three sample PDFs: [invoice](apps/web/public/demo-documents/invoice-nxo-1042.pdf), [purchase order](apps/web/public/demo-documents/purchase-order-nxo-208.pdf), and [team handbook](apps/web/public/demo-documents/team-handbook-sample.pdf). These examples are marked as demo data and are not business transactions. In Keycloak mode, sign-up and password reset run through the identity provider; local demo signup creates a workspace for its fixed demo owner instead of creating a password account.
+
+The workspace **Profile & settings → Appearance** panel provides five color themes. Ocean Light, Midnight Dark, Emerald Light and Plum Dark apply distinct workspace palettes. System follows the device color preference and updates when that preference changes. The selected option is saved in browser preferences and, for signed-in API sessions, in the user's preference record.
 
 ## Environment configuration
 
