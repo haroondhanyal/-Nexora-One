@@ -1,0 +1,20 @@
+[
+  {
+    "id": "previous-playwright-run-994",
+    "generatedAt": "2026-10-09T08:21:06.587Z",
+    "total": 994,
+    "passed": 945,
+    "failed": 0,
+    "skipped": 49,
+    "durationMs": 594540
+  },
+  {
+    "id": "c3e904bf35e73559e71b7db5886ed8e99099d7e3d0fad9a28812289fccfe0835",
+    "generatedAt": "2026-10-09T08:31:01.186Z",
+    "total": 550,
+    "passed": 550,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 29877
+  }
+]

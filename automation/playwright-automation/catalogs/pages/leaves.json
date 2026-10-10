@@ -1,0 +1,956 @@
+{
+  "page": "Leave requests",
+  "pageKey": "leaves",
+  "section": "People",
+  "locatorFile": "../../locators/leaves.json",
+  "apiPaths": [
+    "/api/v1/hr/leaves"
+  ],
+  "dataTables": [
+    "leave_requests"
+  ],
+  "caseCounts": {
+    "ui": 8,
+    "api": 5,
+    "bdd": 4,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-185",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Leave requests · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-186",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Leave requests · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-187",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Leave requests · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-188",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Leave requests · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-189",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Leave requests · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/leaves and its mapped data source (leave_requests), scoped to the active workspace.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-190",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Leave requests · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-191",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Leave requests · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/leaves and its mapped data source (leave_requests), scoped to the active workspace.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-192",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Leave requests · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-023",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/hr/leaves · Leave requests",
+        "method": "GET",
+        "path": "/api/v1/hr/leaves",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-066",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/hr/leaves · Leave requests",
+        "method": "GET",
+        "path": "/api/v1/hr/leaves",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-109",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/hr/leaves · Leave requests",
+        "method": "GET",
+        "path": "/api/v1/hr/leaves",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-152",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/hr/leaves · Leave requests",
+        "method": "GET",
+        "path": "/api/v1/hr/leaves",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-195",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/hr/leaves · Leave requests",
+        "method": "GET",
+        "path": "/api/v1/hr/leaves",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-022",
+        "feature": "Leave requests workflow",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "scenario": "Leave requests: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/hr/leaves and the data tables leave_requests",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-070",
+        "feature": "Leave requests workflow",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "scenario": "Leave requests: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/hr/leaves and the data tables leave_requests",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-118",
+        "feature": "Leave requests workflow",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "scenario": "Leave requests: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/hr/leaves and the data tables leave_requests",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-166",
+        "feature": "Leave requests workflow",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "scenario": "Leave requests: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/hr/leaves and the data tables leave_requests",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0021",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0021",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0063",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0063",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0105",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0105",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0147",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0147",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0189",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0189",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0231",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0231",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0273",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0273",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0315",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0315",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0357",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0357",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0399",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0399",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0441",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0441",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0483",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0483",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0525",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0525",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0567",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0567",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0609",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0609",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0651",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0651",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0693",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0693",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0735",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0735",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0777",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0777",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0819",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0819",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0861",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "standard",
+        "table": "leave_requests",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0861",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0903",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0903",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0945",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0945",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0987",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "difficulty": "high",
+        "table": "leave_requests",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0987",
+          "source": "leaves",
+          "sample_payload": {
+            "label": "Leave requests fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in leave_requests.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

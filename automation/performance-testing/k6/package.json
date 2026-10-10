@@ -1,0 +1,11 @@
+{
+  "name": "@nexora-one/k6-performance",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/check-endpoint-coverage.mjs && node run-performance.mjs",
+    "check:coverage": "node scripts/check-endpoint-coverage.mjs",
+    "cases": "node scripts/print-cases.mjs",
+    "report": "node render-report.mjs"
+  }
+}

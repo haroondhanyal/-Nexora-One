@@ -282,6 +282,8 @@ def list_records(kind: str, db: Session = Depends(get_db), member: Membership = 
     scoped=[r for r in rows if member.role in {"Owner","Admin"} or r.payload.get("branch_id") in member.branch_ids]
     if kind in {"budgets","approvals","payments"}: return [{"id":str(r.id),"version":r.version,**r.payload} for r in scoped]
     tenant=db.get(Tenant,member.tenant_id)
+    if os.getenv("LOCAL_DEMO_MODE", "false").lower()=="true" and (not tenant or tenant.status!="ready" or not tenant.odoo_database):
+        return [{"id":str(r.id),"version":r.version,**r.payload} for r in scoped]
     if not tenant or tenant.status!="ready" or not tenant.odoo_database: raise HTTPException(503,"This workspace Odoo database is not ready")
     external=gateway_command(tenant.odoo_database,{"operation":"records.list","payload":{"kind":kind,"ids":[r.payload.get("odoo_id") for r in scoped if r.payload.get("odoo_id")]}},f"list-{uuid.uuid4()}").get("records",[])
     indexed={int(item["odoo_id"]):item for item in external}

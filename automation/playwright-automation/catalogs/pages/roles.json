@@ -1,0 +1,335 @@
+{
+  "page": "Roles & permissions",
+  "pageKey": "roles",
+  "section": "Governance",
+  "locatorFile": "../../locators/roles.json",
+  "apiPaths": [
+    "/api/v1/roles"
+  ],
+  "dataTables": [],
+  "caseCounts": {
+    "ui": 9,
+    "api": 5,
+    "bdd": 5,
+    "database": 0
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-037",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Roles & permissions · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-038",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Roles & permissions · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-039",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Roles & permissions · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-040",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Roles & permissions · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Role name shows its submitted values.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-041",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Roles & permissions · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/roles and its mapped data source (RBAC policy), scoped to the active workspace.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-042",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Roles & permissions · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-043",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Roles & permissions · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/roles and its mapped data source (RBAC policy), scoped to the active workspace.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-044",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Roles & permissions · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-045",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Roles & permissions · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+        "steps": [
+          "Navigate to Roles & permissions using Roles & permissions.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Role name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
+        "locatorFile": "locators/roles.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-005",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/roles · Roles & permissions",
+        "method": "GET",
+        "path": "/api/v1/roles",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-048",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/roles · Roles & permissions",
+        "method": "GET",
+        "path": "/api/v1/roles",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-091",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/roles · Roles & permissions",
+        "method": "GET",
+        "path": "/api/v1/roles",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-134",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/roles · Roles & permissions",
+        "method": "GET",
+        "path": "/api/v1/roles",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-177",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/roles · Roles & permissions",
+        "method": "GET",
+        "path": "/api/v1/roles",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-005",
+        "feature": "Roles & permissions workflow",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "scenario": "Roles & permissions: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/roles and the configured identity/session state",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-053",
+        "feature": "Roles & permissions workflow",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "scenario": "Roles & permissions: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/roles and the configured identity/session state",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-101",
+        "feature": "Roles & permissions workflow",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "scenario": "Roles & permissions: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/roles and the configured identity/session state",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-149",
+        "feature": "Roles & permissions workflow",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "scenario": "Roles & permissions: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/roles and the configured identity/session state",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-197",
+        "feature": "Roles & permissions workflow",
+        "page": "Roles & permissions",
+        "pageKey": "roles",
+        "scenario": "Roles & permissions: the owner changes to another workspace",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner changes to another workspace",
+        "then": "Then only data belonging to the selected workspace is shown",
+        "and": "And the result is consistent with the screen API /api/v1/roles and the configured identity/session state",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": []
+  }
+}

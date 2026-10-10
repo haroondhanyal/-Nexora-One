@@ -1,0 +1,31 @@
+{
+  "name": "@nexora-one/playwright-automation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:ui:smoke": "playwright test tests/ui/smoke",
+    "test:ui:regression": "playwright test tests/ui/regression",
+    "test:ui:integration": "playwright test tests/ui/integration",
+    "test:ui:negative": "playwright test tests/ui/negative",
+    "test:sections": "playwright test tests/ui/integration",
+    "test:api": "playwright test tests/api",
+    "test:bdd": "playwright test tests/bdd",
+    "test:db": "playwright test tests/database",
+    "test:screens": "playwright test tests/ui/smoke",
+    "test:journeys": "playwright test tests/ui/regression",
+    "build:poms": "node scripts/build-poms.mjs",
+    "build:catalog": "node scripts/build-case-catalog.mjs",
+    "report": "node scripts/generate-report.mjs",
+    "report:serve": "node scripts/serve-report.mjs",
+    "report:screenshots": "node scripts/capture-report-screenshots.mjs"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "1.55.0",
+    "allure-commandline": "2.34.1",
+    "allure-playwright": "3.2.2",
+    "dotenv": "16.4.7"
+  }
+}

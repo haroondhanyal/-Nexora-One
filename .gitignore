@@ -13,3 +13,16 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .DS_Store
+
+# Nexora automation run artifacts
+automation/.env
+automation/playwright-automation/node_modules/
+automation/playwright-automation/allure-results/
+automation/playwright-automation/allure-report/
+automation/playwright-automation/playwright-report/
+automation/playwright-automation/test-results/
+automation/playwright-automation/report-screenshot-test-results/
+automation/playwright-automation/report/playwright-results.json
+automation/playwright-automation/report/run-summary.json
+automation/playwright-automation/report/index.html
+automation/performance-testing/k6/report-output/

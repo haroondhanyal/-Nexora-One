@@ -1,0 +1,36 @@
+{
+  "page": "Create workspace",
+  "pageKey": "workspace_setup",
+  "section": "Workspace setup",
+  "navigationLabel": "Workspace setup",
+  "expectedHeading": "Create workspace",
+  "expectedFirstColumn": null,
+  "apiPaths": [],
+  "dataTables": [
+    "tenants",
+    "memberships"
+  ],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "pageTitle": {
+      "type": "role",
+      "role": "heading",
+      "name": "Start with your business",
+      "level": 2
+    },
+    "companyName": "#workspace-name",
+    "industryOptions": {
+      "type": "role",
+      "role": "radio"
+    },
+    "createWorkspaceButton": {
+      "type": "role",
+      "role": "button",
+      "name": "Create workspace"
+    },
+    "validation": {
+      "type": "css",
+      "selector": "[aria-invalid=\"true\"], [role=\"alert\"]"
+    }
+  }
+}

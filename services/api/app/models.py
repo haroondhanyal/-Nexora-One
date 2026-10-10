@@ -71,6 +71,20 @@ class WorkspaceResource(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=now)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=now, onupdate=now)
 
+class WorkspaceAttachment(Base):
+    __tablename__ = "workspace_attachments"
+    __table_args__ = (Index("ix_attachment_parent", "tenant_id", "entity_kind", "entity_id"),)
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    tenant_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("tenants.id", ondelete="CASCADE"), index=True)
+    entity_kind: Mapped[str] = mapped_column(String(48))
+    entity_id: Mapped[str] = mapped_column(String(80))
+    filename: Mapped[str] = mapped_column(String(255))
+    media_type: Mapped[str] = mapped_column(String(120))
+    size_bytes: Mapped[int] = mapped_column()
+    storage_key: Mapped[str] = mapped_column(String(64), unique=True)
+    uploaded_by: Mapped[str] = mapped_column(String(255))
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=now)
+
 class ApiClientCredential(Base):
     __tablename__ = "api_client_credentials"
     __table_args__ = (UniqueConstraint("tenant_id", "resource_id"), UniqueConstraint("token_hash"))

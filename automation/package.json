@@ -1,0 +1,15 @@
+{
+  "name": "nexora-one-automation",
+  "private": true,
+  "scripts": {
+    "install:playwright": "npm --prefix playwright-automation install",
+    "install:browsers": "npm --prefix playwright-automation exec -- playwright install chromium",
+    "test": "npm --prefix playwright-automation test",
+    "test:screens": "npm --prefix playwright-automation run test:screens",
+    "report": "npm --prefix playwright-automation run build:catalog && npm --prefix playwright-automation run report && npm --prefix performance-testing/k6 run report",
+    "report:serve": "node playwright-automation/scripts/serve-report.mjs",
+    "report:screenshots": "npm --prefix playwright-automation run report:screenshots",
+    "performance:test": "npm --prefix performance-testing/k6 test",
+    "performance:report": "npm --prefix performance-testing/k6 run report"
+  }
+}

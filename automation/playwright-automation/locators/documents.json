@@ -1,0 +1,66 @@
+{
+  "page": "Documents",
+  "pageKey": "documents",
+  "section": "Operations",
+  "navigationLabel": "Documents",
+  "expectedHeading": "Documents",
+  "expectedFirstColumn": "Title",
+  "apiPaths": [
+    "/api/v1/workspace/documents"
+  ],
+  "dataTables": [
+    "workspace_resources",
+    "workspace_attachments"
+  ],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "pageHeading": {
+      "type": "role",
+      "role": "heading",
+      "level": 1
+    },
+    "sidebarItem": {
+      "type": "role",
+      "role": "button",
+      "name": "Documents"
+    },
+    "primaryContent": {
+      "type": "role",
+      "role": "table"
+    },
+    "globalSearch": {
+      "type": "placeholder",
+      "value": "Search records..."
+    },
+    "workspaceSwitcher": {
+      "type": "role",
+      "role": "button",
+      "name": "Workspace:",
+      "exact": false
+    },
+    "table": {
+      "type": "role",
+      "role": "table"
+    },
+    "tableHeader": {
+      "type": "role",
+      "role": "columnheader"
+    },
+    "tableRows": {
+      "type": "css",
+      "selector": "tbody tr"
+    },
+    "primaryAction": {
+      "type": "css",
+      "selector": ".page-heading button"
+    },
+    "form": {
+      "type": "css",
+      "selector": "form.record-dialog"
+    },
+    "validation": {
+      "type": "css",
+      "selector": "[aria-invalid=\"true\"], [role=\"alert\"]"
+    }
+  }
+}

@@ -1,0 +1,3536 @@
+[
+  {
+    "id": "NX-API-001",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/analytics/summary · Business overview",
+    "method": "GET",
+    "path": "/api/v1/workspace/analytics/summary",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-002",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/me/workspaces · Workspaces",
+    "method": "GET",
+    "path": "/api/v1/me/workspaces",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-003",
+    "page": "Users & access",
+    "pageKey": "users",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/members · Users & access",
+    "method": "GET",
+    "path": "/api/v1/members",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-004",
+    "page": "Branches",
+    "pageKey": "branches",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/branches · Branches",
+    "method": "GET",
+    "path": "/api/v1/branches",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-005",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/roles · Roles & permissions",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-006",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/audit · Audit history",
+    "method": "GET",
+    "path": "/api/v1/audit",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-007",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/company-profile · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/company-profile",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-008",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/me/preferences · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/me/preferences",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-009",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/leads · CRM leads",
+    "method": "GET",
+    "path": "/api/v1/records/leads",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-010",
+    "page": "Customers",
+    "pageKey": "customers",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/customers · Customers",
+    "method": "GET",
+    "path": "/api/v1/records/customers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-011",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/suppliers · Suppliers",
+    "method": "GET",
+    "path": "/api/v1/records/suppliers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-012",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/sales · Sales & quotations",
+    "method": "GET",
+    "path": "/api/v1/records/sales",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-013",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/purchasing · Purchasing",
+    "method": "GET",
+    "path": "/api/v1/records/purchasing",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-014",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/inventory · Products & inventory",
+    "method": "GET",
+    "path": "/api/v1/records/inventory",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-015",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/finance · Invoices & bills",
+    "method": "GET",
+    "path": "/api/v1/records/finance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-016",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/payments · Payments & reconciliation",
+    "method": "GET",
+    "path": "/api/v1/records/payments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-017",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/budgets · Budgets & reports",
+    "method": "GET",
+    "path": "/api/v1/records/budgets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-018",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/records/approvals · Approvals",
+    "method": "GET",
+    "path": "/api/v1/records/approvals",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-019",
+    "page": "Departments",
+    "pageKey": "departments",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/departments · Departments",
+    "method": "GET",
+    "path": "/api/v1/hr/departments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-020",
+    "page": "Employees",
+    "pageKey": "employees",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/employees · Employees",
+    "method": "GET",
+    "path": "/api/v1/hr/employees",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-021",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/shifts · Shifts",
+    "method": "GET",
+    "path": "/api/v1/hr/shifts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-022",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/attendance · Attendance",
+    "method": "GET",
+    "path": "/api/v1/hr/attendance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-023",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/leaves · Leave requests",
+    "method": "GET",
+    "path": "/api/v1/hr/leaves",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-024",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/payroll/runs · Payroll runs",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-025",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/hr/payroll/payslips · My payslips",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/payslips",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-026",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/storefronts · Storefronts",
+    "method": "GET",
+    "path": "/api/v1/workspace/storefronts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-027",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/orders · Store orders",
+    "method": "GET",
+    "path": "/api/v1/workspace/orders",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-028",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/promotions · Promotions",
+    "method": "GET",
+    "path": "/api/v1/workspace/promotions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-029",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/returns · Returns & refunds",
+    "method": "GET",
+    "path": "/api/v1/workspace/returns",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-030",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/pos_sessions · POS sessions",
+    "method": "GET",
+    "path": "/api/v1/workspace/pos_sessions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-031",
+    "page": "Projects",
+    "pageKey": "projects",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/projects · Projects",
+    "method": "GET",
+    "path": "/api/v1/workspace/projects",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-032",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/timesheets · Timesheets",
+    "method": "GET",
+    "path": "/api/v1/workspace/timesheets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-033",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/service_tickets · Service tickets",
+    "method": "GET",
+    "path": "/api/v1/workspace/service_tickets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-034",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/field_jobs · Field jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/field_jobs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-035",
+    "page": "Documents",
+    "pageKey": "documents",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/documents · Documents",
+    "method": "GET",
+    "path": "/api/v1/workspace/documents",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-036",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/workflows · Workflow designer",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflows",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-037",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/workflow_runs · Workflow run history",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflow_runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-038",
+    "page": "Reports",
+    "pageKey": "reports",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/reports · Reports",
+    "method": "GET",
+    "path": "/api/v1/workspace/reports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-039",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/custom_fields · Custom fields",
+    "method": "GET",
+    "path": "/api/v1/workspace/custom_fields",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-040",
+    "page": "API clients",
+    "pageKey": "api_clients",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/api_clients · API clients",
+    "method": "GET",
+    "path": "/api/v1/workspace/api_clients",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-041",
+    "page": "Integration health",
+    "pageKey": "integration_health",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/integration_health · Integration health",
+    "method": "GET",
+    "path": "/api/v1/workspace/integration_health",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-042",
+    "page": "Import jobs",
+    "pageKey": "imports",
+    "difficulty": "standard",
+    "title": "success · GET /api/v1/workspace/imports · Import jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/imports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON; response has the documented collection or resource shape.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-043",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "difficulty": "standard",
+    "title": "success · POST /api/v1/workspace/assistant/ask · Workspace assistant",
+    "method": "POST",
+    "path": "/api/v1/workspace/assistant/ask",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": {
+      "question": "List sample projects",
+      "sources": [
+        "projects"
+      ]
+    },
+    "expected": "200 JSON; response contains the assistant answer and source metadata.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-044",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/analytics/summary · Business overview",
+    "method": "GET",
+    "path": "/api/v1/workspace/analytics/summary",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-045",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/me/workspaces · Workspaces",
+    "method": "GET",
+    "path": "/api/v1/me/workspaces",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-046",
+    "page": "Users & access",
+    "pageKey": "users",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/members · Users & access",
+    "method": "GET",
+    "path": "/api/v1/members",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-047",
+    "page": "Branches",
+    "pageKey": "branches",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/branches · Branches",
+    "method": "GET",
+    "path": "/api/v1/branches",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-048",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/roles · Roles & permissions",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-049",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/audit · Audit history",
+    "method": "GET",
+    "path": "/api/v1/audit",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-050",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/company-profile · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/company-profile",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-051",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/me/preferences · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/me/preferences",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-052",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/leads · CRM leads",
+    "method": "GET",
+    "path": "/api/v1/records/leads",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-053",
+    "page": "Customers",
+    "pageKey": "customers",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/customers · Customers",
+    "method": "GET",
+    "path": "/api/v1/records/customers",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-054",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/suppliers · Suppliers",
+    "method": "GET",
+    "path": "/api/v1/records/suppliers",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-055",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/sales · Sales & quotations",
+    "method": "GET",
+    "path": "/api/v1/records/sales",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-056",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/purchasing · Purchasing",
+    "method": "GET",
+    "path": "/api/v1/records/purchasing",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-057",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/inventory · Products & inventory",
+    "method": "GET",
+    "path": "/api/v1/records/inventory",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-058",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/finance · Invoices & bills",
+    "method": "GET",
+    "path": "/api/v1/records/finance",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-059",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/payments · Payments & reconciliation",
+    "method": "GET",
+    "path": "/api/v1/records/payments",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-060",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/budgets · Budgets & reports",
+    "method": "GET",
+    "path": "/api/v1/records/budgets",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-061",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/records/approvals · Approvals",
+    "method": "GET",
+    "path": "/api/v1/records/approvals",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-062",
+    "page": "Departments",
+    "pageKey": "departments",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/departments · Departments",
+    "method": "GET",
+    "path": "/api/v1/hr/departments",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-063",
+    "page": "Employees",
+    "pageKey": "employees",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/employees · Employees",
+    "method": "GET",
+    "path": "/api/v1/hr/employees",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-064",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/shifts · Shifts",
+    "method": "GET",
+    "path": "/api/v1/hr/shifts",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-065",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/attendance · Attendance",
+    "method": "GET",
+    "path": "/api/v1/hr/attendance",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-066",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/leaves · Leave requests",
+    "method": "GET",
+    "path": "/api/v1/hr/leaves",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-067",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/payroll/runs · Payroll runs",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/runs",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-068",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/hr/payroll/payslips · My payslips",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/payslips",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-069",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/storefronts · Storefronts",
+    "method": "GET",
+    "path": "/api/v1/workspace/storefronts",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-070",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/orders · Store orders",
+    "method": "GET",
+    "path": "/api/v1/workspace/orders",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-071",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/promotions · Promotions",
+    "method": "GET",
+    "path": "/api/v1/workspace/promotions",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-072",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/returns · Returns & refunds",
+    "method": "GET",
+    "path": "/api/v1/workspace/returns",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-073",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/pos_sessions · POS sessions",
+    "method": "GET",
+    "path": "/api/v1/workspace/pos_sessions",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-074",
+    "page": "Projects",
+    "pageKey": "projects",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/projects · Projects",
+    "method": "GET",
+    "path": "/api/v1/workspace/projects",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-075",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/timesheets · Timesheets",
+    "method": "GET",
+    "path": "/api/v1/workspace/timesheets",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-076",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/service_tickets · Service tickets",
+    "method": "GET",
+    "path": "/api/v1/workspace/service_tickets",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-077",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/field_jobs · Field jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/field_jobs",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-078",
+    "page": "Documents",
+    "pageKey": "documents",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/documents · Documents",
+    "method": "GET",
+    "path": "/api/v1/workspace/documents",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-079",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/workflows · Workflow designer",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflows",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-080",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/workflow_runs · Workflow run history",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflow_runs",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-081",
+    "page": "Reports",
+    "pageKey": "reports",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/reports · Reports",
+    "method": "GET",
+    "path": "/api/v1/workspace/reports",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-082",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/custom_fields · Custom fields",
+    "method": "GET",
+    "path": "/api/v1/workspace/custom_fields",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-083",
+    "page": "API clients",
+    "pageKey": "api_clients",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/api_clients · API clients",
+    "method": "GET",
+    "path": "/api/v1/workspace/api_clients",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-084",
+    "page": "Integration health",
+    "pageKey": "integration_health",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/integration_health · Integration health",
+    "method": "GET",
+    "path": "/api/v1/workspace/integration_health",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-085",
+    "page": "Import jobs",
+    "pageKey": "imports",
+    "difficulty": "high",
+    "title": "missing-auth · GET /api/v1/workspace/imports · Import jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/imports",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-086",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "difficulty": "high",
+    "title": "missing-auth · POST /api/v1/workspace/assistant/ask · Workspace assistant",
+    "method": "POST",
+    "path": "/api/v1/workspace/assistant/ask",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": {
+      "question": "List sample projects",
+      "sources": [
+        "projects"
+      ]
+    },
+    "expected": "401; response does not disclose tenant data.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-087",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/analytics/summary · Business overview",
+    "method": "GET",
+    "path": "/api/v1/workspace/analytics/summary",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-088",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/me/workspaces · Workspaces",
+    "method": "GET",
+    "path": "/api/v1/me/workspaces",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-089",
+    "page": "Users & access",
+    "pageKey": "users",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/members · Users & access",
+    "method": "GET",
+    "path": "/api/v1/members",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-090",
+    "page": "Branches",
+    "pageKey": "branches",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/branches · Branches",
+    "method": "GET",
+    "path": "/api/v1/branches",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-091",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/roles · Roles & permissions",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-092",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/audit · Audit history",
+    "method": "GET",
+    "path": "/api/v1/audit",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-093",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/company-profile · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/company-profile",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-094",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/me/preferences · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/me/preferences",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-095",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/leads · CRM leads",
+    "method": "GET",
+    "path": "/api/v1/records/leads",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-096",
+    "page": "Customers",
+    "pageKey": "customers",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/customers · Customers",
+    "method": "GET",
+    "path": "/api/v1/records/customers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-097",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/suppliers · Suppliers",
+    "method": "GET",
+    "path": "/api/v1/records/suppliers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-098",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/sales · Sales & quotations",
+    "method": "GET",
+    "path": "/api/v1/records/sales",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-099",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/purchasing · Purchasing",
+    "method": "GET",
+    "path": "/api/v1/records/purchasing",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-100",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/inventory · Products & inventory",
+    "method": "GET",
+    "path": "/api/v1/records/inventory",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-101",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/finance · Invoices & bills",
+    "method": "GET",
+    "path": "/api/v1/records/finance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-102",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/payments · Payments & reconciliation",
+    "method": "GET",
+    "path": "/api/v1/records/payments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-103",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/budgets · Budgets & reports",
+    "method": "GET",
+    "path": "/api/v1/records/budgets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-104",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/records/approvals · Approvals",
+    "method": "GET",
+    "path": "/api/v1/records/approvals",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-105",
+    "page": "Departments",
+    "pageKey": "departments",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/departments · Departments",
+    "method": "GET",
+    "path": "/api/v1/hr/departments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-106",
+    "page": "Employees",
+    "pageKey": "employees",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/employees · Employees",
+    "method": "GET",
+    "path": "/api/v1/hr/employees",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-107",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/shifts · Shifts",
+    "method": "GET",
+    "path": "/api/v1/hr/shifts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-108",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/attendance · Attendance",
+    "method": "GET",
+    "path": "/api/v1/hr/attendance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-109",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/leaves · Leave requests",
+    "method": "GET",
+    "path": "/api/v1/hr/leaves",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-110",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/payroll/runs · Payroll runs",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-111",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/hr/payroll/payslips · My payslips",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/payslips",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-112",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/storefronts · Storefronts",
+    "method": "GET",
+    "path": "/api/v1/workspace/storefronts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-113",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/orders · Store orders",
+    "method": "GET",
+    "path": "/api/v1/workspace/orders",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-114",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/promotions · Promotions",
+    "method": "GET",
+    "path": "/api/v1/workspace/promotions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-115",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/returns · Returns & refunds",
+    "method": "GET",
+    "path": "/api/v1/workspace/returns",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-116",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/pos_sessions · POS sessions",
+    "method": "GET",
+    "path": "/api/v1/workspace/pos_sessions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-117",
+    "page": "Projects",
+    "pageKey": "projects",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/projects · Projects",
+    "method": "GET",
+    "path": "/api/v1/workspace/projects",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-118",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/timesheets · Timesheets",
+    "method": "GET",
+    "path": "/api/v1/workspace/timesheets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-119",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/service_tickets · Service tickets",
+    "method": "GET",
+    "path": "/api/v1/workspace/service_tickets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-120",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/field_jobs · Field jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/field_jobs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-121",
+    "page": "Documents",
+    "pageKey": "documents",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/documents · Documents",
+    "method": "GET",
+    "path": "/api/v1/workspace/documents",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-122",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/workflows · Workflow designer",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflows",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-123",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/workflow_runs · Workflow run history",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflow_runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-124",
+    "page": "Reports",
+    "pageKey": "reports",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/reports · Reports",
+    "method": "GET",
+    "path": "/api/v1/workspace/reports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-125",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/custom_fields · Custom fields",
+    "method": "GET",
+    "path": "/api/v1/workspace/custom_fields",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-126",
+    "page": "API clients",
+    "pageKey": "api_clients",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/api_clients · API clients",
+    "method": "GET",
+    "path": "/api/v1/workspace/api_clients",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-127",
+    "page": "Integration health",
+    "pageKey": "integration_health",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/integration_health · Integration health",
+    "method": "GET",
+    "path": "/api/v1/workspace/integration_health",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-128",
+    "page": "Import jobs",
+    "pageKey": "imports",
+    "difficulty": "high",
+    "title": "missing-tenant · GET /api/v1/workspace/imports · Import jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/imports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-129",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "difficulty": "high",
+    "title": "missing-tenant · POST /api/v1/workspace/assistant/ask · Workspace assistant",
+    "method": "POST",
+    "path": "/api/v1/workspace/assistant/ask",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": {
+      "question": "List sample projects",
+      "sources": [
+        "projects"
+      ]
+    },
+    "expected": "4xx; request without X-Tenant-ID is rejected.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-130",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/analytics/summary · Business overview",
+    "method": "GET",
+    "path": "/api/v1/workspace/analytics/summary",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-131",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/me/workspaces · Workspaces",
+    "method": "GET",
+    "path": "/api/v1/me/workspaces",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-132",
+    "page": "Users & access",
+    "pageKey": "users",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/members · Users & access",
+    "method": "GET",
+    "path": "/api/v1/members",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-133",
+    "page": "Branches",
+    "pageKey": "branches",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/branches · Branches",
+    "method": "GET",
+    "path": "/api/v1/branches",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-134",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/roles · Roles & permissions",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-135",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/audit · Audit history",
+    "method": "GET",
+    "path": "/api/v1/audit",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-136",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/company-profile · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/company-profile",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-137",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/me/preferences · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/me/preferences",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-138",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/leads · CRM leads",
+    "method": "GET",
+    "path": "/api/v1/records/leads",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-139",
+    "page": "Customers",
+    "pageKey": "customers",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/customers · Customers",
+    "method": "GET",
+    "path": "/api/v1/records/customers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-140",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/suppliers · Suppliers",
+    "method": "GET",
+    "path": "/api/v1/records/suppliers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-141",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/sales · Sales & quotations",
+    "method": "GET",
+    "path": "/api/v1/records/sales",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-142",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/purchasing · Purchasing",
+    "method": "GET",
+    "path": "/api/v1/records/purchasing",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-143",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/inventory · Products & inventory",
+    "method": "GET",
+    "path": "/api/v1/records/inventory",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-144",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/finance · Invoices & bills",
+    "method": "GET",
+    "path": "/api/v1/records/finance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-145",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/payments · Payments & reconciliation",
+    "method": "GET",
+    "path": "/api/v1/records/payments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-146",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/budgets · Budgets & reports",
+    "method": "GET",
+    "path": "/api/v1/records/budgets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-147",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/records/approvals · Approvals",
+    "method": "GET",
+    "path": "/api/v1/records/approvals",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-148",
+    "page": "Departments",
+    "pageKey": "departments",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/departments · Departments",
+    "method": "GET",
+    "path": "/api/v1/hr/departments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-149",
+    "page": "Employees",
+    "pageKey": "employees",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/employees · Employees",
+    "method": "GET",
+    "path": "/api/v1/hr/employees",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-150",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/shifts · Shifts",
+    "method": "GET",
+    "path": "/api/v1/hr/shifts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-151",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/attendance · Attendance",
+    "method": "GET",
+    "path": "/api/v1/hr/attendance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-152",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/leaves · Leave requests",
+    "method": "GET",
+    "path": "/api/v1/hr/leaves",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-153",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/payroll/runs · Payroll runs",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-154",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/hr/payroll/payslips · My payslips",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/payslips",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-155",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/storefronts · Storefronts",
+    "method": "GET",
+    "path": "/api/v1/workspace/storefronts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-156",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/orders · Store orders",
+    "method": "GET",
+    "path": "/api/v1/workspace/orders",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-157",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/promotions · Promotions",
+    "method": "GET",
+    "path": "/api/v1/workspace/promotions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-158",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/returns · Returns & refunds",
+    "method": "GET",
+    "path": "/api/v1/workspace/returns",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-159",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/pos_sessions · POS sessions",
+    "method": "GET",
+    "path": "/api/v1/workspace/pos_sessions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-160",
+    "page": "Projects",
+    "pageKey": "projects",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/projects · Projects",
+    "method": "GET",
+    "path": "/api/v1/workspace/projects",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-161",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/timesheets · Timesheets",
+    "method": "GET",
+    "path": "/api/v1/workspace/timesheets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-162",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/service_tickets · Service tickets",
+    "method": "GET",
+    "path": "/api/v1/workspace/service_tickets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-163",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/field_jobs · Field jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/field_jobs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-164",
+    "page": "Documents",
+    "pageKey": "documents",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/documents · Documents",
+    "method": "GET",
+    "path": "/api/v1/workspace/documents",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-165",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/workflows · Workflow designer",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflows",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-166",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/workflow_runs · Workflow run history",
+    "method": "GET",
+    "path": "/api/v1/workspace/workflow_runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-167",
+    "page": "Reports",
+    "pageKey": "reports",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/reports · Reports",
+    "method": "GET",
+    "path": "/api/v1/workspace/reports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-168",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/custom_fields · Custom fields",
+    "method": "GET",
+    "path": "/api/v1/workspace/custom_fields",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-169",
+    "page": "API clients",
+    "pageKey": "api_clients",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/api_clients · API clients",
+    "method": "GET",
+    "path": "/api/v1/workspace/api_clients",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-170",
+    "page": "Integration health",
+    "pageKey": "integration_health",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/integration_health · Integration health",
+    "method": "GET",
+    "path": "/api/v1/workspace/integration_health",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-171",
+    "page": "Import jobs",
+    "pageKey": "imports",
+    "difficulty": "high",
+    "title": "wrong-tenant · GET /api/v1/workspace/imports · Import jobs",
+    "method": "GET",
+    "path": "/api/v1/workspace/imports",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-172",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "difficulty": "high",
+    "title": "wrong-tenant · POST /api/v1/workspace/assistant/ask · Workspace assistant",
+    "method": "POST",
+    "path": "/api/v1/workspace/assistant/ask",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": {
+      "question": "List sample projects",
+      "sources": [
+        "projects"
+      ]
+    },
+    "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-173",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/workspace/analytics/summary · Business overview",
+    "method": "GET",
+    "path": "/api/v1/workspace/analytics/summary",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-174",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/me/workspaces · Workspaces",
+    "method": "GET",
+    "path": "/api/v1/me/workspaces",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-175",
+    "page": "Users & access",
+    "pageKey": "users",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/members · Users & access",
+    "method": "GET",
+    "path": "/api/v1/members",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-176",
+    "page": "Branches",
+    "pageKey": "branches",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/branches · Branches",
+    "method": "GET",
+    "path": "/api/v1/branches",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-177",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/roles · Roles & permissions",
+    "method": "GET",
+    "path": "/api/v1/roles",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-178",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/audit · Audit history",
+    "method": "GET",
+    "path": "/api/v1/audit",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-179",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/company-profile · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/company-profile",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-180",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/me/preferences · Profile & settings",
+    "method": "GET",
+    "path": "/api/v1/me/preferences",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-181",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/leads · CRM leads",
+    "method": "GET",
+    "path": "/api/v1/records/leads",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-182",
+    "page": "Customers",
+    "pageKey": "customers",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/customers · Customers",
+    "method": "GET",
+    "path": "/api/v1/records/customers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-183",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/suppliers · Suppliers",
+    "method": "GET",
+    "path": "/api/v1/records/suppliers",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-184",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/sales · Sales & quotations",
+    "method": "GET",
+    "path": "/api/v1/records/sales",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-185",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/purchasing · Purchasing",
+    "method": "GET",
+    "path": "/api/v1/records/purchasing",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-186",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/inventory · Products & inventory",
+    "method": "GET",
+    "path": "/api/v1/records/inventory",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-187",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/finance · Invoices & bills",
+    "method": "GET",
+    "path": "/api/v1/records/finance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-188",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/payments · Payments & reconciliation",
+    "method": "GET",
+    "path": "/api/v1/records/payments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-189",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/budgets · Budgets & reports",
+    "method": "GET",
+    "path": "/api/v1/records/budgets",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-190",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/records/approvals · Approvals",
+    "method": "GET",
+    "path": "/api/v1/records/approvals",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-191",
+    "page": "Departments",
+    "pageKey": "departments",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/departments · Departments",
+    "method": "GET",
+    "path": "/api/v1/hr/departments",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-192",
+    "page": "Employees",
+    "pageKey": "employees",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/employees · Employees",
+    "method": "GET",
+    "path": "/api/v1/hr/employees",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-193",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/shifts · Shifts",
+    "method": "GET",
+    "path": "/api/v1/hr/shifts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-194",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/attendance · Attendance",
+    "method": "GET",
+    "path": "/api/v1/hr/attendance",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-195",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/leaves · Leave requests",
+    "method": "GET",
+    "path": "/api/v1/hr/leaves",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-196",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/payroll/runs · Payroll runs",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/runs",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-197",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/hr/payroll/payslips · My payslips",
+    "method": "GET",
+    "path": "/api/v1/hr/payroll/payslips",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-198",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/workspace/storefronts · Storefronts",
+    "method": "GET",
+    "path": "/api/v1/workspace/storefronts",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-199",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/workspace/orders · Store orders",
+    "method": "GET",
+    "path": "/api/v1/workspace/orders",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  },
+  {
+    "id": "NX-API-200",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "difficulty": "standard",
+    "title": "content-type · GET /api/v1/workspace/promotions · Promotions",
+    "method": "GET",
+    "path": "/api/v1/workspace/promotions",
+    "headers": {
+      "Authorization": "Bearer <test-token>",
+      "X-Tenant-ID": "<disposable-test-tenant>",
+      "Accept": "application/json"
+    },
+    "body": null,
+    "expected": "200 JSON with an application/json content type.",
+    "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+    "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+  }
+]

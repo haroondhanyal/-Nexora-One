@@ -1,0 +1,37 @@
+{
+  "page": "Sign in",
+  "pageKey": "auth_sign_in",
+  "section": "Authentication",
+  "navigationLabel": "Sign in",
+  "expectedHeading": "Sign in",
+  "expectedFirstColumn": null,
+  "apiPaths": [],
+  "dataTables": [],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "pageTitle": {
+      "type": "role",
+      "role": "heading",
+      "name": "Sign in to Nexora One",
+      "level": 2
+    },
+    "signInButton": {
+      "type": "css",
+      "selector": ".setup-submit"
+    },
+    "resetPasswordLink": {
+      "type": "role",
+      "role": "button",
+      "name": "Forgot password?"
+    },
+    "signUpButton": {
+      "type": "role",
+      "role": "button",
+      "name": "Sign up"
+    },
+    "localDemoNote": {
+      "type": "css",
+      "selector": ".auth-security-note"
+    }
+  }
+}

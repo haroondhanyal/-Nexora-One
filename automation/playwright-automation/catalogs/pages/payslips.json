@@ -1,0 +1,956 @@
+{
+  "page": "My payslips",
+  "pageKey": "payslips",
+  "section": "People",
+  "locatorFile": "../../locators/payslips.json",
+  "apiPaths": [
+    "/api/v1/hr/payroll/payslips"
+  ],
+  "dataTables": [
+    "payslips"
+  ],
+  "caseCounts": {
+    "ui": 8,
+    "api": 5,
+    "bdd": 4,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-201",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "My payslips · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-202",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "My payslips · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-203",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "My payslips · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-204",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "My payslips · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-205",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "My payslips · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-206",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "My payslips · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-207",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "My payslips · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-208",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "My payslips · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-025",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/hr/payroll/payslips · My payslips",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/payslips",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-068",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/hr/payroll/payslips · My payslips",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/payslips",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-111",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/hr/payroll/payslips · My payslips",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/payslips",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-154",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/hr/payroll/payslips · My payslips",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/payslips",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-197",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/hr/payroll/payslips · My payslips",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/payslips",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-024",
+        "feature": "My payslips workflow",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "scenario": "My payslips: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/payslips and the data tables payslips",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-072",
+        "feature": "My payslips workflow",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "scenario": "My payslips: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/payslips and the data tables payslips",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-120",
+        "feature": "My payslips workflow",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "scenario": "My payslips: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/payslips and the data tables payslips",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-168",
+        "feature": "My payslips workflow",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "scenario": "My payslips: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/payslips and the data tables payslips",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0023",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0023",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0065",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0065",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0107",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0107",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0149",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0149",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0191",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0191",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0233",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0233",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0275",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0275",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0317",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0317",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0359",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0359",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0401",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0401",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0443",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0443",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0485",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0485",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0527",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0527",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0569",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0569",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0611",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0611",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0653",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0653",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0695",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0695",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0737",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0737",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0779",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0779",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0821",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0821",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0863",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "standard",
+        "table": "payslips",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0863",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0905",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0905",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0947",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0947",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0989",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "difficulty": "high",
+        "table": "payslips",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0989",
+          "source": "payslips",
+          "sample_payload": {
+            "label": "My payslips fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payslips.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

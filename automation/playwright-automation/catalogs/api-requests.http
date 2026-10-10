@@ -1,0 +1,2149 @@
+@apiBase = http://127.0.0.1:8000/api/v1
+@token = replace-with-disposable-test-token
+@tenantId = replace-with-disposable-test-tenant
+
+### NX-API-001 | success · GET /api/v1/workspace/analytics/summary · Business overview
+GET {{apiBase}}/workspace/analytics/summary
+Accept: application/json
+X-Correlation-ID: NX-API-001
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-002 | success · GET /api/v1/me/workspaces · Workspaces
+GET {{apiBase}}/me/workspaces
+Accept: application/json
+X-Correlation-ID: NX-API-002
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-003 | success · GET /api/v1/members · Users & access
+GET {{apiBase}}/members
+Accept: application/json
+X-Correlation-ID: NX-API-003
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-004 | success · GET /api/v1/branches · Branches
+GET {{apiBase}}/branches
+Accept: application/json
+X-Correlation-ID: NX-API-004
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-005 | success · GET /api/v1/roles · Roles & permissions
+GET {{apiBase}}/roles
+Accept: application/json
+X-Correlation-ID: NX-API-005
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-006 | success · GET /api/v1/audit · Audit history
+GET {{apiBase}}/audit
+Accept: application/json
+X-Correlation-ID: NX-API-006
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-007 | success · GET /api/v1/company-profile · Profile & settings
+GET {{apiBase}}/company-profile
+Accept: application/json
+X-Correlation-ID: NX-API-007
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-008 | success · GET /api/v1/me/preferences · Profile & settings
+GET {{apiBase}}/me/preferences
+Accept: application/json
+X-Correlation-ID: NX-API-008
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-009 | success · GET /api/v1/records/leads · CRM leads
+GET {{apiBase}}/records/leads
+Accept: application/json
+X-Correlation-ID: NX-API-009
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-010 | success · GET /api/v1/records/customers · Customers
+GET {{apiBase}}/records/customers
+Accept: application/json
+X-Correlation-ID: NX-API-010
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-011 | success · GET /api/v1/records/suppliers · Suppliers
+GET {{apiBase}}/records/suppliers
+Accept: application/json
+X-Correlation-ID: NX-API-011
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-012 | success · GET /api/v1/records/sales · Sales & quotations
+GET {{apiBase}}/records/sales
+Accept: application/json
+X-Correlation-ID: NX-API-012
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-013 | success · GET /api/v1/records/purchasing · Purchasing
+GET {{apiBase}}/records/purchasing
+Accept: application/json
+X-Correlation-ID: NX-API-013
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-014 | success · GET /api/v1/records/inventory · Products & inventory
+GET {{apiBase}}/records/inventory
+Accept: application/json
+X-Correlation-ID: NX-API-014
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-015 | success · GET /api/v1/records/finance · Invoices & bills
+GET {{apiBase}}/records/finance
+Accept: application/json
+X-Correlation-ID: NX-API-015
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-016 | success · GET /api/v1/records/payments · Payments & reconciliation
+GET {{apiBase}}/records/payments
+Accept: application/json
+X-Correlation-ID: NX-API-016
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-017 | success · GET /api/v1/records/budgets · Budgets & reports
+GET {{apiBase}}/records/budgets
+Accept: application/json
+X-Correlation-ID: NX-API-017
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-018 | success · GET /api/v1/records/approvals · Approvals
+GET {{apiBase}}/records/approvals
+Accept: application/json
+X-Correlation-ID: NX-API-018
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-019 | success · GET /api/v1/hr/departments · Departments
+GET {{apiBase}}/hr/departments
+Accept: application/json
+X-Correlation-ID: NX-API-019
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-020 | success · GET /api/v1/hr/employees · Employees
+GET {{apiBase}}/hr/employees
+Accept: application/json
+X-Correlation-ID: NX-API-020
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-021 | success · GET /api/v1/hr/shifts · Shifts
+GET {{apiBase}}/hr/shifts
+Accept: application/json
+X-Correlation-ID: NX-API-021
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-022 | success · GET /api/v1/hr/attendance · Attendance
+GET {{apiBase}}/hr/attendance
+Accept: application/json
+X-Correlation-ID: NX-API-022
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-023 | success · GET /api/v1/hr/leaves · Leave requests
+GET {{apiBase}}/hr/leaves
+Accept: application/json
+X-Correlation-ID: NX-API-023
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-024 | success · GET /api/v1/hr/payroll/runs · Payroll runs
+GET {{apiBase}}/hr/payroll/runs
+Accept: application/json
+X-Correlation-ID: NX-API-024
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-025 | success · GET /api/v1/hr/payroll/payslips · My payslips
+GET {{apiBase}}/hr/payroll/payslips
+Accept: application/json
+X-Correlation-ID: NX-API-025
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-026 | success · GET /api/v1/workspace/storefronts · Storefronts
+GET {{apiBase}}/workspace/storefronts
+Accept: application/json
+X-Correlation-ID: NX-API-026
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-027 | success · GET /api/v1/workspace/orders · Store orders
+GET {{apiBase}}/workspace/orders
+Accept: application/json
+X-Correlation-ID: NX-API-027
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-028 | success · GET /api/v1/workspace/promotions · Promotions
+GET {{apiBase}}/workspace/promotions
+Accept: application/json
+X-Correlation-ID: NX-API-028
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-029 | success · GET /api/v1/workspace/returns · Returns & refunds
+GET {{apiBase}}/workspace/returns
+Accept: application/json
+X-Correlation-ID: NX-API-029
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-030 | success · GET /api/v1/workspace/pos_sessions · POS sessions
+GET {{apiBase}}/workspace/pos_sessions
+Accept: application/json
+X-Correlation-ID: NX-API-030
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-031 | success · GET /api/v1/workspace/projects · Projects
+GET {{apiBase}}/workspace/projects
+Accept: application/json
+X-Correlation-ID: NX-API-031
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-032 | success · GET /api/v1/workspace/timesheets · Timesheets
+GET {{apiBase}}/workspace/timesheets
+Accept: application/json
+X-Correlation-ID: NX-API-032
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-033 | success · GET /api/v1/workspace/service_tickets · Service tickets
+GET {{apiBase}}/workspace/service_tickets
+Accept: application/json
+X-Correlation-ID: NX-API-033
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-034 | success · GET /api/v1/workspace/field_jobs · Field jobs
+GET {{apiBase}}/workspace/field_jobs
+Accept: application/json
+X-Correlation-ID: NX-API-034
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-035 | success · GET /api/v1/workspace/documents · Documents
+GET {{apiBase}}/workspace/documents
+Accept: application/json
+X-Correlation-ID: NX-API-035
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-036 | success · GET /api/v1/workspace/workflows · Workflow designer
+GET {{apiBase}}/workspace/workflows
+Accept: application/json
+X-Correlation-ID: NX-API-036
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-037 | success · GET /api/v1/workspace/workflow_runs · Workflow run history
+GET {{apiBase}}/workspace/workflow_runs
+Accept: application/json
+X-Correlation-ID: NX-API-037
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-038 | success · GET /api/v1/workspace/reports · Reports
+GET {{apiBase}}/workspace/reports
+Accept: application/json
+X-Correlation-ID: NX-API-038
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-039 | success · GET /api/v1/workspace/custom_fields · Custom fields
+GET {{apiBase}}/workspace/custom_fields
+Accept: application/json
+X-Correlation-ID: NX-API-039
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-040 | success · GET /api/v1/workspace/api_clients · API clients
+GET {{apiBase}}/workspace/api_clients
+Accept: application/json
+X-Correlation-ID: NX-API-040
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-041 | success · GET /api/v1/workspace/integration_health · Integration health
+GET {{apiBase}}/workspace/integration_health
+Accept: application/json
+X-Correlation-ID: NX-API-041
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-042 | success · GET /api/v1/workspace/imports · Import jobs
+GET {{apiBase}}/workspace/imports
+Accept: application/json
+X-Correlation-ID: NX-API-042
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON; response has the documented collection or resource shape.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-043 | success · POST /api/v1/workspace/assistant/ask · Workspace assistant
+POST {{apiBase}}/workspace/assistant/ask
+Accept: application/json
+X-Correlation-ID: NX-API-043
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+Content-Type: application/json
+
+{
+  "question": "List sample projects",
+  "sources": [
+    "projects"
+  ]
+}
+
+
+# Expected: 200 JSON; response contains the assistant answer and source metadata.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-044 | missing-auth · GET /api/v1/workspace/analytics/summary · Business overview
+GET {{apiBase}}/workspace/analytics/summary
+Accept: application/json
+X-Correlation-ID: NX-API-044
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-045 | missing-auth · GET /api/v1/me/workspaces · Workspaces
+GET {{apiBase}}/me/workspaces
+Accept: application/json
+X-Correlation-ID: NX-API-045
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-046 | missing-auth · GET /api/v1/members · Users & access
+GET {{apiBase}}/members
+Accept: application/json
+X-Correlation-ID: NX-API-046
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-047 | missing-auth · GET /api/v1/branches · Branches
+GET {{apiBase}}/branches
+Accept: application/json
+X-Correlation-ID: NX-API-047
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-048 | missing-auth · GET /api/v1/roles · Roles & permissions
+GET {{apiBase}}/roles
+Accept: application/json
+X-Correlation-ID: NX-API-048
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-049 | missing-auth · GET /api/v1/audit · Audit history
+GET {{apiBase}}/audit
+Accept: application/json
+X-Correlation-ID: NX-API-049
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-050 | missing-auth · GET /api/v1/company-profile · Profile & settings
+GET {{apiBase}}/company-profile
+Accept: application/json
+X-Correlation-ID: NX-API-050
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-051 | missing-auth · GET /api/v1/me/preferences · Profile & settings
+GET {{apiBase}}/me/preferences
+Accept: application/json
+X-Correlation-ID: NX-API-051
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-052 | missing-auth · GET /api/v1/records/leads · CRM leads
+GET {{apiBase}}/records/leads
+Accept: application/json
+X-Correlation-ID: NX-API-052
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-053 | missing-auth · GET /api/v1/records/customers · Customers
+GET {{apiBase}}/records/customers
+Accept: application/json
+X-Correlation-ID: NX-API-053
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-054 | missing-auth · GET /api/v1/records/suppliers · Suppliers
+GET {{apiBase}}/records/suppliers
+Accept: application/json
+X-Correlation-ID: NX-API-054
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-055 | missing-auth · GET /api/v1/records/sales · Sales & quotations
+GET {{apiBase}}/records/sales
+Accept: application/json
+X-Correlation-ID: NX-API-055
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-056 | missing-auth · GET /api/v1/records/purchasing · Purchasing
+GET {{apiBase}}/records/purchasing
+Accept: application/json
+X-Correlation-ID: NX-API-056
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-057 | missing-auth · GET /api/v1/records/inventory · Products & inventory
+GET {{apiBase}}/records/inventory
+Accept: application/json
+X-Correlation-ID: NX-API-057
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-058 | missing-auth · GET /api/v1/records/finance · Invoices & bills
+GET {{apiBase}}/records/finance
+Accept: application/json
+X-Correlation-ID: NX-API-058
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-059 | missing-auth · GET /api/v1/records/payments · Payments & reconciliation
+GET {{apiBase}}/records/payments
+Accept: application/json
+X-Correlation-ID: NX-API-059
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-060 | missing-auth · GET /api/v1/records/budgets · Budgets & reports
+GET {{apiBase}}/records/budgets
+Accept: application/json
+X-Correlation-ID: NX-API-060
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-061 | missing-auth · GET /api/v1/records/approvals · Approvals
+GET {{apiBase}}/records/approvals
+Accept: application/json
+X-Correlation-ID: NX-API-061
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-062 | missing-auth · GET /api/v1/hr/departments · Departments
+GET {{apiBase}}/hr/departments
+Accept: application/json
+X-Correlation-ID: NX-API-062
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-063 | missing-auth · GET /api/v1/hr/employees · Employees
+GET {{apiBase}}/hr/employees
+Accept: application/json
+X-Correlation-ID: NX-API-063
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-064 | missing-auth · GET /api/v1/hr/shifts · Shifts
+GET {{apiBase}}/hr/shifts
+Accept: application/json
+X-Correlation-ID: NX-API-064
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-065 | missing-auth · GET /api/v1/hr/attendance · Attendance
+GET {{apiBase}}/hr/attendance
+Accept: application/json
+X-Correlation-ID: NX-API-065
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-066 | missing-auth · GET /api/v1/hr/leaves · Leave requests
+GET {{apiBase}}/hr/leaves
+Accept: application/json
+X-Correlation-ID: NX-API-066
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-067 | missing-auth · GET /api/v1/hr/payroll/runs · Payroll runs
+GET {{apiBase}}/hr/payroll/runs
+Accept: application/json
+X-Correlation-ID: NX-API-067
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-068 | missing-auth · GET /api/v1/hr/payroll/payslips · My payslips
+GET {{apiBase}}/hr/payroll/payslips
+Accept: application/json
+X-Correlation-ID: NX-API-068
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-069 | missing-auth · GET /api/v1/workspace/storefronts · Storefronts
+GET {{apiBase}}/workspace/storefronts
+Accept: application/json
+X-Correlation-ID: NX-API-069
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-070 | missing-auth · GET /api/v1/workspace/orders · Store orders
+GET {{apiBase}}/workspace/orders
+Accept: application/json
+X-Correlation-ID: NX-API-070
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-071 | missing-auth · GET /api/v1/workspace/promotions · Promotions
+GET {{apiBase}}/workspace/promotions
+Accept: application/json
+X-Correlation-ID: NX-API-071
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-072 | missing-auth · GET /api/v1/workspace/returns · Returns & refunds
+GET {{apiBase}}/workspace/returns
+Accept: application/json
+X-Correlation-ID: NX-API-072
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-073 | missing-auth · GET /api/v1/workspace/pos_sessions · POS sessions
+GET {{apiBase}}/workspace/pos_sessions
+Accept: application/json
+X-Correlation-ID: NX-API-073
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-074 | missing-auth · GET /api/v1/workspace/projects · Projects
+GET {{apiBase}}/workspace/projects
+Accept: application/json
+X-Correlation-ID: NX-API-074
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-075 | missing-auth · GET /api/v1/workspace/timesheets · Timesheets
+GET {{apiBase}}/workspace/timesheets
+Accept: application/json
+X-Correlation-ID: NX-API-075
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-076 | missing-auth · GET /api/v1/workspace/service_tickets · Service tickets
+GET {{apiBase}}/workspace/service_tickets
+Accept: application/json
+X-Correlation-ID: NX-API-076
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-077 | missing-auth · GET /api/v1/workspace/field_jobs · Field jobs
+GET {{apiBase}}/workspace/field_jobs
+Accept: application/json
+X-Correlation-ID: NX-API-077
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-078 | missing-auth · GET /api/v1/workspace/documents · Documents
+GET {{apiBase}}/workspace/documents
+Accept: application/json
+X-Correlation-ID: NX-API-078
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-079 | missing-auth · GET /api/v1/workspace/workflows · Workflow designer
+GET {{apiBase}}/workspace/workflows
+Accept: application/json
+X-Correlation-ID: NX-API-079
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-080 | missing-auth · GET /api/v1/workspace/workflow_runs · Workflow run history
+GET {{apiBase}}/workspace/workflow_runs
+Accept: application/json
+X-Correlation-ID: NX-API-080
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-081 | missing-auth · GET /api/v1/workspace/reports · Reports
+GET {{apiBase}}/workspace/reports
+Accept: application/json
+X-Correlation-ID: NX-API-081
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-082 | missing-auth · GET /api/v1/workspace/custom_fields · Custom fields
+GET {{apiBase}}/workspace/custom_fields
+Accept: application/json
+X-Correlation-ID: NX-API-082
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-083 | missing-auth · GET /api/v1/workspace/api_clients · API clients
+GET {{apiBase}}/workspace/api_clients
+Accept: application/json
+X-Correlation-ID: NX-API-083
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-084 | missing-auth · GET /api/v1/workspace/integration_health · Integration health
+GET {{apiBase}}/workspace/integration_health
+Accept: application/json
+X-Correlation-ID: NX-API-084
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-085 | missing-auth · GET /api/v1/workspace/imports · Import jobs
+GET {{apiBase}}/workspace/imports
+Accept: application/json
+X-Correlation-ID: NX-API-085
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-086 | missing-auth · POST /api/v1/workspace/assistant/ask · Workspace assistant
+POST {{apiBase}}/workspace/assistant/ask
+Accept: application/json
+X-Correlation-ID: NX-API-086
+X-Tenant-ID: {{tenantId}}
+Content-Type: application/json
+
+{
+  "question": "List sample projects",
+  "sources": [
+    "projects"
+  ]
+}
+
+
+# Expected: 401; response does not disclose tenant data.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-087 | missing-tenant · GET /api/v1/workspace/analytics/summary · Business overview
+GET {{apiBase}}/workspace/analytics/summary
+Accept: application/json
+X-Correlation-ID: NX-API-087
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-088 | missing-tenant · GET /api/v1/me/workspaces · Workspaces
+GET {{apiBase}}/me/workspaces
+Accept: application/json
+X-Correlation-ID: NX-API-088
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-089 | missing-tenant · GET /api/v1/members · Users & access
+GET {{apiBase}}/members
+Accept: application/json
+X-Correlation-ID: NX-API-089
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-090 | missing-tenant · GET /api/v1/branches · Branches
+GET {{apiBase}}/branches
+Accept: application/json
+X-Correlation-ID: NX-API-090
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-091 | missing-tenant · GET /api/v1/roles · Roles & permissions
+GET {{apiBase}}/roles
+Accept: application/json
+X-Correlation-ID: NX-API-091
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-092 | missing-tenant · GET /api/v1/audit · Audit history
+GET {{apiBase}}/audit
+Accept: application/json
+X-Correlation-ID: NX-API-092
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-093 | missing-tenant · GET /api/v1/company-profile · Profile & settings
+GET {{apiBase}}/company-profile
+Accept: application/json
+X-Correlation-ID: NX-API-093
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-094 | missing-tenant · GET /api/v1/me/preferences · Profile & settings
+GET {{apiBase}}/me/preferences
+Accept: application/json
+X-Correlation-ID: NX-API-094
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-095 | missing-tenant · GET /api/v1/records/leads · CRM leads
+GET {{apiBase}}/records/leads
+Accept: application/json
+X-Correlation-ID: NX-API-095
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-096 | missing-tenant · GET /api/v1/records/customers · Customers
+GET {{apiBase}}/records/customers
+Accept: application/json
+X-Correlation-ID: NX-API-096
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-097 | missing-tenant · GET /api/v1/records/suppliers · Suppliers
+GET {{apiBase}}/records/suppliers
+Accept: application/json
+X-Correlation-ID: NX-API-097
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-098 | missing-tenant · GET /api/v1/records/sales · Sales & quotations
+GET {{apiBase}}/records/sales
+Accept: application/json
+X-Correlation-ID: NX-API-098
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-099 | missing-tenant · GET /api/v1/records/purchasing · Purchasing
+GET {{apiBase}}/records/purchasing
+Accept: application/json
+X-Correlation-ID: NX-API-099
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-100 | missing-tenant · GET /api/v1/records/inventory · Products & inventory
+GET {{apiBase}}/records/inventory
+Accept: application/json
+X-Correlation-ID: NX-API-100
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-101 | missing-tenant · GET /api/v1/records/finance · Invoices & bills
+GET {{apiBase}}/records/finance
+Accept: application/json
+X-Correlation-ID: NX-API-101
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-102 | missing-tenant · GET /api/v1/records/payments · Payments & reconciliation
+GET {{apiBase}}/records/payments
+Accept: application/json
+X-Correlation-ID: NX-API-102
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-103 | missing-tenant · GET /api/v1/records/budgets · Budgets & reports
+GET {{apiBase}}/records/budgets
+Accept: application/json
+X-Correlation-ID: NX-API-103
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-104 | missing-tenant · GET /api/v1/records/approvals · Approvals
+GET {{apiBase}}/records/approvals
+Accept: application/json
+X-Correlation-ID: NX-API-104
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-105 | missing-tenant · GET /api/v1/hr/departments · Departments
+GET {{apiBase}}/hr/departments
+Accept: application/json
+X-Correlation-ID: NX-API-105
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-106 | missing-tenant · GET /api/v1/hr/employees · Employees
+GET {{apiBase}}/hr/employees
+Accept: application/json
+X-Correlation-ID: NX-API-106
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-107 | missing-tenant · GET /api/v1/hr/shifts · Shifts
+GET {{apiBase}}/hr/shifts
+Accept: application/json
+X-Correlation-ID: NX-API-107
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-108 | missing-tenant · GET /api/v1/hr/attendance · Attendance
+GET {{apiBase}}/hr/attendance
+Accept: application/json
+X-Correlation-ID: NX-API-108
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-109 | missing-tenant · GET /api/v1/hr/leaves · Leave requests
+GET {{apiBase}}/hr/leaves
+Accept: application/json
+X-Correlation-ID: NX-API-109
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-110 | missing-tenant · GET /api/v1/hr/payroll/runs · Payroll runs
+GET {{apiBase}}/hr/payroll/runs
+Accept: application/json
+X-Correlation-ID: NX-API-110
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-111 | missing-tenant · GET /api/v1/hr/payroll/payslips · My payslips
+GET {{apiBase}}/hr/payroll/payslips
+Accept: application/json
+X-Correlation-ID: NX-API-111
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-112 | missing-tenant · GET /api/v1/workspace/storefronts · Storefronts
+GET {{apiBase}}/workspace/storefronts
+Accept: application/json
+X-Correlation-ID: NX-API-112
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-113 | missing-tenant · GET /api/v1/workspace/orders · Store orders
+GET {{apiBase}}/workspace/orders
+Accept: application/json
+X-Correlation-ID: NX-API-113
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-114 | missing-tenant · GET /api/v1/workspace/promotions · Promotions
+GET {{apiBase}}/workspace/promotions
+Accept: application/json
+X-Correlation-ID: NX-API-114
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-115 | missing-tenant · GET /api/v1/workspace/returns · Returns & refunds
+GET {{apiBase}}/workspace/returns
+Accept: application/json
+X-Correlation-ID: NX-API-115
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-116 | missing-tenant · GET /api/v1/workspace/pos_sessions · POS sessions
+GET {{apiBase}}/workspace/pos_sessions
+Accept: application/json
+X-Correlation-ID: NX-API-116
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-117 | missing-tenant · GET /api/v1/workspace/projects · Projects
+GET {{apiBase}}/workspace/projects
+Accept: application/json
+X-Correlation-ID: NX-API-117
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-118 | missing-tenant · GET /api/v1/workspace/timesheets · Timesheets
+GET {{apiBase}}/workspace/timesheets
+Accept: application/json
+X-Correlation-ID: NX-API-118
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-119 | missing-tenant · GET /api/v1/workspace/service_tickets · Service tickets
+GET {{apiBase}}/workspace/service_tickets
+Accept: application/json
+X-Correlation-ID: NX-API-119
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-120 | missing-tenant · GET /api/v1/workspace/field_jobs · Field jobs
+GET {{apiBase}}/workspace/field_jobs
+Accept: application/json
+X-Correlation-ID: NX-API-120
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-121 | missing-tenant · GET /api/v1/workspace/documents · Documents
+GET {{apiBase}}/workspace/documents
+Accept: application/json
+X-Correlation-ID: NX-API-121
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-122 | missing-tenant · GET /api/v1/workspace/workflows · Workflow designer
+GET {{apiBase}}/workspace/workflows
+Accept: application/json
+X-Correlation-ID: NX-API-122
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-123 | missing-tenant · GET /api/v1/workspace/workflow_runs · Workflow run history
+GET {{apiBase}}/workspace/workflow_runs
+Accept: application/json
+X-Correlation-ID: NX-API-123
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-124 | missing-tenant · GET /api/v1/workspace/reports · Reports
+GET {{apiBase}}/workspace/reports
+Accept: application/json
+X-Correlation-ID: NX-API-124
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-125 | missing-tenant · GET /api/v1/workspace/custom_fields · Custom fields
+GET {{apiBase}}/workspace/custom_fields
+Accept: application/json
+X-Correlation-ID: NX-API-125
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-126 | missing-tenant · GET /api/v1/workspace/api_clients · API clients
+GET {{apiBase}}/workspace/api_clients
+Accept: application/json
+X-Correlation-ID: NX-API-126
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-127 | missing-tenant · GET /api/v1/workspace/integration_health · Integration health
+GET {{apiBase}}/workspace/integration_health
+Accept: application/json
+X-Correlation-ID: NX-API-127
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-128 | missing-tenant · GET /api/v1/workspace/imports · Import jobs
+GET {{apiBase}}/workspace/imports
+Accept: application/json
+X-Correlation-ID: NX-API-128
+Authorization: Bearer {{token}}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-129 | missing-tenant · POST /api/v1/workspace/assistant/ask · Workspace assistant
+POST {{apiBase}}/workspace/assistant/ask
+Accept: application/json
+X-Correlation-ID: NX-API-129
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "question": "List sample projects",
+  "sources": [
+    "projects"
+  ]
+}
+
+
+# Expected: 4xx; request without X-Tenant-ID is rejected.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-130 | wrong-tenant · GET /api/v1/workspace/analytics/summary · Business overview
+GET {{apiBase}}/workspace/analytics/summary
+Accept: application/json
+X-Correlation-ID: NX-API-130
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-131 | wrong-tenant · GET /api/v1/me/workspaces · Workspaces
+GET {{apiBase}}/me/workspaces
+Accept: application/json
+X-Correlation-ID: NX-API-131
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-132 | wrong-tenant · GET /api/v1/members · Users & access
+GET {{apiBase}}/members
+Accept: application/json
+X-Correlation-ID: NX-API-132
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-133 | wrong-tenant · GET /api/v1/branches · Branches
+GET {{apiBase}}/branches
+Accept: application/json
+X-Correlation-ID: NX-API-133
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-134 | wrong-tenant · GET /api/v1/roles · Roles & permissions
+GET {{apiBase}}/roles
+Accept: application/json
+X-Correlation-ID: NX-API-134
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-135 | wrong-tenant · GET /api/v1/audit · Audit history
+GET {{apiBase}}/audit
+Accept: application/json
+X-Correlation-ID: NX-API-135
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-136 | wrong-tenant · GET /api/v1/company-profile · Profile & settings
+GET {{apiBase}}/company-profile
+Accept: application/json
+X-Correlation-ID: NX-API-136
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-137 | wrong-tenant · GET /api/v1/me/preferences · Profile & settings
+GET {{apiBase}}/me/preferences
+Accept: application/json
+X-Correlation-ID: NX-API-137
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-138 | wrong-tenant · GET /api/v1/records/leads · CRM leads
+GET {{apiBase}}/records/leads
+Accept: application/json
+X-Correlation-ID: NX-API-138
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-139 | wrong-tenant · GET /api/v1/records/customers · Customers
+GET {{apiBase}}/records/customers
+Accept: application/json
+X-Correlation-ID: NX-API-139
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-140 | wrong-tenant · GET /api/v1/records/suppliers · Suppliers
+GET {{apiBase}}/records/suppliers
+Accept: application/json
+X-Correlation-ID: NX-API-140
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-141 | wrong-tenant · GET /api/v1/records/sales · Sales & quotations
+GET {{apiBase}}/records/sales
+Accept: application/json
+X-Correlation-ID: NX-API-141
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-142 | wrong-tenant · GET /api/v1/records/purchasing · Purchasing
+GET {{apiBase}}/records/purchasing
+Accept: application/json
+X-Correlation-ID: NX-API-142
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-143 | wrong-tenant · GET /api/v1/records/inventory · Products & inventory
+GET {{apiBase}}/records/inventory
+Accept: application/json
+X-Correlation-ID: NX-API-143
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-144 | wrong-tenant · GET /api/v1/records/finance · Invoices & bills
+GET {{apiBase}}/records/finance
+Accept: application/json
+X-Correlation-ID: NX-API-144
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-145 | wrong-tenant · GET /api/v1/records/payments · Payments & reconciliation
+GET {{apiBase}}/records/payments
+Accept: application/json
+X-Correlation-ID: NX-API-145
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-146 | wrong-tenant · GET /api/v1/records/budgets · Budgets & reports
+GET {{apiBase}}/records/budgets
+Accept: application/json
+X-Correlation-ID: NX-API-146
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-147 | wrong-tenant · GET /api/v1/records/approvals · Approvals
+GET {{apiBase}}/records/approvals
+Accept: application/json
+X-Correlation-ID: NX-API-147
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-148 | wrong-tenant · GET /api/v1/hr/departments · Departments
+GET {{apiBase}}/hr/departments
+Accept: application/json
+X-Correlation-ID: NX-API-148
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-149 | wrong-tenant · GET /api/v1/hr/employees · Employees
+GET {{apiBase}}/hr/employees
+Accept: application/json
+X-Correlation-ID: NX-API-149
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-150 | wrong-tenant · GET /api/v1/hr/shifts · Shifts
+GET {{apiBase}}/hr/shifts
+Accept: application/json
+X-Correlation-ID: NX-API-150
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-151 | wrong-tenant · GET /api/v1/hr/attendance · Attendance
+GET {{apiBase}}/hr/attendance
+Accept: application/json
+X-Correlation-ID: NX-API-151
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-152 | wrong-tenant · GET /api/v1/hr/leaves · Leave requests
+GET {{apiBase}}/hr/leaves
+Accept: application/json
+X-Correlation-ID: NX-API-152
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-153 | wrong-tenant · GET /api/v1/hr/payroll/runs · Payroll runs
+GET {{apiBase}}/hr/payroll/runs
+Accept: application/json
+X-Correlation-ID: NX-API-153
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-154 | wrong-tenant · GET /api/v1/hr/payroll/payslips · My payslips
+GET {{apiBase}}/hr/payroll/payslips
+Accept: application/json
+X-Correlation-ID: NX-API-154
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-155 | wrong-tenant · GET /api/v1/workspace/storefronts · Storefronts
+GET {{apiBase}}/workspace/storefronts
+Accept: application/json
+X-Correlation-ID: NX-API-155
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-156 | wrong-tenant · GET /api/v1/workspace/orders · Store orders
+GET {{apiBase}}/workspace/orders
+Accept: application/json
+X-Correlation-ID: NX-API-156
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-157 | wrong-tenant · GET /api/v1/workspace/promotions · Promotions
+GET {{apiBase}}/workspace/promotions
+Accept: application/json
+X-Correlation-ID: NX-API-157
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-158 | wrong-tenant · GET /api/v1/workspace/returns · Returns & refunds
+GET {{apiBase}}/workspace/returns
+Accept: application/json
+X-Correlation-ID: NX-API-158
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-159 | wrong-tenant · GET /api/v1/workspace/pos_sessions · POS sessions
+GET {{apiBase}}/workspace/pos_sessions
+Accept: application/json
+X-Correlation-ID: NX-API-159
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-160 | wrong-tenant · GET /api/v1/workspace/projects · Projects
+GET {{apiBase}}/workspace/projects
+Accept: application/json
+X-Correlation-ID: NX-API-160
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-161 | wrong-tenant · GET /api/v1/workspace/timesheets · Timesheets
+GET {{apiBase}}/workspace/timesheets
+Accept: application/json
+X-Correlation-ID: NX-API-161
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-162 | wrong-tenant · GET /api/v1/workspace/service_tickets · Service tickets
+GET {{apiBase}}/workspace/service_tickets
+Accept: application/json
+X-Correlation-ID: NX-API-162
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-163 | wrong-tenant · GET /api/v1/workspace/field_jobs · Field jobs
+GET {{apiBase}}/workspace/field_jobs
+Accept: application/json
+X-Correlation-ID: NX-API-163
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-164 | wrong-tenant · GET /api/v1/workspace/documents · Documents
+GET {{apiBase}}/workspace/documents
+Accept: application/json
+X-Correlation-ID: NX-API-164
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-165 | wrong-tenant · GET /api/v1/workspace/workflows · Workflow designer
+GET {{apiBase}}/workspace/workflows
+Accept: application/json
+X-Correlation-ID: NX-API-165
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-166 | wrong-tenant · GET /api/v1/workspace/workflow_runs · Workflow run history
+GET {{apiBase}}/workspace/workflow_runs
+Accept: application/json
+X-Correlation-ID: NX-API-166
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-167 | wrong-tenant · GET /api/v1/workspace/reports · Reports
+GET {{apiBase}}/workspace/reports
+Accept: application/json
+X-Correlation-ID: NX-API-167
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-168 | wrong-tenant · GET /api/v1/workspace/custom_fields · Custom fields
+GET {{apiBase}}/workspace/custom_fields
+Accept: application/json
+X-Correlation-ID: NX-API-168
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-169 | wrong-tenant · GET /api/v1/workspace/api_clients · API clients
+GET {{apiBase}}/workspace/api_clients
+Accept: application/json
+X-Correlation-ID: NX-API-169
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-170 | wrong-tenant · GET /api/v1/workspace/integration_health · Integration health
+GET {{apiBase}}/workspace/integration_health
+Accept: application/json
+X-Correlation-ID: NX-API-170
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-171 | wrong-tenant · GET /api/v1/workspace/imports · Import jobs
+GET {{apiBase}}/workspace/imports
+Accept: application/json
+X-Correlation-ID: NX-API-171
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-172 | wrong-tenant · POST /api/v1/workspace/assistant/ask · Workspace assistant
+POST {{apiBase}}/workspace/assistant/ask
+Accept: application/json
+X-Correlation-ID: NX-API-172
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+Content-Type: application/json
+
+{
+  "question": "List sample projects",
+  "sources": [
+    "projects"
+  ]
+}
+
+
+# Expected: 403 or empty tenant-scoped result; no foreign tenant records are exposed.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-173 | content-type · GET /api/v1/workspace/analytics/summary · Business overview
+GET {{apiBase}}/workspace/analytics/summary
+Accept: application/json
+X-Correlation-ID: NX-API-173
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-174 | content-type · GET /api/v1/me/workspaces · Workspaces
+GET {{apiBase}}/me/workspaces
+Accept: application/json
+X-Correlation-ID: NX-API-174
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-175 | content-type · GET /api/v1/members · Users & access
+GET {{apiBase}}/members
+Accept: application/json
+X-Correlation-ID: NX-API-175
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-176 | content-type · GET /api/v1/branches · Branches
+GET {{apiBase}}/branches
+Accept: application/json
+X-Correlation-ID: NX-API-176
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-177 | content-type · GET /api/v1/roles · Roles & permissions
+GET {{apiBase}}/roles
+Accept: application/json
+X-Correlation-ID: NX-API-177
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-178 | content-type · GET /api/v1/audit · Audit history
+GET {{apiBase}}/audit
+Accept: application/json
+X-Correlation-ID: NX-API-178
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-179 | content-type · GET /api/v1/company-profile · Profile & settings
+GET {{apiBase}}/company-profile
+Accept: application/json
+X-Correlation-ID: NX-API-179
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-180 | content-type · GET /api/v1/me/preferences · Profile & settings
+GET {{apiBase}}/me/preferences
+Accept: application/json
+X-Correlation-ID: NX-API-180
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-181 | content-type · GET /api/v1/records/leads · CRM leads
+GET {{apiBase}}/records/leads
+Accept: application/json
+X-Correlation-ID: NX-API-181
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-182 | content-type · GET /api/v1/records/customers · Customers
+GET {{apiBase}}/records/customers
+Accept: application/json
+X-Correlation-ID: NX-API-182
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-183 | content-type · GET /api/v1/records/suppliers · Suppliers
+GET {{apiBase}}/records/suppliers
+Accept: application/json
+X-Correlation-ID: NX-API-183
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-184 | content-type · GET /api/v1/records/sales · Sales & quotations
+GET {{apiBase}}/records/sales
+Accept: application/json
+X-Correlation-ID: NX-API-184
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-185 | content-type · GET /api/v1/records/purchasing · Purchasing
+GET {{apiBase}}/records/purchasing
+Accept: application/json
+X-Correlation-ID: NX-API-185
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-186 | content-type · GET /api/v1/records/inventory · Products & inventory
+GET {{apiBase}}/records/inventory
+Accept: application/json
+X-Correlation-ID: NX-API-186
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-187 | content-type · GET /api/v1/records/finance · Invoices & bills
+GET {{apiBase}}/records/finance
+Accept: application/json
+X-Correlation-ID: NX-API-187
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-188 | content-type · GET /api/v1/records/payments · Payments & reconciliation
+GET {{apiBase}}/records/payments
+Accept: application/json
+X-Correlation-ID: NX-API-188
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-189 | content-type · GET /api/v1/records/budgets · Budgets & reports
+GET {{apiBase}}/records/budgets
+Accept: application/json
+X-Correlation-ID: NX-API-189
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-190 | content-type · GET /api/v1/records/approvals · Approvals
+GET {{apiBase}}/records/approvals
+Accept: application/json
+X-Correlation-ID: NX-API-190
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-191 | content-type · GET /api/v1/hr/departments · Departments
+GET {{apiBase}}/hr/departments
+Accept: application/json
+X-Correlation-ID: NX-API-191
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-192 | content-type · GET /api/v1/hr/employees · Employees
+GET {{apiBase}}/hr/employees
+Accept: application/json
+X-Correlation-ID: NX-API-192
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-193 | content-type · GET /api/v1/hr/shifts · Shifts
+GET {{apiBase}}/hr/shifts
+Accept: application/json
+X-Correlation-ID: NX-API-193
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-194 | content-type · GET /api/v1/hr/attendance · Attendance
+GET {{apiBase}}/hr/attendance
+Accept: application/json
+X-Correlation-ID: NX-API-194
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-195 | content-type · GET /api/v1/hr/leaves · Leave requests
+GET {{apiBase}}/hr/leaves
+Accept: application/json
+X-Correlation-ID: NX-API-195
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-196 | content-type · GET /api/v1/hr/payroll/runs · Payroll runs
+GET {{apiBase}}/hr/payroll/runs
+Accept: application/json
+X-Correlation-ID: NX-API-196
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-197 | content-type · GET /api/v1/hr/payroll/payslips · My payslips
+GET {{apiBase}}/hr/payroll/payslips
+Accept: application/json
+X-Correlation-ID: NX-API-197
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-198 | content-type · GET /api/v1/workspace/storefronts · Storefronts
+GET {{apiBase}}/workspace/storefronts
+Accept: application/json
+X-Correlation-ID: NX-API-198
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-199 | content-type · GET /api/v1/workspace/orders · Store orders
+GET {{apiBase}}/workspace/orders
+Accept: application/json
+X-Correlation-ID: NX-API-199
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.
+
+### NX-API-200 | content-type · GET /api/v1/workspace/promotions · Promotions
+GET {{apiBase}}/workspace/promotions
+Accept: application/json
+X-Correlation-ID: NX-API-200
+Authorization: Bearer {{token}}
+X-Tenant-ID: {{tenantId}}
+
+
+# Expected: 200 JSON with an application/json content type.
+# Log: Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.

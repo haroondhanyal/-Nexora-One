@@ -1,0 +1,956 @@
+{
+  "page": "Payroll runs",
+  "pageKey": "payroll",
+  "section": "People",
+  "locatorFile": "../../locators/payroll.json",
+  "apiPaths": [
+    "/api/v1/hr/payroll/runs"
+  ],
+  "dataTables": [
+    "payroll_runs"
+  ],
+  "caseCounts": {
+    "ui": 8,
+    "api": 5,
+    "bdd": 4,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-193",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payroll runs · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-194",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payroll runs · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-195",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payroll runs · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-196",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payroll runs · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Period start shows its submitted values.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-197",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Payroll runs · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-198",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Payroll runs · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-199",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Payroll runs · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-200",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Payroll runs · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-024",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/hr/payroll/runs · Payroll runs",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/runs",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-067",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/hr/payroll/runs · Payroll runs",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/runs",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-110",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/hr/payroll/runs · Payroll runs",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/runs",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-153",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/hr/payroll/runs · Payroll runs",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/runs",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-196",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/hr/payroll/runs · Payroll runs",
+        "method": "GET",
+        "path": "/api/v1/hr/payroll/runs",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-023",
+        "feature": "Payroll runs workflow",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "scenario": "Payroll runs: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/runs and the data tables payroll_runs",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-071",
+        "feature": "Payroll runs workflow",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "scenario": "Payroll runs: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/runs and the data tables payroll_runs",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-119",
+        "feature": "Payroll runs workflow",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "scenario": "Payroll runs: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/runs and the data tables payroll_runs",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-167",
+        "feature": "Payroll runs workflow",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "scenario": "Payroll runs: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/hr/payroll/runs and the data tables payroll_runs",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0022",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0022",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0064",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0064",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0106",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0106",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0148",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0148",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0190",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0190",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0232",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0232",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0274",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0274",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0316",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0316",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0358",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0358",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0400",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0400",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0442",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0442",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0484",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0484",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0526",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0526",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0568",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0568",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0610",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0610",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0652",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0652",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0694",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0694",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0736",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0736",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0778",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0778",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0820",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0820",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0862",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "standard",
+        "table": "payroll_runs",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0862",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0904",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0904",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0946",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0946",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0988",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "difficulty": "high",
+        "table": "payroll_runs",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0988",
+          "source": "payroll",
+          "sample_payload": {
+            "label": "Payroll runs fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in payroll_runs.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

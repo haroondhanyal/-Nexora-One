@@ -317,7 +317,7 @@ Manage local storefront records and inspect their publishing status.
 
 ### Documents
 
-Browse private document metadata and related operational records.
+Browse private document metadata and related operational records. Eligible Core ERP, HR employee/payroll/payslip and commerce/operations records also expose a **Files** action for multiple PDF, PNG/JPG/WEBP/GIF, DOCX, XLSX and TXT attachments. Images and PDFs preview in the app; Office files and text download for their matching viewer. Uploads are authenticated, tenant/branch scoped, signature checked, limited to 10 MiB per file, 30 MiB and 10 files per request, and stored with private local permissions. This does not include malware scanning or external object storage.
 
 <p><img src="docs/screenshots/operations/documents-p4.jpg" alt="Documents screen" width="100%" /></p>
 
@@ -497,11 +497,20 @@ The API applies the Alembic baseline migration on startup. Control-plane data is
 
 ## API documentation
 
-The API base path is `/api/v1`; local OpenAPI is at `http://localhost:8000/api/v1/openapi.json`. Route boundaries are in [the architecture notes](docs/architecture.md).
+The API base path is `/api/v1`; local OpenAPI is at `http://localhost:8000/api/v1/openapi.json`. Record attachments use `/workspace/{kind}/{record_id}/attachments` and `/workspace/attachments/{attachment_id}/view`; migration `0008_workspace_attachments` creates tenant-isolated metadata. Route boundaries are in [the architecture notes](docs/architecture.md). The switcher includes ten clearly labeled illustrative sample companies with generated initials marks and industry labels; sample contexts are read-only, and **Add workspace** opens company setup.
 
-## Verification commands
+## Verification and automation
 
-The web package defines `npm run lint` and `npm run build`. Start services with `docker compose up -d --build`; inspect with `docker compose ps` and `docker compose logs api identity odoo`. Automated security and ERP journey checks are still required before either phase can be marked complete.
+The web package defines `npm run lint` and `npm run build`. Nexora's separate [automation workspace](automation/README.md) organizes page objects and locators for all 42 screens, PostgreSQL schema/tenant-isolation checks, and 329 K6 performance cases. Before each K6 run, an inventory check compares every FastAPI method/path route against the workload catalog. Playwright reports separate UI, API and database suites in Allure. Each screen has its own browser capture under `automation/playwright-automation/screenshots/runs/`.
+
+API and database cases require an explicitly configured local test API/workspace; database writes are loopback-only and gated by `NEXORA_E2E_ALLOW_WRITES=1`. Direct RLS database checks require a localhost test database and non-superuser role. K6 execution requires a reachable API and disposable test-workspace owner credentials; without them, the report marks those cases skipped/not run. The report center and K6 analytics can be regenerated and opened locally:
+
+```bash
+npm --prefix automation run report
+npm --prefix automation run report:serve
+```
+
+The generated report center is at `http://127.0.0.1:4178/`. These UI checks do not replace API authorization, persistence, security, ERP posting or production integration verification, so phase completion remains tied to the exit checks below. For container-based service startup, use `docker compose up -d --build`; inspect with `docker compose ps` and `docker compose logs api identity odoo`.
 
 ## Exactly five development phases
 

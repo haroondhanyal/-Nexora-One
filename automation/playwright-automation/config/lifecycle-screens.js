@@ -1,0 +1,9 @@
+// Public entry and account lifecycle states rendered by the Nexora app or its configured identity provider.
+export const lifecycleScreens = [
+  { key: 'auth_loading', title: 'Loading and session check', navTitle: 'Application entry', section: 'Authentication', apiPaths: [], tables: [], primaryHeader: null, primaryLocator: '.brand-splash', dataSource: 'Client session and Keycloak OIDC initialization', testability: 'Nexora app' },
+  { key: 'auth_error', title: 'Identity service unavailable', navTitle: 'Authentication error', section: 'Authentication', apiPaths: [], tables: [], primaryHeader: null, primaryLocator: '.brand-splash-error', dataSource: 'Keycloak OIDC availability state', testability: 'Nexora app' },
+  { key: 'auth_sign_in', title: 'Sign in', navTitle: 'Sign in', section: 'Authentication', apiPaths: [], tables: [], primaryHeader: null, primaryLocator: '.setup-form-wrap', dataSource: 'Keycloak OIDC sign-in; local demo owner in local-demo mode', testability: 'Nexora app and identity provider' },
+  { key: 'auth_sign_up', title: 'Sign up', navTitle: 'Sign up', section: 'Authentication', apiPaths: [], tables: [], primaryHeader: null, primaryLocator: '.setup-form-wrap', dataSource: 'Keycloak hosted account-registration flow', testability: 'External identity provider page' },
+  { key: 'auth_password_reset', title: 'Forgot/reset password', navTitle: 'Forgot password', section: 'Authentication', apiPaths: [], tables: [], primaryHeader: null, primaryLocator: '.setup-form-wrap', dataSource: 'Keycloak hosted forgot-credentials flow', testability: 'External identity provider page' },
+  { key: 'workspace_setup', title: 'Create workspace', navTitle: 'Workspace setup', section: 'Workspace setup', apiPaths: [], tables: ['tenants', 'memberships'], primaryHeader: null, primaryLocator: '.setup-form', dataSource: 'PostgreSQL: tenants, memberships', testability: 'Nexora app' },
+];

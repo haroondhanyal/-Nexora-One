@@ -1,0 +1,987 @@
+{
+  "page": "Workspaces",
+  "pageKey": "workspaces",
+  "section": "Workspace",
+  "locatorFile": "../../locators/workspaces.json",
+  "apiPaths": [
+    "/api/v1/me/workspaces"
+  ],
+  "dataTables": [
+    "tenants",
+    "memberships"
+  ],
+  "caseCounts": {
+    "ui": 9,
+    "api": 5,
+    "bdd": 5,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-010",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspaces · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-011",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspaces · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-012",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-013",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Workspace name shows its submitted values.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-014",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Workspaces · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/me/workspaces and its mapped data source (tenants, memberships), scoped to the active workspace.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-015",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Workspaces · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-016",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Workspaces · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/me/workspaces and its mapped data source (tenants, memberships), scoped to the active workspace.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-017",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Workspaces · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-018",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-002",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/me/workspaces · Workspaces",
+        "method": "GET",
+        "path": "/api/v1/me/workspaces",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-045",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/me/workspaces · Workspaces",
+        "method": "GET",
+        "path": "/api/v1/me/workspaces",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-088",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/me/workspaces · Workspaces",
+        "method": "GET",
+        "path": "/api/v1/me/workspaces",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-131",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/me/workspaces · Workspaces",
+        "method": "GET",
+        "path": "/api/v1/me/workspaces",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-174",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/me/workspaces · Workspaces",
+        "method": "GET",
+        "path": "/api/v1/me/workspaces",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-002",
+        "feature": "Workspaces workflow",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "scenario": "Workspaces: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/me/workspaces and the data tables tenants, memberships",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-050",
+        "feature": "Workspaces workflow",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "scenario": "Workspaces: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/me/workspaces and the data tables tenants, memberships",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-098",
+        "feature": "Workspaces workflow",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "scenario": "Workspaces: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/me/workspaces and the data tables tenants, memberships",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-146",
+        "feature": "Workspaces workflow",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "scenario": "Workspaces: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/me/workspaces and the data tables tenants, memberships",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-194",
+        "feature": "Workspaces workflow",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "scenario": "Workspaces: the owner changes to another workspace",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner changes to another workspace",
+        "then": "Then only data belonging to the selected workspace is shown",
+        "and": "And the result is consistent with the screen API /api/v1/me/workspaces and the data tables tenants, memberships",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0002",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0002",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0044",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0044",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0086",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0086",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0128",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0128",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0170",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0170",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0212",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0212",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0254",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0254",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0296",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0296",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0338",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0338",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0380",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0380",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0422",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0422",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0464",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0464",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0506",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0506",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0548",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0548",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0590",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0590",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0632",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0632",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0674",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0674",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0716",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0716",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0758",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0758",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0800",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0800",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0842",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0842",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0884",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0884",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0926",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0926",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0968",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0968",
+          "source": "workspaces",
+          "sample_payload": {
+            "label": "Workspaces fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

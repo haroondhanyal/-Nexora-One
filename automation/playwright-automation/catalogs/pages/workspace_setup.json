@@ -1,0 +1,839 @@
+{
+  "page": "Create workspace",
+  "pageKey": "workspace_setup",
+  "section": "Workspace setup",
+  "locatorFile": "../../locators/workspace_setup.json",
+  "apiPaths": [],
+  "dataTables": [
+    "tenants",
+    "memberships"
+  ],
+  "caseCounts": {
+    "ui": 8,
+    "api": 0,
+    "bdd": 4,
+    "database": 23
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-393",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Create workspace · smoke · Page entry and navigation",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Open workspace setup and verify company-name input, six industry choices and Create workspace action.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Open workspace setup and verify company-name input, six industry choices and Create workspace action. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-394",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Create workspace · smoke · Primary data renders",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Open workspace setup and verify company-name input, six industry choices and Create workspace action.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Open workspace setup and verify company-name input, six industry choices and Create workspace action. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-395",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Create workspace · regression · Search and clear",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Select each industry option and verify the selected choice before submitting.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-396",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Create workspace · regression · Create validation and save",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Select each industry option and verify the selected choice before submitting.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-397",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Create workspace · integration · Page to API contract",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Create a unique test workspace and verify its tenant and owner membership are available after setup.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Create a unique test workspace and verify its tenant and owner membership are available after setup. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-398",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Create workspace · negative · Required value omitted",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Submit an empty or too-short company name and verify inline validation with no tenant created.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Submit an empty or too-short company name and verify inline validation with no tenant created. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-399",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Create workspace · integration · UI to data persistence",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Create a unique test workspace and verify its tenant and owner membership are available after setup.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Create a unique test workspace and verify its tenant and owner membership are available after setup. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-400",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Create workspace · negative · Unauthenticated request",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Submit an empty or too-short company name and verify inline validation with no tenant created.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Submit an empty or too-short company name and verify inline validation with no tenant created. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [],
+    "bdd": [
+      {
+        "id": "NX-BDD-048",
+        "feature": "Create workspace workflow",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "scenario": "Create workspace: the owner submits a valid company name and industry",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits a valid company name and industry",
+        "then": "Then one workspace and its initial owner membership are created",
+        "and": "And the result is consistent with PostgreSQL: tenants, memberships and the data tables tenants, memberships",
+        "testData": "Use a unique company name with valid industry; delete the test tenant and membership after verification."
+      },
+      {
+        "id": "NX-BDD-096",
+        "feature": "Create workspace workflow",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "scenario": "Create workspace: the owner submits an empty company name",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits an empty company name",
+        "then": "Then required-field validation appears and no workspace is created",
+        "and": "And the result is consistent with PostgreSQL: tenants, memberships and the data tables tenants, memberships",
+        "testData": "Use a unique company name with valid industry; delete the test tenant and membership after verification."
+      },
+      {
+        "id": "NX-BDD-144",
+        "feature": "Create workspace workflow",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "scenario": "Create workspace: the owner selects a different industry",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner selects a different industry",
+        "then": "Then the selected industry is shown as the active choice before submission",
+        "and": "And the result is consistent with PostgreSQL: tenants, memberships and the data tables tenants, memberships",
+        "testData": "Use a unique company name with valid industry; delete the test tenant and membership after verification."
+      },
+      {
+        "id": "NX-BDD-192",
+        "feature": "Create workspace workflow",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "scenario": "Create workspace: the owner submits a company name below the minimum length",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits a company name below the minimum length",
+        "then": "Then validation appears and no tenant is created",
+        "and": "And the result is consistent with PostgreSQL: tenants, memberships and the data tables tenants, memberships",
+        "testData": "Use a unique company name with valid industry; delete the test tenant and membership after verification."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0042",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0042",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0084",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0084",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0126",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0126",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0168",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0168",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0210",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0210",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0252",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0252",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0294",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0294",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0336",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0336",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0378",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0378",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0420",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0420",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0462",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0462",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0504",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0504",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0546",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0546",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0588",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0588",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0630",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0630",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0672",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0672",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0714",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0714",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0756",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0756",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0798",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0798",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0840",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "standard",
+        "table": "tenants",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0840",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0882",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0882",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0924",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0924",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0966",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "difficulty": "high",
+        "table": "tenants",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0966",
+          "source": "workspace_setup",
+          "sample_payload": {
+            "label": "Create workspace fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in tenants.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

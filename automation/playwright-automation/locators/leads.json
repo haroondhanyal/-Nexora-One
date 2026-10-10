@@ -1,0 +1,65 @@
+{
+  "page": "CRM leads",
+  "pageKey": "leads",
+  "section": "Core ERP",
+  "navigationLabel": "CRM leads",
+  "expectedHeading": "CRM leads",
+  "expectedFirstColumn": "Lead",
+  "apiPaths": [
+    "/api/v1/records/leads"
+  ],
+  "dataTables": [
+    "business_records"
+  ],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "pageHeading": {
+      "type": "role",
+      "role": "heading",
+      "level": 1
+    },
+    "sidebarItem": {
+      "type": "role",
+      "role": "button",
+      "name": "CRM leads"
+    },
+    "primaryContent": {
+      "type": "role",
+      "role": "table"
+    },
+    "globalSearch": {
+      "type": "placeholder",
+      "value": "Search records..."
+    },
+    "workspaceSwitcher": {
+      "type": "role",
+      "role": "button",
+      "name": "Workspace:",
+      "exact": false
+    },
+    "table": {
+      "type": "role",
+      "role": "table"
+    },
+    "tableHeader": {
+      "type": "role",
+      "role": "columnheader"
+    },
+    "tableRows": {
+      "type": "css",
+      "selector": "tbody tr"
+    },
+    "primaryAction": {
+      "type": "css",
+      "selector": ".page-heading button"
+    },
+    "form": {
+      "type": "css",
+      "selector": "form.record-dialog"
+    },
+    "validation": {
+      "type": "css",
+      "selector": "[aria-invalid=\"true\"], [role=\"alert\"]"
+    }
+  }
+}

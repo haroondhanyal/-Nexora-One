@@ -1,0 +1,32 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dark Modern",
+  "material-icon-theme.folders.associations": {
+    "automation": "automation",
+    "playwright-automation": "test",
+    "tests": "folder-test",
+    "ui": "folder-test",
+    "smoke": "folder-test",
+    "regression": "folder-test",
+    "integration": "folder-integration",
+    "negative": "folder-security",
+    "api": "folder-api",
+    "bdd": "folder-feature",
+    "features": "folder-feature",
+    "database": "folder-database",
+    "pages": "folder-components",
+    "locators": "folder-config",
+    "catalogs": "folder-docs"
+  },
+  "material-icon-theme.files.associations": {
+    "*.spec.js": "playwright",
+    "*.feature": "cucumber",
+    "*.http": "rest"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/playwright-report": true,
+    "**/test-results": true,
+    "**/allure-results": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "page": "Loading and session check",
+  "pageKey": "auth_loading",
+  "section": "Authentication",
+  "navigationLabel": "Application entry",
+  "expectedHeading": "Loading and session check",
+  "expectedFirstColumn": null,
+  "apiPaths": [],
+  "dataTables": [],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "brandMark": {
+      "type": "css",
+      "selector": ".brand-splash img"
+    },
+    "pageTitle": {
+      "type": "role",
+      "role": "heading",
+      "name": "Nexora One",
+      "level": 1
+    },
+    "progress": {
+      "type": "css",
+      "selector": ".brand-splash-progress"
+    }
+  }
+}

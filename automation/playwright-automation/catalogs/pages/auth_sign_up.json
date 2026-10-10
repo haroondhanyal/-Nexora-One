@@ -1,0 +1,214 @@
+{
+  "page": "Sign up",
+  "pageKey": "auth_sign_up",
+  "section": "Authentication",
+  "locatorFile": "../../locators/auth_sign_up.json",
+  "apiPaths": [],
+  "dataTables": [],
+  "caseCounts": {
+    "ui": 8,
+    "api": 0,
+    "bdd": 4,
+    "database": 0
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-377",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sign up · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Open the hosted Keycloak registration page and verify its registration form loads.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Open the hosted Keycloak registration page and verify its registration form loads. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-378",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sign up · smoke · Primary data renders",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Open the hosted Keycloak registration page and verify its registration form loads.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Open the hosted Keycloak registration page and verify its registration form loads. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-379",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sign up · regression · Search and clear",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Submit valid test identity data and verify the configured registration/verification response.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Submit valid test identity data and verify the configured registration/verification response. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-380",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sign up · regression · Create validation and save",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Submit valid test identity data and verify the configured registration/verification response.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Submit valid test identity data and verify the configured registration/verification response. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-381",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sign up · integration · Page to API contract",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Complete the configured registration flow and verify the new identity can start workspace setup.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Complete the configured registration flow and verify the new identity can start workspace setup. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-382",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Sign up · negative · Required value omitted",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Submit invalid or incomplete identity data and verify validation without account creation.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Submit invalid or incomplete identity data and verify validation without account creation. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-383",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sign up · integration · UI to data persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Complete the configured registration flow and verify the new identity can start workspace setup.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Complete the configured registration flow and verify the new identity can start workspace setup. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-384",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "section": "Authentication",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Sign up · negative · Unauthenticated request",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+        "steps": [
+          "Open Sign up from the signed-out page using a configured identity provider.",
+          "Submit invalid or incomplete identity data and verify validation without account creation.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign up lifecycle screen behaves as expected: Submit invalid or incomplete identity data and verify validation without account creation. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_up.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [],
+    "bdd": [
+      {
+        "id": "NX-BDD-046",
+        "feature": "Sign up workflow",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "scenario": "Sign up: a visitor submits valid registration details",
+        "given": "Given a visitor is on the Nexora account lifecycle",
+        "when": "When a visitor submits valid registration details",
+        "then": "Then the identity provider accepts the details or displays its configured verification step",
+        "and": "And the result is consistent with Keycloak hosted account-registration flow and the configured Keycloak identity provider",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-094",
+        "feature": "Sign up workflow",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "scenario": "Sign up: a visitor submits invalid registration details",
+        "given": "Given a visitor is on the Nexora account lifecycle",
+        "when": "When a visitor submits invalid registration details",
+        "then": "Then field-level validation is shown and no account is created",
+        "and": "And the result is consistent with Keycloak hosted account-registration flow and the configured Keycloak identity provider",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-142",
+        "feature": "Sign up workflow",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "scenario": "Sign up: a visitor uses an email already registered",
+        "given": "Given a visitor is on the Nexora account lifecycle",
+        "when": "When a visitor uses an email already registered",
+        "then": "Then the provider displays its safe duplicate-account response",
+        "and": "And the result is consistent with Keycloak hosted account-registration flow and the configured Keycloak identity provider",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-190",
+        "feature": "Sign up workflow",
+        "page": "Sign up",
+        "pageKey": "auth_sign_up",
+        "scenario": "Sign up: a visitor submits mismatched password confirmation",
+        "given": "Given a visitor is on the Nexora account lifecycle",
+        "when": "When a visitor submits mismatched password confirmation",
+        "then": "Then password confirmation validation prevents submission",
+        "and": "And the result is consistent with Keycloak hosted account-registration flow and the configured Keycloak identity provider",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": []
+  }
+}

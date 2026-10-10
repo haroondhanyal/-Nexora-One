@@ -1,0 +1,938 @@
+{
+  "page": "Returns & refunds",
+  "pageKey": "returns",
+  "section": "Commerce",
+  "locatorFile": "../../locators/returns.json",
+  "apiPaths": [
+    "/api/v1/workspace/returns"
+  ],
+  "dataTables": [
+    "workspace_resources"
+  ],
+  "caseCounts": {
+    "ui": 8,
+    "api": 4,
+    "bdd": 4,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-233",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Returns & refunds · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-234",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Returns & refunds · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-235",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Returns & refunds · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-236",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Returns & refunds · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-237",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Returns & refunds · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-238",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Returns & refunds · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-239",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Returns & refunds · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-240",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Returns & refunds · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-029",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/workspace/returns · Returns & refunds",
+        "method": "GET",
+        "path": "/api/v1/workspace/returns",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-072",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/workspace/returns · Returns & refunds",
+        "method": "GET",
+        "path": "/api/v1/workspace/returns",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-115",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/workspace/returns · Returns & refunds",
+        "method": "GET",
+        "path": "/api/v1/workspace/returns",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-158",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/workspace/returns · Returns & refunds",
+        "method": "GET",
+        "path": "/api/v1/workspace/returns",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-028",
+        "feature": "Returns & refunds workflow",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "scenario": "Returns & refunds: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/workspace/returns and the data tables workspace_resources",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-076",
+        "feature": "Returns & refunds workflow",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "scenario": "Returns & refunds: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/workspace/returns and the data tables workspace_resources",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-124",
+        "feature": "Returns & refunds workflow",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "scenario": "Returns & refunds: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/workspace/returns and the data tables workspace_resources",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-172",
+        "feature": "Returns & refunds workflow",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "scenario": "Returns & refunds: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/workspace/returns and the data tables workspace_resources",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0027",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0027",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0069",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0069",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0111",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0111",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0153",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0153",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0195",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0195",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0237",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0237",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0279",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0279",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0321",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0321",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0363",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0363",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0405",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0405",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0447",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0447",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0489",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0489",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0531",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0531",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0573",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0573",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0615",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0615",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0657",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0657",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0699",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0699",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0741",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0741",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0783",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0783",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0825",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "standard",
+        "table": "workspace_resources",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0825",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0867",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0867",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0909",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0909",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0951",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0951",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0993",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "difficulty": "high",
+        "table": "workspace_resources",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0993",
+          "source": "returns",
+          "sample_payload": {
+            "label": "Returns & refunds fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in workspace_resources.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

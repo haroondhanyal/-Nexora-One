@@ -1,0 +1,974 @@
+{
+  "page": "Sales & quotations",
+  "pageKey": "sales",
+  "section": "Core ERP",
+  "locatorFile": "../../locators/sales.json",
+  "apiPaths": [
+    "/api/v1/records/sales"
+  ],
+  "dataTables": [
+    "business_records"
+  ],
+  "caseCounts": {
+    "ui": 9,
+    "api": 5,
+    "bdd": 4,
+    "database": 24
+  },
+  "cases": {
+    "ui": [
+      {
+        "id": "NX-UI-091",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sales & quotations · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-092",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sales & quotations · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-093",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sales & quotations · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-094",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sales & quotations · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Document shows its submitted values.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-095",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sales & quotations · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-096",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Sales & quotations · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-097",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sales & quotations · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-098",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Sales & quotations · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-099",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sales & quotations · integration · Workspace isolation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      }
+    ],
+    "api": [
+      {
+        "id": "NX-API-012",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "title": "success · GET /api/v1/records/sales · Sales & quotations",
+        "method": "GET",
+        "path": "/api/v1/records/sales",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON; response has the documented collection or resource shape.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-055",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "title": "missing-auth · GET /api/v1/records/sales · Sales & quotations",
+        "method": "GET",
+        "path": "/api/v1/records/sales",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "401; response does not disclose tenant data.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-098",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "title": "missing-tenant · GET /api/v1/records/sales · Sales & quotations",
+        "method": "GET",
+        "path": "/api/v1/records/sales",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "4xx; request without X-Tenant-ID is rejected.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-141",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "title": "wrong-tenant · GET /api/v1/records/sales · Sales & quotations",
+        "method": "GET",
+        "path": "/api/v1/records/sales",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "403 or empty tenant-scoped result; no foreign tenant records are exposed.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      },
+      {
+        "id": "NX-API-184",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "title": "content-type · GET /api/v1/records/sales · Sales & quotations",
+        "method": "GET",
+        "path": "/api/v1/records/sales",
+        "headers": {
+          "Authorization": "Bearer <test-token>",
+          "X-Tenant-ID": "<disposable-test-tenant>",
+          "Accept": "application/json"
+        },
+        "body": null,
+        "expected": "200 JSON with an application/json content type.",
+        "requestLog": "Record case ID, method, path, tenant ID (masked), status, elapsed milliseconds, correlation/request ID, and response validation; never log bearer tokens or personal data.",
+        "evidence": "Attach sanitized request/response log and Playwright trace on failure."
+      }
+    ],
+    "bdd": [
+      {
+        "id": "NX-BDD-011",
+        "feature": "Sales & quotations workflow",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "scenario": "Sales & quotations: an owner opens the page",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When an owner opens the page",
+        "then": "Then the page heading and primary content are visible",
+        "and": "And the result is consistent with the screen API /api/v1/records/sales and the data tables business_records",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-059",
+        "feature": "Sales & quotations workflow",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "scenario": "Sales & quotations: the owner searches for a known record",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner searches for a known record",
+        "then": "Then the matching record is shown and unrelated records are hidden",
+        "and": "And the result is consistent with the screen API /api/v1/records/sales and the data tables business_records",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-107",
+        "feature": "Sales & quotations workflow",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "scenario": "Sales & quotations: the owner submits valid required fields",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner submits valid required fields",
+        "then": "Then the record is saved and displayed in the active workspace",
+        "and": "And the result is consistent with the screen API /api/v1/records/sales and the data tables business_records",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      },
+      {
+        "id": "NX-BDD-155",
+        "feature": "Sales & quotations workflow",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "scenario": "Sales & quotations: the owner omits a required field",
+        "given": "Given the Nexora owner is authenticated or is creating a workspace",
+        "when": "When the owner omits a required field",
+        "then": "Then field validation appears and the record is not saved",
+        "and": "And the result is consistent with the screen API /api/v1/records/sales and the data tables business_records",
+        "testData": "Use the configured test identity only; do not use real customer credentials."
+      }
+    ],
+    "database": [
+      {
+        "id": "NX-DB-0010",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0010",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0052",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0052",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0094",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0094",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0136",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0136",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0178",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0178",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0220",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0220",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0262",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0262",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0304",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0304",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0346",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0346",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0388",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0388",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0430",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0430",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0472",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "verify foreign-key references",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0472",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: verify foreign-key references.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0514",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "verify timestamp and status persistence",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0514",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: verify timestamp and status persistence.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0556",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "confirm cleanup removes the fixture",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0556",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: confirm cleanup removes the fixture.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0598",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "select tenant-scoped rows",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0598",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: select tenant-scoped rows.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0640",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "insert a valid fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0640",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: insert a valid fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0682",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "update the fixture row with the current version",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0682",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: update the fixture row with the current version.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0724",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0724",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0766",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "delete the fixture row",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0766",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: delete the fixture row.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0808",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "reject a row with a missing required value",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0808",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: reject a row with a missing required value.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0850",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "standard",
+        "table": "business_records",
+        "action": "reject a duplicate business key",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0850",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: reject a duplicate business key.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Operation is rejected with the expected constraint or authorization error and leaves stored data unchanged.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0892",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "rollback a transaction after a failed write",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0892",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: rollback a transaction after a failed write.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "Database state matches the requested operation; tenant scope, version, and cleanup are verified.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0934",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "deny a cross-tenant read",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction is read-only.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0934",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: deny a cross-tenant read.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      },
+      {
+        "id": "NX-DB-0976",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "difficulty": "high",
+        "table": "business_records",
+        "action": "deny a cross-tenant update",
+        "context": "Disposable PostgreSQL test database; non-superuser role; tenant A owns the fixture; tenant B is an unrelated control; transaction must roll back or clean up.",
+        "data": {
+          "tenant_id": "<test-tenant-A>",
+          "fixture_key": "NX-DB-0976",
+          "source": "sales",
+          "sample_payload": {
+            "label": "Sales & quotations fixture",
+            "status": "test"
+          }
+        },
+        "steps": [
+          "Arrange the documented fixture in business_records.",
+          "Execute action: deny a cross-tenant update.",
+          "Read the affected row through the application role and verify tenant ownership, persisted values, and audit fields.",
+          "Rollback or delete the fixture and verify cleanup."
+        ],
+        "expected": "RLS or API authorization blocks access; tenant B receives no tenant A row.",
+        "transaction": "BEGIN; use unique fixture key; ROLLBACK in finally; never point at production.",
+        "logging": "Record case ID, database/schema/table, masked tenant, operation, row count, SQLSTATE, elapsed time, and rollback status; exclude credentials and personal data."
+      }
+    ]
+  }
+}

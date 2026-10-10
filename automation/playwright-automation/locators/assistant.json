@@ -1,0 +1,65 @@
+{
+  "page": "Workspace assistant",
+  "pageKey": "assistant",
+  "section": "Automation & insights",
+  "navigationLabel": "Workspace assistant",
+  "expectedHeading": "Workspace assistant",
+  "expectedFirstColumn": null,
+  "apiPaths": [
+    "/api/v1/workspace/assistant/ask"
+  ],
+  "dataTables": [
+    "workspace_resources"
+  ],
+  "strategy": "Prefer Playwright role, label, placeholder and text locators. Use ID selectors for unique fields and CSS selectors only for stable layout containers.",
+  "selectors": {
+    "pageHeading": {
+      "type": "role",
+      "role": "heading",
+      "level": 1
+    },
+    "sidebarItem": {
+      "type": "role",
+      "role": "button",
+      "name": "Workspace assistant"
+    },
+    "primaryContent": {
+      "type": "css",
+      "selector": ".page-content .settings-card .settings-form"
+    },
+    "globalSearch": {
+      "type": "placeholder",
+      "value": "Search records..."
+    },
+    "workspaceSwitcher": {
+      "type": "role",
+      "role": "button",
+      "name": "Workspace:",
+      "exact": false
+    },
+    "table": {
+      "type": "role",
+      "role": "table"
+    },
+    "tableHeader": {
+      "type": "role",
+      "role": "columnheader"
+    },
+    "tableRows": {
+      "type": "css",
+      "selector": "tbody tr"
+    },
+    "primaryAction": {
+      "type": "css",
+      "selector": ".page-heading button"
+    },
+    "form": {
+      "type": "css",
+      "selector": "form.record-dialog"
+    },
+    "validation": {
+      "type": "css",
+      "selector": "[aria-invalid=\"true\"], [role=\"alert\"]"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import io
 import json
 import os
 import uuid
+import zipfile
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -19,7 +20,7 @@ from .db import get_db
 from .api_credentials import API_CLIENT_ROLES, new_api_token, token_digest
 from .document_storage import validate_text_upload
 from .reporting import REPORT_GROUPS, REPORT_SOURCES, aggregate_report
-from .models import ApiClientCredential, AuditEvent, Branch, BusinessRecord, IdempotencyKey, Membership, WorkspaceResource
+from .models import ApiClientCredential, AuditEvent, Branch, BusinessRecord, Employee, IdempotencyKey, Membership, PayrollRun, Payslip, WorkspaceAttachment, WorkspaceResource
 from .pos import cash_variance, pos_cash_totals
 from .schemas import PosSaleCreate, ReportRun
 from .security import membership
@@ -44,6 +45,128 @@ KIND_ROLES = {
 }
 BRANCH_REQUIRED = {"orders", "returns", "pos_sessions", "projects", "timesheets", "payments", "service_tickets", "field_jobs", "documents", "imports"}
 INITIAL = {"storefronts":"draft", "orders":"draft", "promotions":"draft", "returns":"pending", "pos_sessions":"open", "projects":"active", "timesheets":"submitted", "payments":"unmatched", "service_tickets":"open", "field_jobs":"scheduled", "documents":"active", "workflows":"draft", "workflow_runs":"queued", "reports":"ready", "api_clients":"active", "webhooks":"active", "custom_fields":"active", "integration_health":"unknown", "imports":"queued"}
+
+ATTACHMENT_TYPES = {
+    ".pdf": ("application/pdf",), ".png": ("image/png",), ".jpg": ("image/jpeg",), ".jpeg": ("image/jpeg",),
+    ".webp": ("image/webp",), ".gif": ("image/gif",), ".txt": ("text/plain",),
+    ".docx": ("application/vnd.openxmlformats-officedocument.wordprocessingml.document",),
+    ".xlsx": ("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",),
+}
+
+def _attachment_parent(db, member, kind, entity_id, write=False):
+    if kind in {"employees", "payroll", "payslips"}:
+        from .hr import HR_USERS, MANAGERS, current_employee
+        if member.role not in HR_USERS:
+            raise HTTPException(403, "HR records are not available to this role")
+        if kind == "employees":
+            row = db.scalar(select(Employee).where(Employee.id == entity_id, Employee.tenant_id == member.tenant_id))
+            if not row: raise HTTPException(404, "Employee not found")
+            if member.role not in MANAGERS and (row.subject != member.subject or member.role != "Employee"):
+                raise HTTPException(404, "Employee not found")
+            if write and member.role not in MANAGERS: raise HTTPException(403, "Only HR managers can attach employee documents")
+        elif kind == "payroll":
+            row = db.scalar(select(PayrollRun).where(PayrollRun.id == entity_id, PayrollRun.tenant_id == member.tenant_id))
+            if not row: raise HTTPException(404, "Payroll run not found")
+            if member.role not in MANAGERS: raise HTTPException(403, "Payroll attachments are only available to HR managers")
+        else:
+            row = db.scalar(select(Payslip).where(Payslip.id == entity_id, Payslip.tenant_id == member.tenant_id))
+            if not row: raise HTTPException(404, "Payslip not found")
+            if member.role not in MANAGERS:
+                employee = current_employee(db, member)
+                if row.employee_id != employee.id or row.released_at is None: raise HTTPException(404, "Payslip not found")
+            if write and member.role not in MANAGERS: raise HTTPException(403, "Only HR managers can attach payslip documents")
+        return row
+    if kind in KINDS:
+        resource = db.scalar(select(WorkspaceResource.id).where(WorkspaceResource.id == entity_id, WorkspaceResource.tenant_id == member.tenant_id, WorkspaceResource.kind == kind))
+        if resource:
+            _allowed(member, kind)
+            row = _row(db, member, kind, entity_id)
+            if write and member.role not in KIND_ROLES[kind] - {"Employee", "Staff"}:
+                raise HTTPException(403, "Only workspace editors can add attachments")
+            return row
+    from .main import KIND_ROLES as CORE_ROLES, RECORD_WRITE_ROLES
+    if kind not in CORE_ROLES or member.role not in CORE_ROLES[kind]:
+        raise HTTPException(403, "This record is not available to your role")
+    if write and member.role not in RECORD_WRITE_ROLES[kind]:
+        raise HTTPException(403, "Only record editors can add attachments")
+    row = db.scalar(select(BusinessRecord).where(BusinessRecord.id == entity_id, BusinessRecord.tenant_id == member.tenant_id, BusinessRecord.kind == kind))
+    if not row:
+        raise HTTPException(404, "Record not found")
+    if member.role not in {"Owner", "Admin"} and row.payload.get("branch_id") not in member.branch_ids:
+        raise HTTPException(404, "Record not found")
+    return row
+
+def _attachment_output(row):
+    return {"id": str(row.id), "filename": row.filename, "media_type": row.media_type, "size_bytes": row.size_bytes, "created_at": row.created_at.isoformat()}
+
+@router.get("/{kind}/{entity_id}/attachments")
+def list_attachments(kind: str, entity_id: uuid.UUID, db: Session = Depends(get_db), member: Membership = Depends(membership)):
+    _attachment_parent(db, member, kind, entity_id)
+    rows = db.scalars(select(WorkspaceAttachment).where(WorkspaceAttachment.tenant_id == member.tenant_id, WorkspaceAttachment.entity_kind == kind, WorkspaceAttachment.entity_id == str(entity_id)).order_by(WorkspaceAttachment.created_at.desc())).all()
+    return [_attachment_output(row) for row in rows]
+
+@router.post("/{kind}/{entity_id}/attachments", status_code=201)
+async def upload_attachments(kind: str, entity_id: uuid.UUID, request: Request, files: list[UploadFile] = File(...), db: Session = Depends(get_db), member: Membership = Depends(membership)):
+    _attachment_parent(db, member, kind, entity_id, write=True)
+    if not files or len(files) > 10:
+        raise HTTPException(422, "Choose between 1 and 10 files")
+    root = Path(os.getenv("DOCUMENT_STORAGE_ROOT", "/tmp/nexora-documents")).resolve()
+    tenant_dir = (root / str(member.tenant_id)).resolve()
+    if root not in tenant_dir.parents:
+        raise HTTPException(500, "Attachment storage path is invalid")
+    saved: list[tuple[WorkspaceAttachment, Path]] = []
+    total = 0
+    try:
+        tenant_dir.mkdir(mode=0o700, parents=True, exist_ok=True); tenant_dir.chmod(0o700)
+        for file in files:
+            filename = Path(file.filename or "").name
+            suffix = Path(filename).suffix.lower()
+            expected = ATTACHMENT_TYPES.get(suffix)
+            if not expected or (file.content_type and file.content_type not in expected and file.content_type != "application/octet-stream"):
+                raise HTTPException(422, "Supported files: PDF, PNG/JPG/WEBP/GIF, DOCX, XLSX and TXT")
+            raw = await file.read(10 * 1024 * 1024 + 1)
+            if len(raw) > 10 * 1024 * 1024:
+                raise HTTPException(413, "Each attachment must be 10 MiB or smaller")
+            total += len(raw)
+            if total > 30 * 1024 * 1024:
+                raise HTTPException(413, "Attachments must total 30 MiB or less")
+            valid = (suffix == ".pdf" and raw.startswith(b"%PDF-")) or (suffix == ".png" and raw.startswith(b"\x89PNG\r\n\x1a\n")) or (suffix in {".jpg", ".jpeg"} and raw.startswith(b"\xff\xd8\xff")) or (suffix == ".gif" and raw.startswith((b"GIF87a", b"GIF89a"))) or (suffix == ".webp" and len(raw) >= 12 and raw[:4] == b"RIFF" and raw[8:12] == b"WEBP") or (suffix in {".docx", ".xlsx"} and raw.startswith(b"PK\x03\x04")) or (suffix == ".txt" and b"\x00" not in raw)
+            if valid and suffix in {".docx", ".xlsx"}:
+                try:
+                    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+                        members = set(archive.namelist())
+                        valid = ("word/document.xml" in members if suffix == ".docx" else "xl/workbook.xml" in members)
+                except (zipfile.BadZipFile, OSError):
+                    valid = False
+            if not valid:
+                raise HTTPException(422, f"{filename} does not match its file type")
+            key = uuid.uuid4().hex
+            stored = (tenant_dir / f"{key}{suffix}").resolve()
+            if stored.parent != tenant_dir:
+                raise HTTPException(422, "Invalid attachment name")
+            stored.write_bytes(raw); stored.chmod(0o600)
+            media_type = expected[0]
+            row = WorkspaceAttachment(tenant_id=member.tenant_id, entity_kind=kind, entity_id=str(entity_id), filename=filename[:255], media_type=media_type, size_bytes=len(raw), storage_key=f"{key}{suffix}", uploaded_by=member.subject)
+            db.add(row); saved.append((row, stored))
+            await file.close()
+        _audit(db, member, request, "workspace.attachments_uploaded", kind, entity_id, {"count":len(saved), "total_bytes":total})
+        db.commit()
+    except Exception:
+        db.rollback()
+        for _, stored in saved: stored.unlink(missing_ok=True)
+        raise
+    return [_attachment_output(row) for row, _ in saved]
+
+@router.get("/attachments/{attachment_id}/view")
+def view_attachment(attachment_id: uuid.UUID, request: Request, db: Session = Depends(get_db), member: Membership = Depends(membership)):
+    row = db.scalar(select(WorkspaceAttachment).where(WorkspaceAttachment.id == attachment_id, WorkspaceAttachment.tenant_id == member.tenant_id))
+    if not row: raise HTTPException(404, "Attachment not found")
+    _attachment_parent(db, member, row.entity_kind, uuid.UUID(row.entity_id))
+    root = Path(os.getenv("DOCUMENT_STORAGE_ROOT", "/tmp/nexora-documents")).resolve(); tenant_dir = (root / str(member.tenant_id)).resolve(); stored = (tenant_dir / row.storage_key).resolve()
+    if stored.parent != tenant_dir or root not in tenant_dir.parents or not stored.is_file(): raise HTTPException(410, "Attachment file is unavailable")
+    disposition = "inline" if row.media_type.startswith("image/") or row.media_type == "application/pdf" else "attachment"
+    _audit(db, member, request, "workspace.attachment_viewed", row.entity_kind, row.entity_id, {"attachment_id":str(row.id), "filename":row.filename}); db.commit()
+    return FileResponse(stored, media_type=row.media_type, filename=row.filename, content_disposition_type=disposition, headers={"X-Content-Type-Options":"nosniff", "Cache-Control":"private, no-store", "Content-Security-Policy":"default-src 'none'; sandbox"})
 TRANSITIONS = {
     "storefronts":{"draft":{"disabled"}},
     # Local records cannot assert provider payment, stock delivery or refunds.
