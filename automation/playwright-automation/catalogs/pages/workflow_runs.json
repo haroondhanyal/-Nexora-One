@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-297",
+        "id": "NX-UI-371",
         "page": "Workflow run history",
         "pageKey": "workflow_runs",
         "section": "Automation & insights",
@@ -36,17 +36,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-298",
+        "id": "NX-UI-372",
         "page": "Workflow run history",
         "pageKey": "workflow_runs",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Workflow run history · smoke · Primary data renders",
+        "title": "Workflow run history · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
         "steps": [
           "Navigate to Workflow run history using Workflow run history.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -54,79 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-299",
-        "page": "Workflow run history",
-        "pageKey": "workflow_runs",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workflow run history · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workflow run history using Workflow run history.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/workflow_runs.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-300",
-        "page": "Workflow run history",
-        "pageKey": "workflow_runs",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workflow run history · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workflow run history using Workflow run history.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/workflow_runs.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-301",
-        "page": "Workflow run history",
-        "pageKey": "workflow_runs",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Workflow run history · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workflow run history using Workflow run history.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/workflow_runs and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/workflow_runs.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-302",
-        "page": "Workflow run history",
-        "pageKey": "workflow_runs",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Workflow run history · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workflow run history using Workflow run history.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/workflow_runs.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-303",
+        "id": "NX-UI-373",
         "page": "Workflow run history",
         "pageKey": "workflow_runs",
         "section": "Automation & insights",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-304",
+        "id": "NX-UI-374",
         "page": "Workflow run history",
         "pageKey": "workflow_runs",
         "section": "Automation & insights",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-375",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workflow run history · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-376",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workflow run history · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-377",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Workflow run history · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/workflow_runs and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-378",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Workflow run history · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-379",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workflow run history · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/workflow_runs.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-380",
+        "page": "Workflow run history",
+        "pageKey": "workflow_runs",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workflow run history · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workflow run history using Workflow run history.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/workflow_runs.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

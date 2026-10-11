@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-329",
+        "id": "NX-UI-411",
         "page": "Integration health",
         "pageKey": "integration_health",
         "section": "Automation & insights",
@@ -36,17 +36,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-330",
+        "id": "NX-UI-412",
         "page": "Integration health",
         "pageKey": "integration_health",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Integration health · smoke · Primary data renders",
+        "title": "Integration health · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
         "steps": [
           "Navigate to Integration health using Integration health.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -54,79 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-331",
-        "page": "Integration health",
-        "pageKey": "integration_health",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Integration health · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Integration health using Integration health.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/integration_health.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-332",
-        "page": "Integration health",
-        "pageKey": "integration_health",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Integration health · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Integration health using Integration health.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/integration_health.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-333",
-        "page": "Integration health",
-        "pageKey": "integration_health",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Integration health · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Integration health using Integration health.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/integration_health and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/integration_health.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-334",
-        "page": "Integration health",
-        "pageKey": "integration_health",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Integration health · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Integration health using Integration health.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/integration_health.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-335",
+        "id": "NX-UI-413",
         "page": "Integration health",
         "pageKey": "integration_health",
         "section": "Automation & insights",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-336",
+        "id": "NX-UI-414",
         "page": "Integration health",
         "pageKey": "integration_health",
         "section": "Automation & insights",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-415",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Integration health · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-416",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Integration health · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-417",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Integration health · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/integration_health and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-418",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Integration health · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-419",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Integration health · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/integration_health.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-420",
+        "page": "Integration health",
+        "pageKey": "integration_health",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Integration health · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Integration health using Integration health.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/integration_health.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

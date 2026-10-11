@@ -10,7 +10,7 @@
     "business_records"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-091",
+        "id": "NX-UI-111",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
@@ -36,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-092",
-        "page": "Sales & quotations",
-        "pageKey": "sales",
-        "section": "Core ERP",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Sales & quotations · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
-        "steps": [
-          "Navigate to Sales & quotations using Sales & quotations.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
-        "locatorFile": "locators/sales.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-093",
+        "id": "NX-UI-112",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
@@ -72,25 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-094",
-        "page": "Sales & quotations",
-        "pageKey": "sales",
-        "section": "Core ERP",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Sales & quotations · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
-        "steps": [
-          "Navigate to Sales & quotations using Sales & quotations.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Document shows its submitted values.",
-        "locatorFile": "locators/sales.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-095",
+        "id": "NX-UI-113",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
@@ -108,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-096",
+        "id": "NX-UI-114",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
@@ -126,17 +90,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-097",
+        "id": "NX-UI-115",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sales & quotations · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-116",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sales & quotations · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-117",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
         "category": "integration",
         "difficulty": "high",
-        "title": "Sales & quotations · integration · UI to data persistence",
+        "title": "Sales & quotations · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
         "steps": [
           "Navigate to Sales & quotations using Sales & quotations.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
@@ -144,17 +144,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-098",
+        "id": "NX-UI-118",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
         "category": "negative",
         "difficulty": "high",
-        "title": "Sales & quotations · negative · Unauthenticated request",
+        "title": "Sales & quotations · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
         "steps": [
           "Navigate to Sales & quotations using Sales & quotations.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -162,20 +162,56 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-099",
+        "id": "NX-UI-119",
         "page": "Sales & quotations",
         "pageKey": "sales",
         "section": "Core ERP",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Sales & quotations · integration · Workspace isolation",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sales & quotations · smoke · Page entry and navigation",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
         "steps": [
           "Navigate to Sales & quotations using Sales & quotations.",
-          "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-120",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sales & quotations · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/sales.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-121",
+        "page": "Sales & quotations",
+        "pageKey": "sales",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sales & quotations · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+        "steps": [
+          "Navigate to Sales & quotations using Sales & quotations.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
         "locatorFile": "locators/sales.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

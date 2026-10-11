@@ -11,7 +11,7 @@
     "api_client_credentials"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -19,7 +19,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-321",
+        "id": "NX-UI-401",
         "page": "API clients",
         "pageKey": "api_clients",
         "section": "Automation & insights",
@@ -37,17 +37,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-322",
+        "id": "NX-UI-402",
         "page": "API clients",
         "pageKey": "api_clients",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "API clients · smoke · Primary data renders",
+        "title": "API clients · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
         "steps": [
           "Navigate to API clients using API clients.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -55,79 +55,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-323",
-        "page": "API clients",
-        "pageKey": "api_clients",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "API clients · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
-        "steps": [
-          "Navigate to API clients using API clients.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/api_clients.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-324",
-        "page": "API clients",
-        "pageKey": "api_clients",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "API clients · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
-        "steps": [
-          "Navigate to API clients using API clients.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/api_clients.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-325",
-        "page": "API clients",
-        "pageKey": "api_clients",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "API clients · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
-        "steps": [
-          "Navigate to API clients using API clients.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/api_clients and its mapped data source (workspace_resources, api_client_credentials), scoped to the active workspace.",
-        "locatorFile": "locators/api_clients.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-326",
-        "page": "API clients",
-        "pageKey": "api_clients",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "API clients · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
-        "steps": [
-          "Navigate to API clients using API clients.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/api_clients.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-327",
+        "id": "NX-UI-403",
         "page": "API clients",
         "pageKey": "api_clients",
         "section": "Automation & insights",
@@ -145,7 +73,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-328",
+        "id": "NX-UI-404",
         "page": "API clients",
         "pageKey": "api_clients",
         "section": "Automation & insights",
@@ -159,6 +87,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-405",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "API clients · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-406",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "API clients · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-407",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "API clients · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/api_clients and its mapped data source (workspace_resources, api_client_credentials), scoped to the active workspace.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-408",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "API clients · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-409",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "API clients · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/api_clients.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-410",
+        "page": "API clients",
+        "pageKey": "api_clients",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "API clients · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+        "steps": [
+          "Navigate to API clients using API clients.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/api_clients.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

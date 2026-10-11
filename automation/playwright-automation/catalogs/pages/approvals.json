@@ -10,7 +10,7 @@
     "business_records"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,79 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-145",
-        "page": "Approvals",
-        "pageKey": "approvals",
-        "section": "Finance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Approvals · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
-        "steps": [
-          "Navigate to Approvals using Approvals.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Request column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
-        "locatorFile": "locators/approvals.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-146",
-        "page": "Approvals",
-        "pageKey": "approvals",
-        "section": "Finance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Approvals · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
-        "steps": [
-          "Navigate to Approvals using Approvals.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Request column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
-        "locatorFile": "locators/approvals.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-147",
-        "page": "Approvals",
-        "pageKey": "approvals",
-        "section": "Finance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Approvals · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
-        "steps": [
-          "Navigate to Approvals using Approvals.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Request column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
-        "locatorFile": "locators/approvals.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-148",
-        "page": "Approvals",
-        "pageKey": "approvals",
-        "section": "Finance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Approvals · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
-        "steps": [
-          "Navigate to Approvals using Approvals.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Request column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
-        "locatorFile": "locators/approvals.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-149",
+        "id": "NX-UI-177",
         "page": "Approvals",
         "pageKey": "approvals",
         "section": "Finance",
@@ -108,7 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-150",
+        "id": "NX-UI-178",
         "page": "Approvals",
         "pageKey": "approvals",
         "section": "Finance",
@@ -126,17 +54,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-151",
+        "id": "NX-UI-179",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Approvals · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-180",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Approvals · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-181",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Approvals · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-182",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Approvals · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-183",
         "page": "Approvals",
         "pageKey": "approvals",
         "section": "Finance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Approvals · integration · UI to data persistence",
+        "title": "Approvals · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
         "steps": [
           "Navigate to Approvals using Approvals.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Request column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/records/approvals and its mapped data source (business_records), scoped to the active workspace.",
@@ -144,20 +144,74 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-152",
+        "id": "NX-UI-184",
         "page": "Approvals",
         "pageKey": "approvals",
         "section": "Finance",
         "category": "negative",
         "difficulty": "high",
-        "title": "Approvals · negative · Unauthenticated request",
+        "title": "Approvals · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
         "steps": [
           "Navigate to Approvals using Approvals.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Request column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-185",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Approvals · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-186",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Approvals · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
+        "locatorFile": "locators/approvals.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-187",
+        "page": "Approvals",
+        "pageKey": "approvals",
+        "section": "Finance",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Approvals · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+        "steps": [
+          "Navigate to Approvals using Approvals.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Request column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/records/approvals and its mapped data source (business_records), scoped to the active workspace.",
         "locatorFile": "locators/approvals.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-249",
-        "page": "Projects",
-        "pageKey": "projects",
-        "section": "Operations",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Projects · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Projects using Projects.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Projects page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/projects.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-250",
+        "id": "NX-UI-311",
         "page": "Projects",
         "pageKey": "projects",
         "section": "Operations",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-251",
-        "page": "Projects",
-        "pageKey": "projects",
-        "section": "Operations",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Projects · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Projects using Projects.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Projects page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/projects.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-252",
+        "id": "NX-UI-312",
         "page": "Projects",
         "pageKey": "projects",
         "section": "Operations",
@@ -90,43 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-253",
-        "page": "Projects",
-        "pageKey": "projects",
-        "section": "Operations",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Projects · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Projects using Projects.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/projects and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/projects.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-254",
-        "page": "Projects",
-        "pageKey": "projects",
-        "section": "Operations",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Projects · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Projects using Projects.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/projects.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-255",
+        "id": "NX-UI-313",
         "page": "Projects",
         "pageKey": "projects",
         "section": "Operations",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-256",
+        "id": "NX-UI-314",
         "page": "Projects",
         "pageKey": "projects",
         "section": "Operations",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-315",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Projects · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Projects page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-316",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Projects · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-317",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Projects · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/projects and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-318",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Projects · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-319",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Projects · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Projects page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/projects.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-320",
+        "page": "Projects",
+        "pageKey": "projects",
+        "section": "Operations",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Projects · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Projects using Projects.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
         "locatorFile": "locators/projects.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

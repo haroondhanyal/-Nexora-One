@@ -10,7 +10,7 @@
     "departments"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,97 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-153",
-        "page": "Departments",
-        "pageKey": "departments",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Departments · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
-        "steps": [
-          "Navigate to Departments using Departments.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/departments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-154",
-        "page": "Departments",
-        "pageKey": "departments",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Departments · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
-        "steps": [
-          "Navigate to Departments using Departments.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/departments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-155",
-        "page": "Departments",
-        "pageKey": "departments",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Departments · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
-        "steps": [
-          "Navigate to Departments using Departments.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/departments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-156",
-        "page": "Departments",
-        "pageKey": "departments",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Departments · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
-        "steps": [
-          "Navigate to Departments using Departments.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
-        "locatorFile": "locators/departments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-157",
-        "page": "Departments",
-        "pageKey": "departments",
-        "section": "People",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Departments · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
-        "steps": [
-          "Navigate to Departments using Departments.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/hr/departments and its mapped data source (departments), scoped to the active workspace.",
-        "locatorFile": "locators/departments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-158",
+        "id": "NX-UI-188",
         "page": "Departments",
         "pageKey": "departments",
         "section": "People",
@@ -126,17 +36,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-159",
+        "id": "NX-UI-189",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Departments · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-190",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Departments · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-191",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Departments · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-192",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Departments · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-193",
         "page": "Departments",
         "pageKey": "departments",
         "section": "People",
         "category": "integration",
         "difficulty": "high",
-        "title": "Departments · integration · UI to data persistence",
+        "title": "Departments · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
         "steps": [
           "Navigate to Departments using Departments.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Name column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/hr/departments and its mapped data source (departments), scoped to the active workspace.",
@@ -144,17 +126,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-160",
+        "id": "NX-UI-194",
         "page": "Departments",
         "pageKey": "departments",
         "section": "People",
         "category": "negative",
         "difficulty": "high",
-        "title": "Departments · negative · Unauthenticated request",
+        "title": "Departments · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
         "steps": [
           "Navigate to Departments using Departments.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-195",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Departments · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-196",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Departments · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-197",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Departments · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/departments and its mapped data source (departments), scoped to the active workspace.",
+        "locatorFile": "locators/departments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-198",
+        "page": "Departments",
+        "pageKey": "departments",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Departments · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+        "steps": [
+          "Navigate to Departments using Departments.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Name column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",

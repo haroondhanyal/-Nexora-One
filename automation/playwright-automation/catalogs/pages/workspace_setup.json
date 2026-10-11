@@ -9,7 +9,7 @@
     "memberships"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 0,
     "bdd": 4,
     "database": 23
@@ -17,25 +17,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-393",
-        "page": "Create workspace",
-        "pageKey": "workspace_setup",
-        "section": "Workspace setup",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Create workspace · smoke · Page entry and navigation",
-        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
-        "steps": [
-          "Sign in locally and choose Create a demo workspace.",
-          "Open workspace setup and verify company-name input, six industry choices and Create workspace action.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Create workspace lifecycle screen behaves as expected: Open workspace setup and verify company-name input, six industry choices and Create workspace action. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/workspace_setup.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-394",
+        "id": "NX-UI-491",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
@@ -53,7 +35,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-395",
+        "id": "NX-UI-492",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
@@ -71,31 +53,13 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-396",
-        "page": "Create workspace",
-        "pageKey": "workspace_setup",
-        "section": "Workspace setup",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Create workspace · regression · Create validation and save",
-        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
-        "steps": [
-          "Sign in locally and choose Create a demo workspace.",
-          "Select each industry option and verify the selected choice before submitting.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/workspace_setup.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-397",
+        "id": "NX-UI-493",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
         "category": "integration",
         "difficulty": "high",
-        "title": "Create workspace · integration · Page to API contract",
+        "title": "Create workspace · integration · Workspace isolation",
         "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
         "steps": [
           "Sign in locally and choose Create a demo workspace.",
@@ -107,7 +71,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-398",
+        "id": "NX-UI-494",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
@@ -125,13 +89,49 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-399",
+        "id": "NX-UI-495",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Create workspace · smoke · Primary data renders",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Open workspace setup and verify company-name input, six industry choices and Create workspace action.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Open workspace setup and verify company-name input, six industry choices and Create workspace action. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-496",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Create workspace · regression · Search and clear",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Select each industry option and verify the selected choice before submitting.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-497",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
         "category": "integration",
         "difficulty": "high",
-        "title": "Create workspace · integration · UI to data persistence",
+        "title": "Create workspace · integration · Workspace isolation",
         "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
         "steps": [
           "Sign in locally and choose Create a demo workspace.",
@@ -143,13 +143,13 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-400",
+        "id": "NX-UI-498",
         "page": "Create workspace",
         "pageKey": "workspace_setup",
         "section": "Workspace setup",
         "category": "negative",
         "difficulty": "high",
-        "title": "Create workspace · negative · Unauthenticated request",
+        "title": "Create workspace · negative · Required value omitted",
         "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
         "steps": [
           "Sign in locally and choose Create a demo workspace.",
@@ -157,6 +157,42 @@
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Create workspace lifecycle screen behaves as expected: Submit an empty or too-short company name and verify inline validation with no tenant created. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-499",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Create workspace · smoke · Primary data renders",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Open workspace setup and verify company-name input, six industry choices and Create workspace action.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Open workspace setup and verify company-name input, six industry choices and Create workspace action. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/workspace_setup.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-500",
+        "page": "Create workspace",
+        "pageKey": "workspace_setup",
+        "section": "Workspace setup",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Create workspace · regression · Search and clear",
+        "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+        "steps": [
+          "Sign in locally and choose Create a demo workspace.",
+          "Select each industry option and verify the selected choice before submitting.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/workspace_setup.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

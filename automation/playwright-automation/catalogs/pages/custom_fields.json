@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-313",
+        "id": "NX-UI-391",
         "page": "Custom fields",
         "pageKey": "custom_fields",
         "section": "Automation & insights",
@@ -36,17 +36,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-314",
+        "id": "NX-UI-392",
         "page": "Custom fields",
         "pageKey": "custom_fields",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Custom fields · smoke · Primary data renders",
+        "title": "Custom fields · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
         "steps": [
           "Navigate to Custom fields using Custom fields.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -54,79 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-315",
-        "page": "Custom fields",
-        "pageKey": "custom_fields",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Custom fields · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Custom fields using Custom fields.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/custom_fields.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-316",
-        "page": "Custom fields",
-        "pageKey": "custom_fields",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Custom fields · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Custom fields using Custom fields.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/custom_fields.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-317",
-        "page": "Custom fields",
-        "pageKey": "custom_fields",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Custom fields · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Custom fields using Custom fields.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/custom_fields and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/custom_fields.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-318",
-        "page": "Custom fields",
-        "pageKey": "custom_fields",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Custom fields · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Custom fields using Custom fields.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/custom_fields.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-319",
+        "id": "NX-UI-393",
         "page": "Custom fields",
         "pageKey": "custom_fields",
         "section": "Automation & insights",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-320",
+        "id": "NX-UI-394",
         "page": "Custom fields",
         "pageKey": "custom_fields",
         "section": "Automation & insights",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-395",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Custom fields · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-396",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Custom fields · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-397",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Custom fields · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/custom_fields and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-398",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Custom fields · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-399",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Custom fields · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/custom_fields.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-400",
+        "page": "Custom fields",
+        "pageKey": "custom_fields",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Custom fields · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Custom fields using Custom fields.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/custom_fields.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

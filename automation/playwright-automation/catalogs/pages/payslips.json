@@ -10,7 +10,7 @@
     "payslips"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-201",
-        "page": "My payslips",
-        "pageKey": "payslips",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "My payslips · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
-        "steps": [
-          "Navigate to My payslips using My payslips.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/payslips.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-202",
+        "id": "NX-UI-251",
         "page": "My payslips",
         "pageKey": "payslips",
         "section": "People",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-203",
-        "page": "My payslips",
-        "pageKey": "payslips",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "My payslips · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
-        "steps": [
-          "Navigate to My payslips using My payslips.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/payslips.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-204",
+        "id": "NX-UI-252",
         "page": "My payslips",
         "pageKey": "payslips",
         "section": "People",
@@ -90,43 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-205",
-        "page": "My payslips",
-        "pageKey": "payslips",
-        "section": "People",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "My payslips · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
-        "steps": [
-          "Navigate to My payslips using My payslips.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
-        "locatorFile": "locators/payslips.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-206",
-        "page": "My payslips",
-        "pageKey": "payslips",
-        "section": "People",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "My payslips · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
-        "steps": [
-          "Navigate to My payslips using My payslips.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/payslips.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-207",
+        "id": "NX-UI-253",
         "page": "My payslips",
         "pageKey": "payslips",
         "section": "People",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-208",
+        "id": "NX-UI-254",
         "page": "My payslips",
         "pageKey": "payslips",
         "section": "People",
@@ -158,6 +86,114 @@
           "Check the Employee column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-255",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "My payslips · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-256",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "My payslips · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-257",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "My payslips · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-258",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "My payslips · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-259",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "My payslips · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/payslips.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-260",
+        "page": "My payslips",
+        "pageKey": "payslips",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "My payslips · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+        "steps": [
+          "Navigate to My payslips using My payslips.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
         "locatorFile": "locators/payslips.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

@@ -11,49 +11,13 @@
     "memberships"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 5,
     "database": 24
   },
   "cases": {
     "ui": [
-      {
-        "id": "NX-UI-010",
-        "page": "Workspaces",
-        "pageKey": "workspaces",
-        "section": "Workspace",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Workspaces · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
-        "steps": [
-          "Navigate to Workspaces using Workspaces.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
-        "locatorFile": "locators/workspaces.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-011",
-        "page": "Workspaces",
-        "pageKey": "workspaces",
-        "section": "Workspace",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Workspaces · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
-        "steps": [
-          "Navigate to Workspaces using Workspaces.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
-        "locatorFile": "locators/workspaces.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
       {
         "id": "NX-UI-012",
         "page": "Workspaces",
@@ -77,24 +41,6 @@
         "page": "Workspaces",
         "pageKey": "workspaces",
         "section": "Workspace",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workspaces · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
-        "steps": [
-          "Navigate to Workspaces using Workspaces.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Workspace name shows its submitted values.",
-        "locatorFile": "locators/workspaces.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-014",
-        "page": "Workspaces",
-        "pageKey": "workspaces",
-        "section": "Workspace",
         "category": "integration",
         "difficulty": "high",
         "title": "Workspaces · integration · Page to API contract",
@@ -109,7 +55,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-015",
+        "id": "NX-UI-014",
         "page": "Workspaces",
         "pageKey": "workspaces",
         "section": "Workspace",
@@ -127,20 +73,38 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
+        "id": "NX-UI-015",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspaces · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
         "id": "NX-UI-016",
         "page": "Workspaces",
         "pageKey": "workspaces",
         "section": "Workspace",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Workspaces · integration · UI to data persistence",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Search and clear",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
         "steps": [
           "Navigate to Workspaces using Workspaces.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Workspace name column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page result agrees with /api/v1/me/workspaces and its mapped data source (tenants, memberships), scoped to the active workspace.",
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
         "locatorFile": "locators/workspaces.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
@@ -149,16 +113,16 @@
         "page": "Workspaces",
         "pageKey": "workspaces",
         "section": "Workspace",
-        "category": "negative",
+        "category": "integration",
         "difficulty": "high",
-        "title": "Workspaces · negative · Unauthenticated request",
+        "title": "Workspaces · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
         "steps": [
           "Navigate to Workspaces using Workspaces.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Workspace name column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "expected": "The page result agrees with /api/v1/me/workspaces and its mapped data source (tenants, memberships), scoped to the active workspace.",
         "locatorFile": "locators/workspaces.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
@@ -167,13 +131,85 @@
         "page": "Workspaces",
         "pageKey": "workspaces",
         "section": "Workspace",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workspaces · regression · Reload persistence",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Workspaces · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
         "steps": [
           "Navigate to Workspaces using Workspaces.",
-          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-019",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspaces · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-020",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-021",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspaces · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+        "locatorFile": "locators/workspaces.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-022",
+        "page": "Workspaces",
+        "pageKey": "workspaces",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspaces · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+        "steps": [
+          "Navigate to Workspaces using Workspaces.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Workspace name column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",

@@ -6,7 +6,7 @@
   "apiPaths": [],
   "dataTables": [],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 0,
     "bdd": 4,
     "database": 0
@@ -14,7 +14,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-353",
+        "id": "NX-UI-441",
         "page": "Loading and session check",
         "pageKey": "auth_loading",
         "section": "Authentication",
@@ -32,97 +32,25 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-354",
-        "page": "Loading and session check",
-        "pageKey": "auth_loading",
-        "section": "Authentication",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Loading and session check · smoke · Primary data renders",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
-        "steps": [
-          "Load the Nexora app entry route.",
-          "Open Nexora One and verify the brand splash and session-check progress indicator.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Loading and session check lifecycle screen behaves as expected: Open Nexora One and verify the brand splash and session-check progress indicator. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_loading.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-355",
+        "id": "NX-UI-442",
         "page": "Loading and session check",
         "pageKey": "auth_loading",
         "section": "Authentication",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Loading and session check · regression · Search and clear",
+        "title": "Loading and session check · regression · Reload persistence",
         "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
         "steps": [
           "Load the Nexora app entry route.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The Loading and session check lifecycle screen behaves as expected: Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state. No unauthorized workspace data is displayed.",
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/auth_loading.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-356",
-        "page": "Loading and session check",
-        "pageKey": "auth_loading",
-        "section": "Authentication",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Loading and session check · regression · Create validation and save",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
-        "steps": [
-          "Load the Nexora app entry route.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Loading and session check lifecycle screen behaves as expected: Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_loading.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-357",
-        "page": "Loading and session check",
-        "pageKey": "auth_loading",
-        "section": "Authentication",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Loading and session check · integration · Page to API contract",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
-        "steps": [
-          "Load the Nexora app entry route.",
-          "Start with a valid and then absent identity session; verify the app routes to the matching account state.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Loading and session check lifecycle screen behaves as expected: Start with a valid and then absent identity session; verify the app routes to the matching account state. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_loading.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-358",
-        "page": "Loading and session check",
-        "pageKey": "auth_loading",
-        "section": "Authentication",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Loading and session check · negative · Required value omitted",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
-        "steps": [
-          "Load the Nexora app entry route.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Loading and session check lifecycle screen behaves as expected: Submit the create form with its required value empty; verify inline validation and confirm no row was written. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_loading.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-359",
+        "id": "NX-UI-443",
         "page": "Loading and session check",
         "pageKey": "auth_loading",
         "section": "Authentication",
@@ -140,7 +68,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-360",
+        "id": "NX-UI-444",
         "page": "Loading and session check",
         "pageKey": "auth_loading",
         "section": "Authentication",
@@ -154,6 +82,114 @@
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Loading and session check lifecycle screen behaves as expected: Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-445",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Loading and session check · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Open Nexora One and verify the brand splash and session-check progress indicator.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Open Nexora One and verify the brand splash and session-check progress indicator. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-446",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Loading and session check · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-447",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Loading and session check · integration · UI to data persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Start with a valid and then absent identity session; verify the app routes to the matching account state.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Start with a valid and then absent identity session; verify the app routes to the matching account state. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-448",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Loading and session check · negative · Unauthenticated request",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-449",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Loading and session check · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Open Nexora One and verify the brand splash and session-check progress indicator.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Open Nexora One and verify the brand splash and session-check progress indicator. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_loading.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-450",
+        "page": "Loading and session check",
+        "pageKey": "auth_loading",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Loading and session check · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+        "steps": [
+          "Load the Nexora app entry route.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/auth_loading.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

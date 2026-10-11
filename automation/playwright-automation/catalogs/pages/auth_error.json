@@ -6,7 +6,7 @@
   "apiPaths": [],
   "dataTables": [],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 0,
     "bdd": 4,
     "database": 0
@@ -14,7 +14,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-361",
+        "id": "NX-UI-451",
         "page": "Identity service unavailable",
         "pageKey": "auth_error",
         "section": "Authentication",
@@ -32,97 +32,25 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-362",
-        "page": "Identity service unavailable",
-        "pageKey": "auth_error",
-        "section": "Authentication",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Identity service unavailable · smoke · Primary data renders",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
-        "steps": [
-          "Simulate an identity-provider initialization error.",
-          "Render the identity-service error state and verify the message and Retry button.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Render the identity-service error state and verify the message and Retry button. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_error.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-363",
+        "id": "NX-UI-452",
         "page": "Identity service unavailable",
         "pageKey": "auth_error",
         "section": "Authentication",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Identity service unavailable · regression · Search and clear",
+        "title": "Identity service unavailable · regression · Reload persistence",
         "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
         "steps": [
           "Simulate an identity-provider initialization error.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state. No unauthorized workspace data is displayed.",
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/auth_error.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-364",
-        "page": "Identity service unavailable",
-        "pageKey": "auth_error",
-        "section": "Authentication",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Identity service unavailable · regression · Create validation and save",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
-        "steps": [
-          "Simulate an identity-provider initialization error.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_error.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-365",
-        "page": "Identity service unavailable",
-        "pageKey": "auth_error",
-        "section": "Authentication",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Identity service unavailable · integration · Page to API contract",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
-        "steps": [
-          "Simulate an identity-provider initialization error.",
-          "Restore the identity service and verify Retry returns the visitor to sign-in.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Restore the identity service and verify Retry returns the visitor to sign-in. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_error.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-366",
-        "page": "Identity service unavailable",
-        "pageKey": "auth_error",
-        "section": "Authentication",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Identity service unavailable · negative · Required value omitted",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
-        "steps": [
-          "Simulate an identity-provider initialization error.",
-          "Keep the identity service unavailable; verify retry does not expose private workspace content.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Keep the identity service unavailable; verify retry does not expose private workspace content. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_error.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-367",
+        "id": "NX-UI-453",
         "page": "Identity service unavailable",
         "pageKey": "auth_error",
         "section": "Authentication",
@@ -140,7 +68,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-368",
+        "id": "NX-UI-454",
         "page": "Identity service unavailable",
         "pageKey": "auth_error",
         "section": "Authentication",
@@ -154,6 +82,114 @@
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Identity service unavailable lifecycle screen behaves as expected: Keep the identity service unavailable; verify retry does not expose private workspace content. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-455",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Identity service unavailable · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Render the identity-service error state and verify the message and Retry button.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Render the identity-service error state and verify the message and Retry button. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-456",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Identity service unavailable · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-457",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Identity service unavailable · integration · UI to data persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Restore the identity service and verify Retry returns the visitor to sign-in.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Restore the identity service and verify Retry returns the visitor to sign-in. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-458",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Identity service unavailable · negative · Unauthenticated request",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Keep the identity service unavailable; verify retry does not expose private workspace content.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Keep the identity service unavailable; verify retry does not expose private workspace content. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-459",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Identity service unavailable · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Render the identity-service error state and verify the message and Retry button.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Render the identity-service error state and verify the message and Retry button. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_error.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-460",
+        "page": "Identity service unavailable",
+        "pageKey": "auth_error",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Identity service unavailable · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+        "steps": [
+          "Simulate an identity-provider initialization error.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/auth_error.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

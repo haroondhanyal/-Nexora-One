@@ -11,7 +11,7 @@
     "workspace_attachments"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 24
@@ -19,7 +19,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-281",
+        "id": "NX-UI-351",
         "page": "Documents",
         "pageKey": "documents",
         "section": "Operations",
@@ -37,17 +37,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-282",
+        "id": "NX-UI-352",
         "page": "Documents",
         "pageKey": "documents",
         "section": "Operations",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Documents · smoke · Primary data renders",
+        "title": "Documents · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
         "steps": [
           "Navigate to Documents using Documents.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -55,79 +55,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-283",
-        "page": "Documents",
-        "pageKey": "documents",
-        "section": "Operations",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Documents · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
-        "steps": [
-          "Navigate to Documents using Documents.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/documents.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-284",
-        "page": "Documents",
-        "pageKey": "documents",
-        "section": "Operations",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Documents · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
-        "steps": [
-          "Navigate to Documents using Documents.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/documents.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-285",
-        "page": "Documents",
-        "pageKey": "documents",
-        "section": "Operations",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Documents · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
-        "steps": [
-          "Navigate to Documents using Documents.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/documents and its mapped data source (workspace_resources, workspace_attachments), scoped to the active workspace.",
-        "locatorFile": "locators/documents.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-286",
-        "page": "Documents",
-        "pageKey": "documents",
-        "section": "Operations",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Documents · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
-        "steps": [
-          "Navigate to Documents using Documents.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/documents.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-287",
+        "id": "NX-UI-353",
         "page": "Documents",
         "pageKey": "documents",
         "section": "Operations",
@@ -145,7 +73,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-288",
+        "id": "NX-UI-354",
         "page": "Documents",
         "pageKey": "documents",
         "section": "Operations",
@@ -159,6 +87,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-355",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Documents · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-356",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Documents · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-357",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Documents · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/documents and its mapped data source (workspace_resources, workspace_attachments), scoped to the active workspace.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-358",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Documents · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-359",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Documents · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/documents.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-360",
+        "page": "Documents",
+        "pageKey": "documents",
+        "section": "Operations",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Documents · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+        "steps": [
+          "Navigate to Documents using Documents.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/documents.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

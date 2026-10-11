@@ -10,7 +10,7 @@
     "payroll_runs"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-193",
-        "page": "Payroll runs",
-        "pageKey": "payroll",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Payroll runs · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-        "steps": [
-          "Navigate to Payroll runs using Payroll runs.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Period start column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
-        "locatorFile": "locators/payroll.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-194",
+        "id": "NX-UI-241",
         "page": "Payroll runs",
         "pageKey": "payroll",
         "section": "People",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-195",
-        "page": "Payroll runs",
-        "pageKey": "payroll",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Payroll runs · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-        "steps": [
-          "Navigate to Payroll runs using Payroll runs.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Period start column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
-        "locatorFile": "locators/payroll.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-196",
+        "id": "NX-UI-242",
         "page": "Payroll runs",
         "pageKey": "payroll",
         "section": "People",
@@ -90,43 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-197",
-        "page": "Payroll runs",
-        "pageKey": "payroll",
-        "section": "People",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Payroll runs · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-        "steps": [
-          "Navigate to Payroll runs using Payroll runs.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Period start column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
-        "locatorFile": "locators/payroll.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-198",
-        "page": "Payroll runs",
-        "pageKey": "payroll",
-        "section": "People",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Payroll runs · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-        "steps": [
-          "Navigate to Payroll runs using Payroll runs.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Period start column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/payroll.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-199",
+        "id": "NX-UI-243",
         "page": "Payroll runs",
         "pageKey": "payroll",
         "section": "People",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-200",
+        "id": "NX-UI-244",
         "page": "Payroll runs",
         "pageKey": "payroll",
         "section": "People",
@@ -158,6 +86,114 @@
           "Check the Period start column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-245",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payroll runs · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-246",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payroll runs · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Period start shows its submitted values.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-247",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Payroll runs · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-248",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Payroll runs · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-249",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payroll runs · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
+        "locatorFile": "locators/payroll.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-250",
+        "page": "Payroll runs",
+        "pageKey": "payroll",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payroll runs · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+        "steps": [
+          "Navigate to Payroll runs using Payroll runs.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Period start column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Period start shows its submitted values.",
         "locatorFile": "locators/payroll.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

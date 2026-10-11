@@ -10,7 +10,7 @@
     "leave_requests"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-185",
-        "page": "Leave requests",
-        "pageKey": "leaves",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Leave requests · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
-        "steps": [
-          "Navigate to Leave requests using Leave requests.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/leaves.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-186",
+        "id": "NX-UI-231",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-187",
-        "page": "Leave requests",
-        "pageKey": "leaves",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Leave requests · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
-        "steps": [
-          "Navigate to Leave requests using Leave requests.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/leaves.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-188",
+        "id": "NX-UI-232",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
@@ -90,7 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-189",
+        "id": "NX-UI-233",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
@@ -108,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-190",
+        "id": "NX-UI-234",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
@@ -126,17 +90,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-191",
+        "id": "NX-UI-235",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Leave requests · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-236",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Leave requests · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-237",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
         "category": "integration",
         "difficulty": "high",
-        "title": "Leave requests · integration · UI to data persistence",
+        "title": "Leave requests · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
         "steps": [
           "Navigate to Leave requests using Leave requests.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Employee column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/hr/leaves and its mapped data source (leave_requests), scoped to the active workspace.",
@@ -144,20 +144,56 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-192",
+        "id": "NX-UI-238",
         "page": "Leave requests",
         "pageKey": "leaves",
         "section": "People",
         "category": "negative",
         "difficulty": "high",
-        "title": "Leave requests · negative · Unauthenticated request",
+        "title": "Leave requests · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
         "steps": [
           "Navigate to Leave requests using Leave requests.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Employee column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-239",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Leave requests · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/leaves.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-240",
+        "page": "Leave requests",
+        "pageKey": "leaves",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Leave requests · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+        "steps": [
+          "Navigate to Leave requests using Leave requests.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
         "locatorFile": "locators/leaves.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

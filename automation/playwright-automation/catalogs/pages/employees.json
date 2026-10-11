@@ -10,7 +10,7 @@
     "employees"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-161",
-        "page": "Employees",
-        "pageKey": "employees",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Employees · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
-        "steps": [
-          "Navigate to Employees using Employees.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Employee no column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
-        "locatorFile": "locators/employees.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-162",
+        "id": "NX-UI-199",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-163",
-        "page": "Employees",
-        "pageKey": "employees",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Employees · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
-        "steps": [
-          "Navigate to Employees using Employees.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Employee no column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
-        "locatorFile": "locators/employees.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-164",
+        "id": "NX-UI-200",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
@@ -90,7 +54,43 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-165",
+        "id": "NX-UI-201",
+        "page": "Employees",
+        "pageKey": "employees",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Employees · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+        "steps": [
+          "Navigate to Employees using Employees.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee no column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
+        "locatorFile": "locators/employees.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-202",
+        "page": "Employees",
+        "pageKey": "employees",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Employees · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+        "steps": [
+          "Navigate to Employees using Employees.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee no column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee no shows its submitted values.",
+        "locatorFile": "locators/employees.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-203",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
@@ -108,7 +108,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-166",
+        "id": "NX-UI-204",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
@@ -126,17 +126,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-167",
+        "id": "NX-UI-205",
+        "page": "Employees",
+        "pageKey": "employees",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Employees · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+        "steps": [
+          "Navigate to Employees using Employees.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee no column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
+        "locatorFile": "locators/employees.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-206",
+        "page": "Employees",
+        "pageKey": "employees",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Employees · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+        "steps": [
+          "Navigate to Employees using Employees.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee no column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee no shows its submitted values.",
+        "locatorFile": "locators/employees.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-207",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
         "category": "integration",
         "difficulty": "high",
-        "title": "Employees · integration · UI to data persistence",
+        "title": "Employees · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
         "steps": [
           "Navigate to Employees using Employees.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Employee no column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/hr/employees and its mapped data source (employees), scoped to the active workspace.",
@@ -144,20 +180,38 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-168",
+        "id": "NX-UI-208",
         "page": "Employees",
         "pageKey": "employees",
         "section": "People",
         "category": "negative",
         "difficulty": "high",
-        "title": "Employees · negative · Unauthenticated request",
+        "title": "Employees · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
         "steps": [
           "Navigate to Employees using Employees.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Employee no column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/employees.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-209",
+        "page": "Employees",
+        "pageKey": "employees",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Employees · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+        "steps": [
+          "Navigate to Employees using Employees.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee no column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
         "locatorFile": "locators/employees.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

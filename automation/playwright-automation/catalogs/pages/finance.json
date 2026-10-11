@@ -10,7 +10,7 @@
     "business_records"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,97 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-118",
-        "page": "Invoices & bills",
-        "pageKey": "finance",
-        "section": "Finance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Invoices & bills · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-        "steps": [
-          "Navigate to Invoices & bills using Invoices & bills.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
-        "locatorFile": "locators/finance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-119",
-        "page": "Invoices & bills",
-        "pageKey": "finance",
-        "section": "Finance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Invoices & bills · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-        "steps": [
-          "Navigate to Invoices & bills using Invoices & bills.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
-        "locatorFile": "locators/finance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-120",
-        "page": "Invoices & bills",
-        "pageKey": "finance",
-        "section": "Finance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Invoices & bills · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-        "steps": [
-          "Navigate to Invoices & bills using Invoices & bills.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
-        "locatorFile": "locators/finance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-121",
-        "page": "Invoices & bills",
-        "pageKey": "finance",
-        "section": "Finance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Invoices & bills · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-        "steps": [
-          "Navigate to Invoices & bills using Invoices & bills.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Document shows its submitted values.",
-        "locatorFile": "locators/finance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-122",
-        "page": "Invoices & bills",
-        "pageKey": "finance",
-        "section": "Finance",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Invoices & bills · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-        "steps": [
-          "Navigate to Invoices & bills using Invoices & bills.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Document column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/records/finance and its mapped data source (business_records), scoped to the active workspace.",
-        "locatorFile": "locators/finance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-123",
+        "id": "NX-UI-144",
         "page": "Invoices & bills",
         "pageKey": "finance",
         "section": "Finance",
@@ -126,17 +36,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-124",
+        "id": "NX-UI-145",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Invoices & bills · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-146",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Invoices & bills · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-147",
         "page": "Invoices & bills",
         "pageKey": "finance",
         "section": "Finance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Invoices & bills · integration · UI to data persistence",
+        "title": "Invoices & bills · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
         "steps": [
           "Navigate to Invoices & bills using Invoices & bills.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/records/finance and its mapped data source (business_records), scoped to the active workspace.",
@@ -144,17 +90,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-125",
+        "id": "NX-UI-148",
         "page": "Invoices & bills",
         "pageKey": "finance",
         "section": "Finance",
         "category": "negative",
         "difficulty": "high",
-        "title": "Invoices & bills · negative · Unauthenticated request",
+        "title": "Invoices & bills · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
         "steps": [
           "Navigate to Invoices & bills using Invoices & bills.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -162,20 +108,110 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-126",
+        "id": "NX-UI-149",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Invoices & bills · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-150",
         "page": "Invoices & bills",
         "pageKey": "finance",
         "section": "Finance",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Invoices & bills · regression · Reload persistence",
+        "title": "Invoices & bills · regression · Search and clear",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
         "steps": [
           "Navigate to Invoices & bills using Invoices & bills.",
-          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Document column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-151",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Invoices & bills · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-152",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Invoices & bills · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-153",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Invoices & bills · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/records/finance and its mapped data source (business_records), scoped to the active workspace.",
+        "locatorFile": "locators/finance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-154",
+        "page": "Invoices & bills",
+        "pageKey": "finance",
+        "section": "Finance",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Invoices & bills · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+        "steps": [
+          "Navigate to Invoices & bills using Invoices & bills.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Document column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
         "locatorFile": "locators/finance.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

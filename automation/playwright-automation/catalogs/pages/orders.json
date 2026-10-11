@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-217",
-        "page": "Store orders",
-        "pageKey": "orders",
-        "section": "Commerce",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Store orders · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Store orders using Store orders.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Store orders page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/orders.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-218",
+        "id": "NX-UI-271",
         "page": "Store orders",
         "pageKey": "orders",
         "section": "Commerce",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-219",
-        "page": "Store orders",
-        "pageKey": "orders",
-        "section": "Commerce",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Store orders · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Store orders using Store orders.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Store orders page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/orders.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-220",
+        "id": "NX-UI-272",
         "page": "Store orders",
         "pageKey": "orders",
         "section": "Commerce",
@@ -90,43 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-221",
-        "page": "Store orders",
-        "pageKey": "orders",
-        "section": "Commerce",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Store orders · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Store orders using Store orders.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/orders and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/orders.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-222",
-        "page": "Store orders",
-        "pageKey": "orders",
-        "section": "Commerce",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Store orders · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Store orders using Store orders.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/orders.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-223",
+        "id": "NX-UI-273",
         "page": "Store orders",
         "pageKey": "orders",
         "section": "Commerce",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-224",
+        "id": "NX-UI-274",
         "page": "Store orders",
         "pageKey": "orders",
         "section": "Commerce",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-275",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Store orders · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Store orders page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-276",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Store orders · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-277",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Store orders · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/orders and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-278",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Store orders · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-279",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Store orders · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Store orders page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/orders.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-280",
+        "page": "Store orders",
+        "pageKey": "orders",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Store orders · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Store orders using Store orders.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
         "locatorFile": "locators/orders.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

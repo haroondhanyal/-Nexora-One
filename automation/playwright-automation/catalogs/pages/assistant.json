@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-345",
+        "id": "NX-UI-431",
         "page": "Workspace assistant",
         "pageKey": "assistant",
         "section": "Automation & insights",
@@ -36,17 +36,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-346",
+        "id": "NX-UI-432",
         "page": "Workspace assistant",
         "pageKey": "assistant",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Workspace assistant · smoke · Primary data renders",
+        "title": "Workspace assistant · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
         "steps": [
           "Navigate to Workspace assistant using Workspace assistant.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the primary content and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
@@ -54,79 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-347",
-        "page": "Workspace assistant",
-        "pageKey": "assistant",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workspace assistant · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workspace assistant using Workspace assistant.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
-        "locatorFile": "locators/assistant.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-348",
-        "page": "Workspace assistant",
-        "pageKey": "assistant",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Workspace assistant · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workspace assistant using Workspace assistant.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the primary page content shows its submitted values.",
-        "locatorFile": "locators/assistant.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-349",
-        "page": "Workspace assistant",
-        "pageKey": "assistant",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Workspace assistant · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workspace assistant using Workspace assistant.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/assistant/ask and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/assistant.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-350",
-        "page": "Workspace assistant",
-        "pageKey": "assistant",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Workspace assistant · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Workspace assistant using Workspace assistant.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/assistant.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-351",
+        "id": "NX-UI-433",
         "page": "Workspace assistant",
         "pageKey": "assistant",
         "section": "Automation & insights",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-352",
+        "id": "NX-UI-434",
         "page": "Workspace assistant",
         "pageKey": "assistant",
         "section": "Automation & insights",
@@ -158,6 +86,114 @@
           "Check the primary content and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-435",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspace assistant · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-436",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspace assistant · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-437",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Workspace assistant · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/assistant/ask and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-438",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Workspace assistant · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-439",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Workspace assistant · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/assistant.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-440",
+        "page": "Workspace assistant",
+        "pageKey": "assistant",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Workspace assistant · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Workspace assistant using Workspace assistant.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
         "locatorFile": "locators/assistant.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

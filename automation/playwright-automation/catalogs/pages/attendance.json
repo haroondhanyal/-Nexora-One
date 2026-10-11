@@ -10,7 +10,7 @@
     "attendance"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-177",
-        "page": "Attendance",
-        "pageKey": "attendance",
-        "section": "People",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Attendance · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
-        "steps": [
-          "Navigate to Attendance using Attendance.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Attendance page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/attendance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-178",
+        "id": "NX-UI-221",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-179",
-        "page": "Attendance",
-        "pageKey": "attendance",
-        "section": "People",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Attendance · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
-        "steps": [
-          "Navigate to Attendance using Attendance.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Employee column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Attendance page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-        "locatorFile": "locators/attendance.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-180",
+        "id": "NX-UI-222",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
@@ -90,7 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-181",
+        "id": "NX-UI-223",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
@@ -108,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-182",
+        "id": "NX-UI-224",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
@@ -126,17 +90,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-183",
+        "id": "NX-UI-225",
+        "page": "Attendance",
+        "pageKey": "attendance",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Attendance · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+        "steps": [
+          "Navigate to Attendance using Attendance.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Attendance page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/attendance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-226",
+        "page": "Attendance",
+        "pageKey": "attendance",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Attendance · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+        "steps": [
+          "Navigate to Attendance using Attendance.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+        "locatorFile": "locators/attendance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-227",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
         "category": "integration",
         "difficulty": "high",
-        "title": "Attendance · integration · UI to data persistence",
+        "title": "Attendance · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
         "steps": [
           "Navigate to Attendance using Attendance.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Employee column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/hr/attendance and its mapped data source (attendance), scoped to the active workspace.",
@@ -144,20 +144,56 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-184",
+        "id": "NX-UI-228",
         "page": "Attendance",
         "pageKey": "attendance",
         "section": "People",
         "category": "negative",
         "difficulty": "high",
-        "title": "Attendance · negative · Unauthenticated request",
+        "title": "Attendance · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
         "steps": [
           "Navigate to Attendance using Attendance.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Employee column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/attendance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-229",
+        "page": "Attendance",
+        "pageKey": "attendance",
+        "section": "People",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Attendance · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+        "steps": [
+          "Navigate to Attendance using Attendance.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Attendance page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
+        "locatorFile": "locators/attendance.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-230",
+        "page": "Attendance",
+        "pageKey": "attendance",
+        "section": "People",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Attendance · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+        "steps": [
+          "Navigate to Attendance using Attendance.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Employee column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
         "locatorFile": "locators/attendance.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

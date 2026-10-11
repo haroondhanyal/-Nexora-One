@@ -6,7 +6,7 @@
   "apiPaths": [],
   "dataTables": [],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 0,
     "bdd": 4,
     "database": 0
@@ -14,7 +14,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-369",
+        "id": "NX-UI-461",
         "page": "Sign in",
         "pageKey": "auth_sign_in",
         "section": "Authentication",
@@ -32,31 +32,13 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-370",
-        "page": "Sign in",
-        "pageKey": "auth_sign_in",
-        "section": "Authentication",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Sign in · smoke · Primary data renders",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
-        "steps": [
-          "Reach the signed-out Nexora sign-in screen.",
-          "Open the sign-in page and verify the Nexora heading, secure sign-in action and account links.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Sign in lifecycle screen behaves as expected: Open the sign-in page and verify the Nexora heading, secure sign-in action and account links. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_sign_in.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-371",
+        "id": "NX-UI-462",
         "page": "Sign in",
         "pageKey": "auth_sign_in",
         "section": "Authentication",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Sign in · regression · Search and clear",
+        "title": "Sign in · regression · Reload persistence",
         "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
         "steps": [
           "Reach the signed-out Nexora sign-in screen.",
@@ -68,61 +50,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-372",
-        "page": "Sign in",
-        "pageKey": "auth_sign_in",
-        "section": "Authentication",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Sign in · regression · Create validation and save",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
-        "steps": [
-          "Reach the signed-out Nexora sign-in screen.",
-          "Select Forgot password and Sign up; verify each opens its configured identity flow.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Sign in lifecycle screen behaves as expected: Select Forgot password and Sign up; verify each opens its configured identity flow. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_sign_in.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-373",
-        "page": "Sign in",
-        "pageKey": "auth_sign_in",
-        "section": "Authentication",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Sign in · integration · Page to API contract",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
-        "steps": [
-          "Reach the signed-out Nexora sign-in screen.",
-          "Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Sign in lifecycle screen behaves as expected: Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_sign_in.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-374",
-        "page": "Sign in",
-        "pageKey": "auth_sign_in",
-        "section": "Authentication",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Sign in · negative · Required value omitted",
-        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
-        "steps": [
-          "Reach the signed-out Nexora sign-in screen.",
-          "Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error.",
-          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Sign in lifecycle screen behaves as expected: Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error. No unauthorized workspace data is displayed.",
-        "locatorFile": "locators/auth_sign_in.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-375",
+        "id": "NX-UI-463",
         "page": "Sign in",
         "pageKey": "auth_sign_in",
         "section": "Authentication",
@@ -140,7 +68,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-376",
+        "id": "NX-UI-464",
         "page": "Sign in",
         "pageKey": "auth_sign_in",
         "section": "Authentication",
@@ -154,6 +82,114 @@
           "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Sign in lifecycle screen behaves as expected: Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-465",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sign in · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Open the sign-in page and verify the Nexora heading, secure sign-in action and account links.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Open the sign-in page and verify the Nexora heading, secure sign-in action and account links. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-466",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sign in · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Select Forgot password and Sign up; verify each opens its configured identity flow.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Select Forgot password and Sign up; verify each opens its configured identity flow. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-467",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Sign in · integration · UI to data persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-468",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Sign in · negative · Unauthenticated request",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-469",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Sign in · smoke · Page entry and navigation",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Open the sign-in page and verify the Nexora heading, secure sign-in action and account links.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Open the sign-in page and verify the Nexora heading, secure sign-in action and account links. No unauthorized workspace data is displayed.",
+        "locatorFile": "locators/auth_sign_in.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-470",
+        "page": "Sign in",
+        "pageKey": "auth_sign_in",
+        "section": "Authentication",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Sign in · regression · Reload persistence",
+        "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+        "steps": [
+          "Reach the signed-out Nexora sign-in screen.",
+          "Select Forgot password and Sign up; verify each opens its configured identity flow.",
+          "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Sign in lifecycle screen behaves as expected: Select Forgot password and Sign up; verify each opens its configured identity flow. No unauthorized workspace data is displayed.",
         "locatorFile": "locators/auth_sign_in.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

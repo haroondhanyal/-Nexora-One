@@ -10,7 +10,7 @@
     "business_records"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-073",
+        "id": "NX-UI-089",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
@@ -36,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-074",
-        "page": "Customers",
-        "pageKey": "customers",
-        "section": "Core ERP",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Customers · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
-        "steps": [
-          "Navigate to Customers using Customers.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Customer column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
-        "locatorFile": "locators/customers.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-075",
+        "id": "NX-UI-090",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
@@ -72,25 +54,43 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-076",
+        "id": "NX-UI-091",
+        "page": "Customers",
+        "pageKey": "customers",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Customers · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
+        "steps": [
+          "Navigate to Customers using Customers.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Customer column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
+        "locatorFile": "locators/customers.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-092",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Customers · regression · Create validation and save",
+        "title": "Customers · regression · Search and clear",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
         "steps": [
           "Navigate to Customers using Customers.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Customer column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "A unique test record is saved once in the active workspace; the Customer shows its submitted values.",
+        "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
         "locatorFile": "locators/customers.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-077",
+        "id": "NX-UI-093",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
@@ -108,7 +108,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-078",
+        "id": "NX-UI-094",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
@@ -126,17 +126,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-079",
+        "id": "NX-UI-095",
+        "page": "Customers",
+        "pageKey": "customers",
+        "section": "Core ERP",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Customers · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
+        "steps": [
+          "Navigate to Customers using Customers.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Customer column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
+        "locatorFile": "locators/customers.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-096",
+        "page": "Customers",
+        "pageKey": "customers",
+        "section": "Core ERP",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Customers · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
+        "steps": [
+          "Navigate to Customers using Customers.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Customer column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
+        "locatorFile": "locators/customers.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-097",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
         "category": "integration",
         "difficulty": "high",
-        "title": "Customers · integration · UI to data persistence",
+        "title": "Customers · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
         "steps": [
           "Navigate to Customers using Customers.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Customer column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/records/customers and its mapped data source (business_records), scoped to the active workspace.",
@@ -144,17 +180,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-080",
+        "id": "NX-UI-098",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",
         "category": "negative",
         "difficulty": "high",
-        "title": "Customers · negative · Unauthenticated request",
+        "title": "Customers · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
         "steps": [
           "Navigate to Customers using Customers.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Customer column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -162,7 +198,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-081",
+        "id": "NX-UI-099",
         "page": "Customers",
         "pageKey": "customers",
         "section": "Core ERP",

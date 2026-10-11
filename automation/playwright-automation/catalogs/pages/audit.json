@@ -10,7 +10,7 @@
     "audit_events"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 5,
     "database": 24
@@ -18,43 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-046",
-        "page": "Audit history",
-        "pageKey": "audit",
-        "section": "Governance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Audit history · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
-        "steps": [
-          "Navigate to Audit history using Audit history.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Actor column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
-        "locatorFile": "locators/audit.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-047",
-        "page": "Audit history",
-        "pageKey": "audit",
-        "section": "Governance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Audit history · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
-        "steps": [
-          "Navigate to Audit history using Audit history.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Actor column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
-        "locatorFile": "locators/audit.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-048",
+        "id": "NX-UI-056",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
@@ -72,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-049",
-        "page": "Audit history",
-        "pageKey": "audit",
-        "section": "Governance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Audit history · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
-        "steps": [
-          "Navigate to Audit history using Audit history.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Actor column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Actor shows its submitted values.",
-        "locatorFile": "locators/audit.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-050",
+        "id": "NX-UI-057",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
@@ -108,7 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-051",
+        "id": "NX-UI-058",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
@@ -126,17 +72,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-052",
+        "id": "NX-UI-059",
+        "page": "Audit history",
+        "pageKey": "audit",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Audit history · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+        "steps": [
+          "Navigate to Audit history using Audit history.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Actor column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+        "locatorFile": "locators/audit.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-060",
+        "page": "Audit history",
+        "pageKey": "audit",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Audit history · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+        "steps": [
+          "Navigate to Audit history using Audit history.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Actor column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+        "locatorFile": "locators/audit.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-061",
+        "page": "Audit history",
+        "pageKey": "audit",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Audit history · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+        "steps": [
+          "Navigate to Audit history using Audit history.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Actor column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+        "locatorFile": "locators/audit.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-062",
+        "page": "Audit history",
+        "pageKey": "audit",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Audit history · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+        "steps": [
+          "Navigate to Audit history using Audit history.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Actor column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+        "locatorFile": "locators/audit.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-063",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Audit history · integration · UI to data persistence",
+        "title": "Audit history · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
         "steps": [
           "Navigate to Audit history using Audit history.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Actor column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/audit and its mapped data source (audit_events), scoped to the active workspace.",
@@ -144,17 +162,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-053",
+        "id": "NX-UI-064",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
         "category": "negative",
         "difficulty": "high",
-        "title": "Audit history · negative · Unauthenticated request",
+        "title": "Audit history · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
         "steps": [
           "Navigate to Audit history using Audit history.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Actor column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -162,17 +180,35 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-054",
+        "id": "NX-UI-065",
+        "page": "Audit history",
+        "pageKey": "audit",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Audit history · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+        "steps": [
+          "Navigate to Audit history using Audit history.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Actor column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+        "locatorFile": "locators/audit.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-066",
         "page": "Audit history",
         "pageKey": "audit",
         "section": "Governance",
         "category": "regression",
         "difficulty": "standard",
-        "title": "Audit history · regression · Reload persistence",
+        "title": "Audit history · regression · Search and clear",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
         "steps": [
           "Navigate to Audit history using Audit history.",
-          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Actor column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",

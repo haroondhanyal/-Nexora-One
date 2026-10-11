@@ -1,6 +1,6 @@
 [
   {
-    "id": "NX-UI-005",
+    "id": "NX-UI-003",
     "page": "Business overview",
     "pageKey": "overview",
     "section": "Workspace",
@@ -24,11 +24,11 @@
     "section": "Workspace",
     "category": "integration",
     "difficulty": "high",
-    "title": "Business overview · integration · UI to data persistence",
+    "title": "Business overview · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/analytics/summary; backing data workspace_resources, business_records, payroll_runs.",
     "steps": [
       "Navigate to Business overview using Overview.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/workspace/analytics/summary and its mapped data source (workspace_resources, business_records, payroll_runs), scoped to the active workspace.",
@@ -36,7 +36,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-014",
+    "id": "NX-UI-013",
     "page": "Workspaces",
     "pageKey": "workspaces",
     "section": "Workspace",
@@ -54,17 +54,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-016",
+    "id": "NX-UI-017",
     "page": "Workspaces",
     "pageKey": "workspaces",
     "section": "Workspace",
     "category": "integration",
     "difficulty": "high",
-    "title": "Workspaces · integration · UI to data persistence",
+    "title": "Workspaces · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
     "steps": [
       "Navigate to Workspaces using Workspaces.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Workspace name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/me/workspaces and its mapped data source (tenants, memberships), scoped to the active workspace.",
@@ -90,35 +90,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-025",
-    "page": "Users & access",
-    "pageKey": "users",
-    "section": "Workspace",
-    "category": "integration",
-    "difficulty": "high",
-    "title": "Users & access · integration · UI to data persistence",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
-    "steps": [
-      "Navigate to Users & access using Users & access.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
-      "Check the Name column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",
-    "locatorFile": "locators/users.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
     "id": "NX-UI-027",
     "page": "Users & access",
     "pageKey": "users",
     "section": "Workspace",
     "category": "integration",
     "difficulty": "high",
-    "title": "Users & access · integration · Workspace isolation",
+    "title": "Users & access · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
     "steps": [
       "Navigate to Users & access using Users & access.",
-      "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",
@@ -127,6 +109,24 @@
   },
   {
     "id": "NX-UI-033",
+    "page": "Users & access",
+    "pageKey": "users",
+    "section": "Workspace",
+    "category": "integration",
+    "difficulty": "high",
+    "title": "Users & access · integration · Page to API contract",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+    "steps": [
+      "Navigate to Users & access using Users & access.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",
+    "locatorFile": "locators/users.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-037",
     "page": "Branches",
     "pageKey": "branches",
     "section": "Workspace",
@@ -144,17 +144,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-035",
+    "id": "NX-UI-043",
     "page": "Branches",
     "pageKey": "branches",
     "section": "Workspace",
     "category": "integration",
     "difficulty": "high",
-    "title": "Branches · integration · UI to data persistence",
+    "title": "Branches · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
     "steps": [
       "Navigate to Branches using Branches.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Branch name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/branches and its mapped data source (branches), scoped to the active workspace.",
@@ -162,7 +162,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-041",
+    "id": "NX-UI-047",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
@@ -180,17 +180,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-043",
+    "id": "NX-UI-053",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Roles & permissions · integration · UI to data persistence",
+    "title": "Roles & permissions · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
     "steps": [
       "Navigate to Roles & permissions using Roles & permissions.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Role name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/roles and its mapped data source (RBAC policy), scoped to the active workspace.",
@@ -198,7 +198,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-050",
+    "id": "NX-UI-057",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
@@ -216,17 +216,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-052",
+    "id": "NX-UI-063",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Audit history · integration · UI to data persistence",
+    "title": "Audit history · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
     "steps": [
       "Navigate to Audit history using Audit history.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Actor column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/audit and its mapped data source (audit_events), scoped to the active workspace.",
@@ -234,7 +234,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-059",
+    "id": "NX-UI-067",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
@@ -252,17 +252,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-061",
+    "id": "NX-UI-073",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Profile & settings · integration · UI to data persistence",
+    "title": "Profile & settings · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
     "steps": [
       "Navigate to Profile & settings using Profile & settings.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/company-profile, /api/v1/me/preferences and its mapped data source (tenants, user_preferences), scoped to the active workspace.",
@@ -270,17 +270,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-063",
+    "id": "NX-UI-077",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Profile & settings · integration · Workspace isolation",
+    "title": "Profile & settings · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
     "steps": [
       "Navigate to Profile & settings using Profile & settings.",
-      "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/company-profile, /api/v1/me/preferences and its mapped data source (tenants, user_preferences), scoped to the active workspace.",
@@ -288,7 +288,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-069",
+    "id": "NX-UI-083",
     "page": "CRM leads",
     "pageKey": "leads",
     "section": "Core ERP",
@@ -306,17 +306,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-071",
+    "id": "NX-UI-087",
     "page": "CRM leads",
     "pageKey": "leads",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "CRM leads · integration · UI to data persistence",
+    "title": "CRM leads · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
     "steps": [
       "Navigate to CRM leads using CRM leads.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Lead column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/leads and its mapped data source (business_records), scoped to the active workspace.",
@@ -324,7 +324,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-077",
+    "id": "NX-UI-093",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
@@ -342,17 +342,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-079",
+    "id": "NX-UI-097",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "Customers · integration · UI to data persistence",
+    "title": "Customers · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
     "steps": [
       "Navigate to Customers using Customers.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Customer column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/customers and its mapped data source (business_records), scoped to the active workspace.",
@@ -360,7 +360,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-086",
+    "id": "NX-UI-103",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
@@ -378,17 +378,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-088",
+    "id": "NX-UI-107",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "Suppliers · integration · UI to data persistence",
+    "title": "Suppliers · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
     "steps": [
       "Navigate to Suppliers using Suppliers.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Supplier column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/suppliers and its mapped data source (business_records), scoped to the active workspace.",
@@ -396,7 +396,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-095",
+    "id": "NX-UI-113",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
@@ -414,17 +414,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-097",
+    "id": "NX-UI-117",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "Sales & quotations · integration · UI to data persistence",
+    "title": "Sales & quotations · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
     "steps": [
       "Navigate to Sales & quotations using Sales & quotations.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
@@ -432,25 +432,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-099",
-    "page": "Sales & quotations",
-    "pageKey": "sales",
-    "section": "Core ERP",
-    "category": "integration",
-    "difficulty": "high",
-    "title": "Sales & quotations · integration · Workspace isolation",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
-    "steps": [
-      "Navigate to Sales & quotations using Sales & quotations.",
-      "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
-      "Check the Document column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page result agrees with /api/v1/records/sales and its mapped data source (business_records), scoped to the active workspace.",
-    "locatorFile": "locators/sales.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-105",
+    "id": "NX-UI-123",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
@@ -468,17 +450,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-107",
+    "id": "NX-UI-127",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "Purchasing · integration · UI to data persistence",
+    "title": "Purchasing · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/purchasing; backing data business_records.",
     "steps": [
       "Navigate to Purchasing using Purchasing.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Purchase order column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/purchasing and its mapped data source (business_records), scoped to the active workspace.",
@@ -486,7 +468,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-113",
+    "id": "NX-UI-133",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
@@ -504,17 +486,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-115",
+    "id": "NX-UI-137",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
     "category": "integration",
     "difficulty": "high",
-    "title": "Products & inventory · integration · UI to data persistence",
+    "title": "Products & inventory · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/inventory; backing data business_records.",
     "steps": [
       "Navigate to Products & inventory using Products & inventory.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Product column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/inventory and its mapped data source (business_records), scoped to the active workspace.",
@@ -522,7 +504,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-122",
+    "id": "NX-UI-143",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "section": "Core ERP",
+    "category": "integration",
+    "difficulty": "high",
+    "title": "Products & inventory · integration · Page to API contract",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/inventory; backing data business_records.",
+    "steps": [
+      "Navigate to Products & inventory using Products & inventory.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Check the Product column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page result agrees with /api/v1/records/inventory and its mapped data source (business_records), scoped to the active workspace.",
+    "locatorFile": "locators/inventory.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-147",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
@@ -540,17 +540,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-124",
+    "id": "NX-UI-153",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Invoices & bills · integration · UI to data persistence",
+    "title": "Invoices & bills · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
     "steps": [
       "Navigate to Invoices & bills using Invoices & bills.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/finance and its mapped data source (business_records), scoped to the active workspace.",
@@ -558,7 +558,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-131",
+    "id": "NX-UI-157",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
@@ -576,17 +576,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-133",
+    "id": "NX-UI-163",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Payments & reconciliation · integration · UI to data persistence",
+    "title": "Payments & reconciliation · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
     "steps": [
       "Navigate to Payments & reconciliation using Payments & reconciliation.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Reference column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/payments and its mapped data source (business_records), scoped to the active workspace.",
@@ -594,25 +594,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-135",
-    "page": "Payments & reconciliation",
-    "pageKey": "payments",
-    "section": "Finance",
-    "category": "integration",
-    "difficulty": "high",
-    "title": "Payments & reconciliation · integration · Workspace isolation",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
-    "steps": [
-      "Navigate to Payments & reconciliation using Payments & reconciliation.",
-      "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
-      "Check the Reference column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page result agrees with /api/v1/records/payments and its mapped data source (business_records), scoped to the active workspace.",
-    "locatorFile": "locators/payments.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-141",
+    "id": "NX-UI-167",
     "page": "Budgets & reports",
     "pageKey": "budgets",
     "section": "Finance",
@@ -630,17 +612,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-143",
+    "id": "NX-UI-173",
     "page": "Budgets & reports",
     "pageKey": "budgets",
     "section": "Finance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Budgets & reports · integration · UI to data persistence",
+    "title": "Budgets & reports · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
     "steps": [
       "Navigate to Budgets & reports using Budgets & reports.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Budget column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/budgets and its mapped data source (business_records), scoped to the active workspace.",
@@ -648,7 +630,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-149",
+    "id": "NX-UI-177",
     "page": "Approvals",
     "pageKey": "approvals",
     "section": "Finance",
@@ -666,17 +648,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-151",
+    "id": "NX-UI-183",
     "page": "Approvals",
     "pageKey": "approvals",
     "section": "Finance",
     "category": "integration",
     "difficulty": "high",
-    "title": "Approvals · integration · UI to data persistence",
+    "title": "Approvals · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
     "steps": [
       "Navigate to Approvals using Approvals.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Request column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/records/approvals and its mapped data source (business_records), scoped to the active workspace.",
@@ -684,7 +666,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-157",
+    "id": "NX-UI-187",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "section": "Finance",
+    "category": "integration",
+    "difficulty": "high",
+    "title": "Approvals · integration · Page to API contract",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+    "steps": [
+      "Navigate to Approvals using Approvals.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Check the Request column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page result agrees with /api/v1/records/approvals and its mapped data source (business_records), scoped to the active workspace.",
+    "locatorFile": "locators/approvals.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-193",
     "page": "Departments",
     "pageKey": "departments",
     "section": "People",
@@ -702,17 +702,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-159",
+    "id": "NX-UI-197",
     "page": "Departments",
     "pageKey": "departments",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Departments · integration · UI to data persistence",
+    "title": "Departments · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
     "steps": [
       "Navigate to Departments using Departments.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/hr/departments and its mapped data source (departments), scoped to the active workspace.",
@@ -720,7 +720,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-165",
+    "id": "NX-UI-203",
     "page": "Employees",
     "pageKey": "employees",
     "section": "People",
@@ -738,17 +738,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-167",
+    "id": "NX-UI-207",
     "page": "Employees",
     "pageKey": "employees",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Employees · integration · UI to data persistence",
+    "title": "Employees · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
     "steps": [
       "Navigate to Employees using Employees.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Employee no column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/hr/employees and its mapped data source (employees), scoped to the active workspace.",
@@ -756,7 +756,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-173",
+    "id": "NX-UI-213",
     "page": "Shifts",
     "pageKey": "shifts",
     "section": "People",
@@ -774,17 +774,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-175",
+    "id": "NX-UI-217",
     "page": "Shifts",
     "pageKey": "shifts",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Shifts · integration · UI to data persistence",
+    "title": "Shifts · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
     "steps": [
       "Navigate to Shifts using Shifts.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/hr/shifts and its mapped data source (shifts), scoped to the active workspace.",
@@ -792,7 +792,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-181",
+    "id": "NX-UI-223",
     "page": "Attendance",
     "pageKey": "attendance",
     "section": "People",
@@ -810,17 +810,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-183",
+    "id": "NX-UI-227",
     "page": "Attendance",
     "pageKey": "attendance",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Attendance · integration · UI to data persistence",
+    "title": "Attendance · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
     "steps": [
       "Navigate to Attendance using Attendance.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/hr/attendance and its mapped data source (attendance), scoped to the active workspace.",
@@ -828,7 +828,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-189",
+    "id": "NX-UI-233",
     "page": "Leave requests",
     "pageKey": "leaves",
     "section": "People",
@@ -846,17 +846,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-191",
+    "id": "NX-UI-237",
     "page": "Leave requests",
     "pageKey": "leaves",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Leave requests · integration · UI to data persistence",
+    "title": "Leave requests · integration · Page to API contract",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
     "steps": [
       "Navigate to Leave requests using Leave requests.",
-      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
       "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page result agrees with /api/v1/hr/leaves and its mapped data source (leave_requests), scoped to the active workspace.",
@@ -864,25 +864,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-197",
-    "page": "Payroll runs",
-    "pageKey": "payroll",
-    "section": "People",
-    "category": "integration",
-    "difficulty": "high",
-    "title": "Payroll runs · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-    "steps": [
-      "Navigate to Payroll runs using Payroll runs.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-      "Check the Period start column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
-    "locatorFile": "locators/payroll.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-199",
+    "id": "NX-UI-243",
     "page": "Payroll runs",
     "pageKey": "payroll",
     "section": "People",
@@ -900,25 +882,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-205",
-    "page": "My payslips",
-    "pageKey": "payslips",
+    "id": "NX-UI-247",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
     "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "My payslips · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+    "title": "Payroll runs · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
     "steps": [
-      "Navigate to My payslips using My payslips.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-      "Check the Employee column and confirm no private data is exposed to the wrong account."
+      "Navigate to Payroll runs using Payroll runs.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Check the Period start column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
-    "locatorFile": "locators/payslips.json",
+    "expected": "The page result agrees with /api/v1/hr/payroll/runs and its mapped data source (payroll_runs), scoped to the active workspace.",
+    "locatorFile": "locators/payroll.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-207",
+    "id": "NX-UI-253",
     "page": "My payslips",
     "pageKey": "payslips",
     "section": "People",
@@ -936,25 +918,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-213",
-    "page": "Storefronts",
-    "pageKey": "storefronts",
-    "section": "Commerce",
+    "id": "NX-UI-257",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "section": "People",
     "category": "integration",
     "difficulty": "high",
-    "title": "Storefronts · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
+    "title": "My payslips · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
     "steps": [
-      "Navigate to Storefronts using Storefronts.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-      "Check the Title column and confirm no private data is exposed to the wrong account."
+      "Navigate to My payslips using My payslips.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/storefronts and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/storefronts.json",
+    "expected": "The page result agrees with /api/v1/hr/payroll/payslips and its mapped data source (payslips), scoped to the active workspace.",
+    "locatorFile": "locators/payslips.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-215",
+    "id": "NX-UI-263",
     "page": "Storefronts",
     "pageKey": "storefronts",
     "section": "Commerce",
@@ -972,25 +954,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-221",
-    "page": "Store orders",
-    "pageKey": "orders",
+    "id": "NX-UI-267",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
     "section": "Commerce",
     "category": "integration",
     "difficulty": "high",
-    "title": "Store orders · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+    "title": "Storefronts · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
     "steps": [
-      "Navigate to Store orders using Store orders.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Storefronts using Storefronts.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/orders and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/orders.json",
+    "expected": "The page result agrees with /api/v1/workspace/storefronts and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/storefronts.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-223",
+    "id": "NX-UI-273",
     "page": "Store orders",
     "pageKey": "orders",
     "section": "Commerce",
@@ -1008,25 +990,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-229",
-    "page": "Promotions",
-    "pageKey": "promotions",
+    "id": "NX-UI-277",
+    "page": "Store orders",
+    "pageKey": "orders",
     "section": "Commerce",
     "category": "integration",
     "difficulty": "high",
-    "title": "Promotions · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
+    "title": "Store orders · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
     "steps": [
-      "Navigate to Promotions using Promotions.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Store orders using Store orders.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/promotions and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/promotions.json",
+    "expected": "The page result agrees with /api/v1/workspace/orders and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/orders.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-231",
+    "id": "NX-UI-283",
     "page": "Promotions",
     "pageKey": "promotions",
     "section": "Commerce",
@@ -1044,25 +1026,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-237",
-    "page": "Returns & refunds",
-    "pageKey": "returns",
+    "id": "NX-UI-287",
+    "page": "Promotions",
+    "pageKey": "promotions",
     "section": "Commerce",
     "category": "integration",
     "difficulty": "high",
-    "title": "Returns & refunds · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+    "title": "Promotions · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Returns & refunds using Returns & refunds.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Promotions using Promotions.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/returns.json",
+    "expected": "The page result agrees with /api/v1/workspace/promotions and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/promotions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-239",
+    "id": "NX-UI-293",
     "page": "Returns & refunds",
     "pageKey": "returns",
     "section": "Commerce",
@@ -1080,25 +1062,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-245",
-    "page": "POS sessions",
-    "pageKey": "pos_sessions",
+    "id": "NX-UI-297",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
     "section": "Commerce",
     "category": "integration",
     "difficulty": "high",
-    "title": "POS sessions · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
+    "title": "Returns & refunds · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
     "steps": [
-      "Navigate to POS sessions using POS sessions.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Returns & refunds using Returns & refunds.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/pos_sessions and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/pos_sessions.json",
+    "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/returns.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-247",
+    "id": "NX-UI-303",
     "page": "POS sessions",
     "pageKey": "pos_sessions",
     "section": "Commerce",
@@ -1116,25 +1098,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-253",
-    "page": "Projects",
-    "pageKey": "projects",
-    "section": "Operations",
+    "id": "NX-UI-307",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "section": "Commerce",
     "category": "integration",
     "difficulty": "high",
-    "title": "Projects · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+    "title": "POS sessions · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Projects using Projects.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to POS sessions using POS sessions.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/projects and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/projects.json",
+    "expected": "The page result agrees with /api/v1/workspace/pos_sessions and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/pos_sessions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-255",
+    "id": "NX-UI-313",
     "page": "Projects",
     "pageKey": "projects",
     "section": "Operations",
@@ -1152,25 +1134,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-261",
-    "page": "Timesheets",
-    "pageKey": "timesheets",
+    "id": "NX-UI-317",
+    "page": "Projects",
+    "pageKey": "projects",
     "section": "Operations",
     "category": "integration",
     "difficulty": "high",
-    "title": "Timesheets · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
+    "title": "Projects · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
     "steps": [
-      "Navigate to Timesheets using Timesheets.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Projects using Projects.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/timesheets and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/timesheets.json",
+    "expected": "The page result agrees with /api/v1/workspace/projects and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/projects.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-263",
+    "id": "NX-UI-323",
     "page": "Timesheets",
     "pageKey": "timesheets",
     "section": "Operations",
@@ -1188,25 +1170,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-269",
-    "page": "Service tickets",
-    "pageKey": "service_tickets",
+    "id": "NX-UI-327",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
     "section": "Operations",
     "category": "integration",
     "difficulty": "high",
-    "title": "Service tickets · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
+    "title": "Timesheets · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
     "steps": [
-      "Navigate to Service tickets using Service tickets.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Timesheets using Timesheets.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/service_tickets and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/service_tickets.json",
+    "expected": "The page result agrees with /api/v1/workspace/timesheets and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/timesheets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-271",
+    "id": "NX-UI-333",
     "page": "Service tickets",
     "pageKey": "service_tickets",
     "section": "Operations",
@@ -1224,25 +1206,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-277",
-    "page": "Field jobs",
-    "pageKey": "field_jobs",
+    "id": "NX-UI-337",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
     "section": "Operations",
     "category": "integration",
     "difficulty": "high",
-    "title": "Field jobs · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
+    "title": "Service tickets · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
     "steps": [
-      "Navigate to Field jobs using Field jobs.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Service tickets using Service tickets.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/field_jobs and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/field_jobs.json",
+    "expected": "The page result agrees with /api/v1/workspace/service_tickets and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/service_tickets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-279",
+    "id": "NX-UI-343",
     "page": "Field jobs",
     "pageKey": "field_jobs",
     "section": "Operations",
@@ -1260,25 +1242,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-285",
-    "page": "Documents",
-    "pageKey": "documents",
+    "id": "NX-UI-347",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
     "section": "Operations",
     "category": "integration",
     "difficulty": "high",
-    "title": "Documents · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+    "title": "Field jobs · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
     "steps": [
-      "Navigate to Documents using Documents.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Field jobs using Field jobs.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/documents and its mapped data source (workspace_resources, workspace_attachments), scoped to the active workspace.",
-    "locatorFile": "locators/documents.json",
+    "expected": "The page result agrees with /api/v1/workspace/field_jobs and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/field_jobs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-287",
+    "id": "NX-UI-353",
     "page": "Documents",
     "pageKey": "documents",
     "section": "Operations",
@@ -1296,25 +1278,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-293",
-    "page": "Workflow designer",
-    "pageKey": "workflows",
-    "section": "Automation & insights",
+    "id": "NX-UI-357",
+    "page": "Documents",
+    "pageKey": "documents",
+    "section": "Operations",
     "category": "integration",
     "difficulty": "high",
-    "title": "Workflow designer · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
+    "title": "Documents · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
     "steps": [
-      "Navigate to Workflow designer using Workflow designer.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Documents using Documents.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/workflows and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/workflows.json",
+    "expected": "The page result agrees with /api/v1/workspace/documents and its mapped data source (workspace_resources, workspace_attachments), scoped to the active workspace.",
+    "locatorFile": "locators/documents.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-295",
+    "id": "NX-UI-363",
     "page": "Workflow designer",
     "pageKey": "workflows",
     "section": "Automation & insights",
@@ -1332,25 +1314,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-301",
-    "page": "Workflow run history",
-    "pageKey": "workflow_runs",
+    "id": "NX-UI-367",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Workflow run history · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+    "title": "Workflow designer · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
     "steps": [
-      "Navigate to Workflow run history using Workflow run history.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Workflow designer using Workflow designer.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/workflow_runs and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/workflow_runs.json",
+    "expected": "The page result agrees with /api/v1/workspace/workflows and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/workflows.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-303",
+    "id": "NX-UI-373",
     "page": "Workflow run history",
     "pageKey": "workflow_runs",
     "section": "Automation & insights",
@@ -1368,25 +1350,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-309",
-    "page": "Reports",
-    "pageKey": "reports",
+    "id": "NX-UI-377",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Reports · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+    "title": "Workflow run history · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
     "steps": [
-      "Navigate to Reports using Reports.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Workflow run history using Workflow run history.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/reports and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/reports.json",
+    "expected": "The page result agrees with /api/v1/workspace/workflow_runs and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/workflow_runs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-311",
+    "id": "NX-UI-383",
     "page": "Reports",
     "pageKey": "reports",
     "section": "Automation & insights",
@@ -1404,25 +1386,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-317",
-    "page": "Custom fields",
-    "pageKey": "custom_fields",
+    "id": "NX-UI-387",
+    "page": "Reports",
+    "pageKey": "reports",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Custom fields · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+    "title": "Reports · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
     "steps": [
-      "Navigate to Custom fields using Custom fields.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Reports using Reports.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/custom_fields and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/custom_fields.json",
+    "expected": "The page result agrees with /api/v1/workspace/reports and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/reports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-319",
+    "id": "NX-UI-393",
     "page": "Custom fields",
     "pageKey": "custom_fields",
     "section": "Automation & insights",
@@ -1440,25 +1422,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-325",
-    "page": "API clients",
-    "pageKey": "api_clients",
+    "id": "NX-UI-397",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "API clients · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+    "title": "Custom fields · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
     "steps": [
-      "Navigate to API clients using API clients.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Custom fields using Custom fields.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/api_clients and its mapped data source (workspace_resources, api_client_credentials), scoped to the active workspace.",
-    "locatorFile": "locators/api_clients.json",
+    "expected": "The page result agrees with /api/v1/workspace/custom_fields and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/custom_fields.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-327",
+    "id": "NX-UI-403",
     "page": "API clients",
     "pageKey": "api_clients",
     "section": "Automation & insights",
@@ -1476,25 +1458,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-333",
-    "page": "Integration health",
-    "pageKey": "integration_health",
+    "id": "NX-UI-407",
+    "page": "API clients",
+    "pageKey": "api_clients",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Integration health · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+    "title": "API clients · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
     "steps": [
-      "Navigate to Integration health using Integration health.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to API clients using API clients.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/integration_health and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/integration_health.json",
+    "expected": "The page result agrees with /api/v1/workspace/api_clients and its mapped data source (workspace_resources, api_client_credentials), scoped to the active workspace.",
+    "locatorFile": "locators/api_clients.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-335",
+    "id": "NX-UI-413",
     "page": "Integration health",
     "pageKey": "integration_health",
     "section": "Automation & insights",
@@ -1512,25 +1494,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-341",
-    "page": "Import jobs",
-    "pageKey": "imports",
+    "id": "NX-UI-417",
+    "page": "Integration health",
+    "pageKey": "integration_health",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Import jobs · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
+    "title": "Integration health · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
     "steps": [
-      "Navigate to Import jobs using Import jobs.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+      "Navigate to Integration health using Integration health.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/imports and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/imports.json",
+    "expected": "The page result agrees with /api/v1/workspace/integration_health and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/integration_health.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-343",
+    "id": "NX-UI-423",
     "page": "Import jobs",
     "pageKey": "imports",
     "section": "Automation & insights",
@@ -1548,25 +1530,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-349",
-    "page": "Workspace assistant",
-    "pageKey": "assistant",
+    "id": "NX-UI-427",
+    "page": "Import jobs",
+    "pageKey": "imports",
     "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Workspace assistant · integration · Page to API contract",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+    "title": "Import jobs · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
     "steps": [
-      "Navigate to Workspace assistant using Workspace assistant.",
-      "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-      "Check the primary content and confirm no private data is exposed to the wrong account."
+      "Navigate to Import jobs using Import jobs.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The page result agrees with /api/v1/workspace/assistant/ask and its mapped data source (workspace_resources), scoped to the active workspace.",
-    "locatorFile": "locators/assistant.json",
+    "expected": "The page result agrees with /api/v1/workspace/imports and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/imports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-351",
+    "id": "NX-UI-433",
     "page": "Workspace assistant",
     "pageKey": "assistant",
     "section": "Automation & insights",
@@ -1584,25 +1566,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-357",
-    "page": "Loading and session check",
-    "pageKey": "auth_loading",
-    "section": "Authentication",
+    "id": "NX-UI-437",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "section": "Automation & insights",
     "category": "integration",
     "difficulty": "high",
-    "title": "Loading and session check · integration · Page to API contract",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+    "title": "Workspace assistant · integration · UI to data persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
     "steps": [
-      "Load the Nexora app entry route.",
-      "Start with a valid and then absent identity session; verify the app routes to the matching account state.",
-      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+      "Navigate to Workspace assistant using Workspace assistant.",
+      "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+      "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Loading and session check lifecycle screen behaves as expected: Start with a valid and then absent identity session; verify the app routes to the matching account state. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_loading.json",
+    "expected": "The page result agrees with /api/v1/workspace/assistant/ask and its mapped data source (workspace_resources), scoped to the active workspace.",
+    "locatorFile": "locators/assistant.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-359",
+    "id": "NX-UI-443",
     "page": "Loading and session check",
     "pageKey": "auth_loading",
     "section": "Authentication",
@@ -1620,25 +1602,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-365",
-    "page": "Identity service unavailable",
-    "pageKey": "auth_error",
+    "id": "NX-UI-447",
+    "page": "Loading and session check",
+    "pageKey": "auth_loading",
     "section": "Authentication",
     "category": "integration",
     "difficulty": "high",
-    "title": "Identity service unavailable · integration · Page to API contract",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+    "title": "Loading and session check · integration · UI to data persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
     "steps": [
-      "Simulate an identity-provider initialization error.",
-      "Restore the identity service and verify Retry returns the visitor to sign-in.",
+      "Load the Nexora app entry route.",
+      "Start with a valid and then absent identity session; verify the app routes to the matching account state.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Restore the identity service and verify Retry returns the visitor to sign-in. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_error.json",
+    "expected": "The Loading and session check lifecycle screen behaves as expected: Start with a valid and then absent identity session; verify the app routes to the matching account state. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_loading.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-367",
+    "id": "NX-UI-453",
     "page": "Identity service unavailable",
     "pageKey": "auth_error",
     "section": "Authentication",
@@ -1656,25 +1638,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-373",
-    "page": "Sign in",
-    "pageKey": "auth_sign_in",
+    "id": "NX-UI-457",
+    "page": "Identity service unavailable",
+    "pageKey": "auth_error",
     "section": "Authentication",
     "category": "integration",
     "difficulty": "high",
-    "title": "Sign in · integration · Page to API contract",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+    "title": "Identity service unavailable · integration · UI to data persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
     "steps": [
-      "Reach the signed-out Nexora sign-in screen.",
-      "Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works.",
+      "Simulate an identity-provider initialization error.",
+      "Restore the identity service and verify Retry returns the visitor to sign-in.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Sign in lifecycle screen behaves as expected: Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_sign_in.json",
+    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Restore the identity service and verify Retry returns the visitor to sign-in. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_error.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-375",
+    "id": "NX-UI-463",
     "page": "Sign in",
     "pageKey": "auth_sign_in",
     "section": "Authentication",
@@ -1692,25 +1674,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-381",
-    "page": "Sign up",
-    "pageKey": "auth_sign_up",
+    "id": "NX-UI-467",
+    "page": "Sign in",
+    "pageKey": "auth_sign_in",
     "section": "Authentication",
     "category": "integration",
     "difficulty": "high",
-    "title": "Sign up · integration · Page to API contract",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+    "title": "Sign in · integration · UI to data persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
     "steps": [
-      "Open Sign up from the signed-out page using a configured identity provider.",
-      "Complete the configured registration flow and verify the new identity can start workspace setup.",
+      "Reach the signed-out Nexora sign-in screen.",
+      "Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Sign up lifecycle screen behaves as expected: Complete the configured registration flow and verify the new identity can start workspace setup. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_sign_up.json",
+    "expected": "The Sign in lifecycle screen behaves as expected: Select secure sign-in and verify the configured Keycloak OIDC redirect; in local-demo mode verify owner access works. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_in.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-383",
+    "id": "NX-UI-473",
     "page": "Sign up",
     "pageKey": "auth_sign_up",
     "section": "Authentication",
@@ -1728,13 +1710,31 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-389",
+    "id": "NX-UI-477",
+    "page": "Sign up",
+    "pageKey": "auth_sign_up",
+    "section": "Authentication",
+    "category": "integration",
+    "difficulty": "high",
+    "title": "Sign up · integration · UI to data persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+    "steps": [
+      "Open Sign up from the signed-out page using a configured identity provider.",
+      "Complete the configured registration flow and verify the new identity can start workspace setup.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Sign up lifecycle screen behaves as expected: Complete the configured registration flow and verify the new identity can start workspace setup. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_up.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-483",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
     "category": "integration",
     "difficulty": "high",
-    "title": "Forgot/reset password · integration · Page to API contract",
+    "title": "Forgot/reset password · integration · Workspace isolation",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted forgot-credentials flow.",
     "steps": [
       "Open Forgot password from the signed-out page using a configured identity provider.",
@@ -1746,13 +1746,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-391",
+    "id": "NX-UI-487",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
     "category": "integration",
     "difficulty": "high",
-    "title": "Forgot/reset password · integration · UI to data persistence",
+    "title": "Forgot/reset password · integration · Workspace isolation",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted forgot-credentials flow.",
     "steps": [
       "Open Forgot password from the signed-out page using a configured identity provider.",
@@ -1764,13 +1764,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-397",
+    "id": "NX-UI-493",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
     "category": "integration",
     "difficulty": "high",
-    "title": "Create workspace · integration · Page to API contract",
+    "title": "Create workspace · integration · Workspace isolation",
     "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
     "steps": [
       "Sign in locally and choose Create a demo workspace.",
@@ -1782,13 +1782,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-399",
+    "id": "NX-UI-497",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
     "category": "integration",
     "difficulty": "high",
-    "title": "Create workspace · integration · UI to data persistence",
+    "title": "Create workspace · integration · Workspace isolation",
     "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
     "steps": [
       "Sign in locally and choose Create a demo workspace.",

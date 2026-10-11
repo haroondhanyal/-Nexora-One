@@ -12,7 +12,7 @@
     "user_preferences"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 10,
     "bdd": 5,
     "database": 24
@@ -20,79 +20,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-055",
-        "page": "Profile & settings",
-        "pageKey": "settings",
-        "section": "Governance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Profile & settings · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
-        "steps": [
-          "Navigate to Profile & settings using Profile & settings.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
-        "locatorFile": "locators/settings.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-056",
-        "page": "Profile & settings",
-        "pageKey": "settings",
-        "section": "Governance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Profile & settings · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
-        "steps": [
-          "Navigate to Profile & settings using Profile & settings.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
-        "locatorFile": "locators/settings.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-057",
-        "page": "Profile & settings",
-        "pageKey": "settings",
-        "section": "Governance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Profile & settings · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
-        "steps": [
-          "Navigate to Profile & settings using Profile & settings.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
-        "locatorFile": "locators/settings.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-058",
-        "page": "Profile & settings",
-        "pageKey": "settings",
-        "section": "Governance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Profile & settings · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
-        "steps": [
-          "Navigate to Profile & settings using Profile & settings.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the primary content and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the primary page content shows its submitted values.",
-        "locatorFile": "locators/settings.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-059",
+        "id": "NX-UI-067",
         "page": "Profile & settings",
         "pageKey": "settings",
         "section": "Governance",
@@ -110,7 +38,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-060",
+        "id": "NX-UI-068",
         "page": "Profile & settings",
         "pageKey": "settings",
         "section": "Governance",
@@ -128,17 +56,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-061",
+        "id": "NX-UI-069",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Profile & settings · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-070",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Profile & settings · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-071",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Profile & settings · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-072",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Profile & settings · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-073",
         "page": "Profile & settings",
         "pageKey": "settings",
         "section": "Governance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Profile & settings · integration · UI to data persistence",
+        "title": "Profile & settings · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
         "steps": [
           "Navigate to Profile & settings using Profile & settings.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the primary content and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/company-profile, /api/v1/me/preferences and its mapped data source (tenants, user_preferences), scoped to the active workspace.",
@@ -146,17 +146,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-062",
+        "id": "NX-UI-074",
         "page": "Profile & settings",
         "pageKey": "settings",
         "section": "Governance",
         "category": "negative",
         "difficulty": "high",
-        "title": "Profile & settings · negative · Unauthenticated request",
+        "title": "Profile & settings · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
         "steps": [
           "Navigate to Profile & settings using Profile & settings.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the primary content and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -164,17 +164,53 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-063",
+        "id": "NX-UI-075",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Profile & settings · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-076",
+        "page": "Profile & settings",
+        "pageKey": "settings",
+        "section": "Governance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Profile & settings · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+        "steps": [
+          "Navigate to Profile & settings using Profile & settings.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the primary content and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+        "locatorFile": "locators/settings.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-077",
         "page": "Profile & settings",
         "pageKey": "settings",
         "section": "Governance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Profile & settings · integration · Workspace isolation",
+        "title": "Profile & settings · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
         "steps": [
           "Navigate to Profile & settings using Profile & settings.",
-          "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the primary content and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/company-profile, /api/v1/me/preferences and its mapped data source (tenants, user_preferences), scoped to the active workspace.",

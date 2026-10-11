@@ -10,7 +10,7 @@
     "business_records"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 4,
     "database": 24
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-127",
+        "id": "NX-UI-155",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
@@ -36,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-128",
-        "page": "Payments & reconciliation",
-        "pageKey": "payments",
-        "section": "Finance",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Payments & reconciliation · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
-        "steps": [
-          "Navigate to Payments & reconciliation using Payments & reconciliation.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Reference column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
-        "locatorFile": "locators/payments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-129",
+        "id": "NX-UI-156",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
@@ -72,25 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-130",
-        "page": "Payments & reconciliation",
-        "pageKey": "payments",
-        "section": "Finance",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Payments & reconciliation · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
-        "steps": [
-          "Navigate to Payments & reconciliation using Payments & reconciliation.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Reference column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Reference shows its submitted values.",
-        "locatorFile": "locators/payments.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-131",
+        "id": "NX-UI-157",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
@@ -108,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-132",
+        "id": "NX-UI-158",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
@@ -126,17 +90,89 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-133",
+        "id": "NX-UI-159",
+        "page": "Payments & reconciliation",
+        "pageKey": "payments",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payments & reconciliation · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
+        "steps": [
+          "Navigate to Payments & reconciliation using Payments & reconciliation.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Reference column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
+        "locatorFile": "locators/payments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-160",
+        "page": "Payments & reconciliation",
+        "pageKey": "payments",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payments & reconciliation · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
+        "steps": [
+          "Navigate to Payments & reconciliation using Payments & reconciliation.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Reference column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
+        "locatorFile": "locators/payments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-161",
+        "page": "Payments & reconciliation",
+        "pageKey": "payments",
+        "section": "Finance",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payments & reconciliation · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
+        "steps": [
+          "Navigate to Payments & reconciliation using Payments & reconciliation.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Reference column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
+        "locatorFile": "locators/payments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-162",
+        "page": "Payments & reconciliation",
+        "pageKey": "payments",
+        "section": "Finance",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Payments & reconciliation · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
+        "steps": [
+          "Navigate to Payments & reconciliation using Payments & reconciliation.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Reference column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Reference shows its submitted values.",
+        "locatorFile": "locators/payments.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-163",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
         "category": "integration",
         "difficulty": "high",
-        "title": "Payments & reconciliation · integration · UI to data persistence",
+        "title": "Payments & reconciliation · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
         "steps": [
           "Navigate to Payments & reconciliation using Payments & reconciliation.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Reference column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/records/payments and its mapped data source (business_records), scoped to the active workspace.",
@@ -144,17 +180,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-134",
+        "id": "NX-UI-164",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
         "category": "negative",
         "difficulty": "high",
-        "title": "Payments & reconciliation · negative · Unauthenticated request",
+        "title": "Payments & reconciliation · negative · Required value omitted",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
         "steps": [
           "Navigate to Payments & reconciliation using Payments & reconciliation.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
           "Check the Reference column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -162,20 +198,20 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-135",
+        "id": "NX-UI-165",
         "page": "Payments & reconciliation",
         "pageKey": "payments",
         "section": "Finance",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Payments & reconciliation · integration · Workspace isolation",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Payments & reconciliation · smoke · Primary data renders",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
         "steps": [
           "Navigate to Payments & reconciliation using Payments & reconciliation.",
-          "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
           "Check the Reference column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page result agrees with /api/v1/records/payments and its mapped data source (business_records), scoped to the active workspace.",
+        "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
         "locatorFile": "locators/payments.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "NX-UI-003",
+    "id": "NX-UI-002",
     "page": "Business overview",
     "pageKey": "overview",
     "section": "Workspace",
@@ -18,20 +18,38 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-004",
+    "id": "NX-UI-006",
     "page": "Business overview",
     "pageKey": "overview",
     "section": "Workspace",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Business overview · regression · Create validation and save",
+    "title": "Business overview · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/analytics/summary; backing data workspace_resources, business_records, payroll_runs.",
     "steps": [
       "Navigate to Business overview using Overview.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the primary page content shows its submitted values.",
+    "expected": "The Business overview page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+    "locatorFile": "locators/overview.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-010",
+    "page": "Business overview",
+    "pageKey": "overview",
+    "section": "Workspace",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Business overview · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/analytics/summary; backing data workspace_resources, business_records, payroll_runs.",
+    "steps": [
+      "Navigate to Business overview using Overview.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the primary content and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Business overview page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
     "locatorFile": "locators/overview.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
@@ -54,35 +72,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-013",
+    "id": "NX-UI-016",
     "page": "Workspaces",
     "pageKey": "workspaces",
     "section": "Workspace",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workspaces · regression · Create validation and save",
+    "title": "Workspaces · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
     "steps": [
       "Navigate to Workspaces using Workspaces.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-      "Check the Workspace name column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "A unique test record is saved once in the active workspace; the Workspace name shows its submitted values.",
-    "locatorFile": "locators/workspaces.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-018",
-    "page": "Workspaces",
-    "pageKey": "workspaces",
-    "section": "Workspace",
-    "category": "regression",
-    "difficulty": "standard",
-    "title": "Workspaces · regression · Reload persistence",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
-    "steps": [
-      "Navigate to Workspaces using Workspaces.",
-      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Workspace name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
@@ -90,7 +90,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-021",
+    "id": "NX-UI-020",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "section": "Workspace",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Workspaces · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+    "steps": [
+      "Navigate to Workspaces using Workspaces.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+    "locatorFile": "locators/workspaces.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-022",
+    "page": "Workspaces",
+    "pageKey": "workspaces",
+    "section": "Workspace",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Workspaces · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
+    "steps": [
+      "Navigate to Workspaces using Workspaces.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Workspace name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Workspaces page shows its expected heading, active navigation and table headed “Workspace name” without horizontal overflow.",
+    "locatorFile": "locators/workspaces.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-026",
     "page": "Users & access",
     "pageKey": "users",
     "section": "Workspace",
@@ -108,25 +144,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-022",
+    "id": "NX-UI-030",
     "page": "Users & access",
     "pageKey": "users",
     "section": "Workspace",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Users & access · regression · Create validation and save",
+    "title": "Users & access · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
     "steps": [
       "Navigate to Users & access using Users & access.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
     "locatorFile": "locators/users.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-030",
+    "id": "NX-UI-032",
+    "page": "Users & access",
+    "pageKey": "users",
+    "section": "Workspace",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Users & access · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+    "steps": [
+      "Navigate to Users & access using Users & access.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+    "locatorFile": "locators/users.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-036",
     "page": "Branches",
     "pageKey": "branches",
     "section": "Workspace",
@@ -144,25 +198,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-031",
+    "id": "NX-UI-040",
     "page": "Branches",
     "pageKey": "branches",
     "section": "Workspace",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Branches · regression · Create validation and save",
+    "title": "Branches · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
     "steps": [
       "Navigate to Branches using Branches.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Branch name column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Branch name shows its submitted values.",
+    "expected": "The Branches page shows its expected heading, active navigation and table headed “Branch name” without horizontal overflow.",
     "locatorFile": "locators/branches.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-039",
+    "id": "NX-UI-042",
+    "page": "Branches",
+    "pageKey": "branches",
+    "section": "Workspace",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Branches · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
+    "steps": [
+      "Navigate to Branches using Branches.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Branch name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Branches page shows its expected heading, active navigation and table headed “Branch name” without horizontal overflow.",
+    "locatorFile": "locators/branches.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-046",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
@@ -180,25 +252,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-040",
+    "id": "NX-UI-050",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Roles & permissions · regression · Create validation and save",
+    "title": "Roles & permissions · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
     "steps": [
       "Navigate to Roles & permissions using Roles & permissions.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Role name column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Role name shows its submitted values.",
+    "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
     "locatorFile": "locators/roles.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-048",
+    "id": "NX-UI-052",
+    "page": "Roles & permissions",
+    "pageKey": "roles",
+    "section": "Governance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Roles & permissions · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
+    "steps": [
+      "Navigate to Roles & permissions using Roles & permissions.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Role name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Roles & permissions page shows its expected heading, active navigation and table headed “Role name” without horizontal overflow.",
+    "locatorFile": "locators/roles.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-056",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
@@ -216,35 +306,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-049",
+    "id": "NX-UI-060",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Audit history · regression · Create validation and save",
+    "title": "Audit history · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
     "steps": [
       "Navigate to Audit history using Audit history.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-      "Check the Actor column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "A unique test record is saved once in the active workspace; the Actor shows its submitted values.",
-    "locatorFile": "locators/audit.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-054",
-    "page": "Audit history",
-    "pageKey": "audit",
-    "section": "Governance",
-    "category": "regression",
-    "difficulty": "standard",
-    "title": "Audit history · regression · Reload persistence",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
-    "steps": [
-      "Navigate to Audit history using Audit history.",
-      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Actor column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
@@ -252,7 +324,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-057",
+    "id": "NX-UI-062",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "section": "Governance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Audit history · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+    "steps": [
+      "Navigate to Audit history using Audit history.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Actor column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+    "locatorFile": "locators/audit.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-066",
+    "page": "Audit history",
+    "pageKey": "audit",
+    "section": "Governance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Audit history · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
+    "steps": [
+      "Navigate to Audit history using Audit history.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Actor column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Audit history page shows its expected heading, active navigation and table headed “Actor” without horizontal overflow.",
+    "locatorFile": "locators/audit.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-070",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
@@ -270,25 +378,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-058",
+    "id": "NX-UI-072",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Profile & settings · regression · Create validation and save",
+    "title": "Profile & settings · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
     "steps": [
       "Navigate to Profile & settings using Profile & settings.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the primary page content shows its submitted values.",
+    "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
     "locatorFile": "locators/settings.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-066",
+    "id": "NX-UI-076",
+    "page": "Profile & settings",
+    "pageKey": "settings",
+    "section": "Governance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Profile & settings · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
+    "steps": [
+      "Navigate to Profile & settings using Profile & settings.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the primary content and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Profile & settings page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+    "locatorFile": "locators/settings.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-080",
     "page": "CRM leads",
     "pageKey": "leads",
     "section": "Core ERP",
@@ -306,25 +432,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-067",
+    "id": "NX-UI-082",
     "page": "CRM leads",
     "pageKey": "leads",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "CRM leads · regression · Create validation and save",
+    "title": "CRM leads · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
     "steps": [
       "Navigate to CRM leads using CRM leads.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Lead column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Lead shows its submitted values.",
+    "expected": "The CRM leads page shows its expected heading, active navigation and table headed “Lead” without horizontal overflow.",
     "locatorFile": "locators/leads.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-075",
+    "id": "NX-UI-086",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "CRM leads · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
+    "steps": [
+      "Navigate to CRM leads using CRM leads.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Lead column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The CRM leads page shows its expected heading, active navigation and table headed “Lead” without horizontal overflow.",
+    "locatorFile": "locators/leads.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-090",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
@@ -342,25 +486,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-076",
+    "id": "NX-UI-092",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Customers · regression · Create validation and save",
+    "title": "Customers · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
     "steps": [
       "Navigate to Customers using Customers.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Customer column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Customer shows its submitted values.",
+    "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
     "locatorFile": "locators/customers.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-084",
+    "id": "NX-UI-096",
+    "page": "Customers",
+    "pageKey": "customers",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Customers · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
+    "steps": [
+      "Navigate to Customers using Customers.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Customer column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Customers page shows its expected heading, active navigation and table headed “Customer” without horizontal overflow.",
+    "locatorFile": "locators/customers.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-100",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
@@ -378,35 +540,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-085",
+    "id": "NX-UI-102",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Suppliers · regression · Create validation and save",
+    "title": "Suppliers · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
     "steps": [
       "Navigate to Suppliers using Suppliers.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-      "Check the Supplier column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "A unique test record is saved once in the active workspace; the Supplier shows its submitted values.",
-    "locatorFile": "locators/suppliers.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-090",
-    "page": "Suppliers",
-    "pageKey": "suppliers",
-    "section": "Core ERP",
-    "category": "regression",
-    "difficulty": "standard",
-    "title": "Suppliers · regression · Reload persistence",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
-    "steps": [
-      "Navigate to Suppliers using Suppliers.",
-      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Supplier column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Suppliers page shows its expected heading, active navigation and table headed “Supplier” without horizontal overflow.",
@@ -414,7 +558,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-093",
+    "id": "NX-UI-106",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Suppliers · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
+    "steps": [
+      "Navigate to Suppliers using Suppliers.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Supplier column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Suppliers page shows its expected heading, active navigation and table headed “Supplier” without horizontal overflow.",
+    "locatorFile": "locators/suppliers.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-110",
+    "page": "Suppliers",
+    "pageKey": "suppliers",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Suppliers · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
+    "steps": [
+      "Navigate to Suppliers using Suppliers.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Supplier column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Suppliers page shows its expected heading, active navigation and table headed “Supplier” without horizontal overflow.",
+    "locatorFile": "locators/suppliers.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-112",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
@@ -432,25 +612,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-094",
+    "id": "NX-UI-116",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Sales & quotations · regression · Create validation and save",
+    "title": "Sales & quotations · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
     "steps": [
       "Navigate to Sales & quotations using Sales & quotations.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Document shows its submitted values.",
+    "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
     "locatorFile": "locators/sales.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-102",
+    "id": "NX-UI-120",
+    "page": "Sales & quotations",
+    "pageKey": "sales",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Sales & quotations · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
+    "steps": [
+      "Navigate to Sales & quotations using Sales & quotations.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Document column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Sales & quotations page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+    "locatorFile": "locators/sales.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-122",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
@@ -468,25 +666,61 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-103",
+    "id": "NX-UI-126",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Purchasing · regression · Create validation and save",
+    "title": "Purchasing · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/purchasing; backing data business_records.",
     "steps": [
       "Navigate to Purchasing using Purchasing.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Purchase order column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Purchase order shows its submitted values.",
+    "expected": "The Purchasing page shows its expected heading, active navigation and table headed “Purchase order” without horizontal overflow.",
     "locatorFile": "locators/purchasing.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-111",
+    "id": "NX-UI-130",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Purchasing · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/purchasing; backing data business_records.",
+    "steps": [
+      "Navigate to Purchasing using Purchasing.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Purchase order column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Purchasing page shows its expected heading, active navigation and table headed “Purchase order” without horizontal overflow.",
+    "locatorFile": "locators/purchasing.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-132",
+    "page": "Purchasing",
+    "pageKey": "purchasing",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Purchasing · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/purchasing; backing data business_records.",
+    "steps": [
+      "Navigate to Purchasing using Purchasing.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Purchase order column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Purchasing page shows its expected heading, active navigation and table headed “Purchase order” without horizontal overflow.",
+    "locatorFile": "locators/purchasing.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-136",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
@@ -504,25 +738,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-112",
+    "id": "NX-UI-140",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Products & inventory · regression · Create validation and save",
+    "title": "Products & inventory · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/inventory; backing data business_records.",
     "steps": [
       "Navigate to Products & inventory using Products & inventory.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Product column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Product shows its submitted values.",
+    "expected": "The Products & inventory page shows its expected heading, active navigation and table headed “Product” without horizontal overflow.",
     "locatorFile": "locators/inventory.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-120",
+    "id": "NX-UI-142",
+    "page": "Products & inventory",
+    "pageKey": "inventory",
+    "section": "Core ERP",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Products & inventory · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/inventory; backing data business_records.",
+    "steps": [
+      "Navigate to Products & inventory using Products & inventory.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Product column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Products & inventory page shows its expected heading, active navigation and table headed “Product” without horizontal overflow.",
+    "locatorFile": "locators/inventory.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-146",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
@@ -540,35 +792,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-121",
+    "id": "NX-UI-150",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Invoices & bills · regression · Create validation and save",
+    "title": "Invoices & bills · regression · Search and clear",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
     "steps": [
       "Navigate to Invoices & bills using Invoices & bills.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-      "Check the Document column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "A unique test record is saved once in the active workspace; the Document shows its submitted values.",
-    "locatorFile": "locators/finance.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-126",
-    "page": "Invoices & bills",
-    "pageKey": "finance",
-    "section": "Finance",
-    "category": "regression",
-    "difficulty": "standard",
-    "title": "Invoices & bills · regression · Reload persistence",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
-    "steps": [
-      "Navigate to Invoices & bills using Invoices & bills.",
-      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
@@ -576,7 +810,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-129",
+    "id": "NX-UI-152",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "section": "Finance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Invoices & bills · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+    "steps": [
+      "Navigate to Invoices & bills using Invoices & bills.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Document column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Invoices & bills page shows its expected heading, active navigation and table headed “Document” without horizontal overflow.",
+    "locatorFile": "locators/finance.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-156",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
@@ -594,7 +846,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-130",
+    "id": "NX-UI-160",
+    "page": "Payments & reconciliation",
+    "pageKey": "payments",
+    "section": "Finance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Payments & reconciliation · regression · Search and clear",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
+    "steps": [
+      "Navigate to Payments & reconciliation using Payments & reconciliation.",
+      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Check the Reference column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Payments & reconciliation page shows its expected heading, active navigation and table headed “Reference” without horizontal overflow.",
+    "locatorFile": "locators/payments.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-162",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
@@ -612,25 +882,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-138",
-    "page": "Budgets & reports",
-    "pageKey": "budgets",
-    "section": "Finance",
-    "category": "regression",
-    "difficulty": "standard",
-    "title": "Budgets & reports · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
-    "steps": [
-      "Navigate to Budgets & reports using Budgets & reports.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Budget column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The Budgets & reports page shows its expected heading, active navigation and table headed “Budget” without horizontal overflow.",
-    "locatorFile": "locators/budgets.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-139",
+    "id": "NX-UI-166",
     "page": "Budgets & reports",
     "pageKey": "budgets",
     "section": "Finance",
@@ -648,25 +900,61 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-147",
-    "page": "Approvals",
-    "pageKey": "approvals",
+    "id": "NX-UI-170",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
     "section": "Finance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Approvals · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+    "title": "Budgets & reports · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
     "steps": [
-      "Navigate to Approvals using Approvals.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Request column and confirm no private data is exposed to the wrong account."
+      "Navigate to Budgets & reports using Budgets & reports.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Budget column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Approvals page shows its expected heading, active navigation and table headed “Request” without horizontal overflow.",
-    "locatorFile": "locators/approvals.json",
+    "expected": "A unique test record is saved once in the active workspace; the Budget shows its submitted values.",
+    "locatorFile": "locators/budgets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-148",
+    "id": "NX-UI-172",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "section": "Finance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Budgets & reports · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
+    "steps": [
+      "Navigate to Budgets & reports using Budgets & reports.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Budget column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Budget shows its submitted values.",
+    "locatorFile": "locators/budgets.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-176",
+    "page": "Budgets & reports",
+    "pageKey": "budgets",
+    "section": "Finance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Budgets & reports · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
+    "steps": [
+      "Navigate to Budgets & reports using Budgets & reports.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Budget column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Budget shows its submitted values.",
+    "locatorFile": "locators/budgets.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-180",
     "page": "Approvals",
     "pageKey": "approvals",
     "section": "Finance",
@@ -684,25 +972,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-155",
-    "page": "Departments",
-    "pageKey": "departments",
-    "section": "People",
+    "id": "NX-UI-182",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "section": "Finance",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Departments · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+    "title": "Approvals · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
     "steps": [
-      "Navigate to Departments using Departments.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Name column and confirm no private data is exposed to the wrong account."
+      "Navigate to Approvals using Approvals.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Request column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Departments page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-    "locatorFile": "locators/departments.json",
+    "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
+    "locatorFile": "locators/approvals.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-156",
+    "id": "NX-UI-186",
+    "page": "Approvals",
+    "pageKey": "approvals",
+    "section": "Finance",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Approvals · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
+    "steps": [
+      "Navigate to Approvals using Approvals.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Request column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Request shows its submitted values.",
+    "locatorFile": "locators/approvals.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-190",
     "page": "Departments",
     "pageKey": "departments",
     "section": "People",
@@ -720,25 +1026,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-163",
-    "page": "Employees",
-    "pageKey": "employees",
+    "id": "NX-UI-192",
+    "page": "Departments",
+    "pageKey": "departments",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Employees · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+    "title": "Departments · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
     "steps": [
-      "Navigate to Employees using Employees.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Employee no column and confirm no private data is exposed to the wrong account."
+      "Navigate to Departments using Departments.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Employees page shows its expected heading, active navigation and table headed “Employee no” without horizontal overflow.",
-    "locatorFile": "locators/employees.json",
+    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "locatorFile": "locators/departments.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-164",
+    "id": "NX-UI-196",
+    "page": "Departments",
+    "pageKey": "departments",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Departments · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+    "steps": [
+      "Navigate to Departments using Departments.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "locatorFile": "locators/departments.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-200",
     "page": "Employees",
     "pageKey": "employees",
     "section": "People",
@@ -756,25 +1080,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-171",
-    "page": "Shifts",
-    "pageKey": "shifts",
+    "id": "NX-UI-202",
+    "page": "Employees",
+    "pageKey": "employees",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Shifts · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
+    "title": "Employees · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
     "steps": [
-      "Navigate to Shifts using Shifts.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Name column and confirm no private data is exposed to the wrong account."
+      "Navigate to Employees using Employees.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee no column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Shifts page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-    "locatorFile": "locators/shifts.json",
+    "expected": "A unique test record is saved once in the active workspace; the Employee no shows its submitted values.",
+    "locatorFile": "locators/employees.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-172",
+    "id": "NX-UI-206",
+    "page": "Employees",
+    "pageKey": "employees",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Employees · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
+    "steps": [
+      "Navigate to Employees using Employees.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee no column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Employee no shows its submitted values.",
+    "locatorFile": "locators/employees.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-210",
     "page": "Shifts",
     "pageKey": "shifts",
     "section": "People",
@@ -792,25 +1134,61 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-179",
-    "page": "Attendance",
-    "pageKey": "attendance",
+    "id": "NX-UI-212",
+    "page": "Shifts",
+    "pageKey": "shifts",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Attendance · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+    "title": "Shifts · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
     "steps": [
-      "Navigate to Attendance using Attendance.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Employee column and confirm no private data is exposed to the wrong account."
+      "Navigate to Shifts using Shifts.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Attendance page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-    "locatorFile": "locators/attendance.json",
+    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "locatorFile": "locators/shifts.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-180",
+    "id": "NX-UI-216",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Shifts · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
+    "steps": [
+      "Navigate to Shifts using Shifts.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "locatorFile": "locators/shifts.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-220",
+    "page": "Shifts",
+    "pageKey": "shifts",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Shifts · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
+    "steps": [
+      "Navigate to Shifts using Shifts.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
+    "locatorFile": "locators/shifts.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-222",
     "page": "Attendance",
     "pageKey": "attendance",
     "section": "People",
@@ -828,25 +1206,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-187",
-    "page": "Leave requests",
-    "pageKey": "leaves",
+    "id": "NX-UI-226",
+    "page": "Attendance",
+    "pageKey": "attendance",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Leave requests · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+    "title": "Attendance · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
     "steps": [
-      "Navigate to Leave requests using Leave requests.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to Attendance using Attendance.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Leave requests page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-    "locatorFile": "locators/leaves.json",
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/attendance.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-188",
+    "id": "NX-UI-230",
+    "page": "Attendance",
+    "pageKey": "attendance",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Attendance · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
+    "steps": [
+      "Navigate to Attendance using Attendance.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/attendance.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-232",
     "page": "Leave requests",
     "pageKey": "leaves",
     "section": "People",
@@ -864,25 +1260,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-195",
-    "page": "Payroll runs",
-    "pageKey": "payroll",
+    "id": "NX-UI-236",
+    "page": "Leave requests",
+    "pageKey": "leaves",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Payroll runs · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+    "title": "Leave requests · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
     "steps": [
-      "Navigate to Payroll runs using Payroll runs.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Period start column and confirm no private data is exposed to the wrong account."
+      "Navigate to Leave requests using Leave requests.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Payroll runs page shows its expected heading, active navigation and table headed “Period start” without horizontal overflow.",
-    "locatorFile": "locators/payroll.json",
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/leaves.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-196",
+    "id": "NX-UI-240",
+    "page": "Leave requests",
+    "pageKey": "leaves",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Leave requests · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
+    "steps": [
+      "Navigate to Leave requests using Leave requests.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/leaves.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-242",
     "page": "Payroll runs",
     "pageKey": "payroll",
     "section": "People",
@@ -900,25 +1314,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-203",
-    "page": "My payslips",
-    "pageKey": "payslips",
+    "id": "NX-UI-246",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
     "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "My payslips · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+    "title": "Payroll runs · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
     "steps": [
-      "Navigate to My payslips using My payslips.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Employee column and confirm no private data is exposed to the wrong account."
+      "Navigate to Payroll runs using Payroll runs.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Period start column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The My payslips page shows its expected heading, active navigation and table headed “Employee” without horizontal overflow.",
-    "locatorFile": "locators/payslips.json",
+    "expected": "A unique test record is saved once in the active workspace; the Period start shows its submitted values.",
+    "locatorFile": "locators/payroll.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-204",
+    "id": "NX-UI-250",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Payroll runs · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
+    "steps": [
+      "Navigate to Payroll runs using Payroll runs.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Period start column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Period start shows its submitted values.",
+    "locatorFile": "locators/payroll.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-252",
     "page": "My payslips",
     "pageKey": "payslips",
     "section": "People",
@@ -936,25 +1368,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-211",
-    "page": "Storefronts",
-    "pageKey": "storefronts",
-    "section": "Commerce",
+    "id": "NX-UI-256",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "section": "People",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Storefronts · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
+    "title": "My payslips · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
     "steps": [
-      "Navigate to Storefronts using Storefronts.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-      "Check the Title column and confirm no private data is exposed to the wrong account."
+      "Navigate to My payslips using My payslips.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Storefronts page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/storefronts.json",
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/payslips.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-212",
+    "id": "NX-UI-260",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "section": "People",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "My payslips · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+    "steps": [
+      "Navigate to My payslips using My payslips.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Employee shows its submitted values.",
+    "locatorFile": "locators/payslips.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-262",
     "page": "Storefronts",
     "pageKey": "storefronts",
     "section": "Commerce",
@@ -972,25 +1422,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-219",
-    "page": "Store orders",
-    "pageKey": "orders",
+    "id": "NX-UI-266",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
     "section": "Commerce",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Store orders · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+    "title": "Storefronts · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
     "steps": [
-      "Navigate to Store orders using Store orders.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to Storefronts using Storefronts.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Store orders page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/orders.json",
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/storefronts.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-220",
+    "id": "NX-UI-270",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
+    "section": "Commerce",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Storefronts · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Storefronts using Storefronts.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/storefronts.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-272",
     "page": "Store orders",
     "pageKey": "orders",
     "section": "Commerce",
@@ -1008,25 +1476,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-227",
-    "page": "Promotions",
-    "pageKey": "promotions",
+    "id": "NX-UI-276",
+    "page": "Store orders",
+    "pageKey": "orders",
     "section": "Commerce",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Promotions · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
+    "title": "Store orders · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
     "steps": [
-      "Navigate to Promotions using Promotions.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to Store orders using Store orders.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Promotions page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/promotions.json",
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/orders.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-228",
+    "id": "NX-UI-280",
+    "page": "Store orders",
+    "pageKey": "orders",
+    "section": "Commerce",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Store orders · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Store orders using Store orders.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/orders.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-282",
     "page": "Promotions",
     "pageKey": "promotions",
     "section": "Commerce",
@@ -1044,25 +1530,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-235",
-    "page": "Returns & refunds",
-    "pageKey": "returns",
+    "id": "NX-UI-286",
+    "page": "Promotions",
+    "pageKey": "promotions",
     "section": "Commerce",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Returns & refunds · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+    "title": "Promotions · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Returns & refunds using Returns & refunds.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to Promotions using Promotions.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/returns.json",
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/promotions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-236",
+    "id": "NX-UI-290",
+    "page": "Promotions",
+    "pageKey": "promotions",
+    "section": "Commerce",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Promotions · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Promotions using Promotions.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/promotions.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-292",
     "page": "Returns & refunds",
     "pageKey": "returns",
     "section": "Commerce",
@@ -1080,25 +1584,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-243",
-    "page": "POS sessions",
-    "pageKey": "pos_sessions",
+    "id": "NX-UI-296",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
     "section": "Commerce",
     "category": "regression",
     "difficulty": "standard",
-    "title": "POS sessions · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
+    "title": "Returns & refunds · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
     "steps": [
-      "Navigate to POS sessions using POS sessions.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to Returns & refunds using Returns & refunds.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The POS sessions page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/pos_sessions.json",
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/returns.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-244",
+    "id": "NX-UI-300",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
+    "section": "Commerce",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Returns & refunds · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Returns & refunds using Returns & refunds.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/returns.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-302",
     "page": "POS sessions",
     "pageKey": "pos_sessions",
     "section": "Commerce",
@@ -1116,25 +1638,43 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-251",
-    "page": "Projects",
-    "pageKey": "projects",
-    "section": "Operations",
+    "id": "NX-UI-306",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "section": "Commerce",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Projects · regression · Search and clear",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+    "title": "POS sessions · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Projects using Projects.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Navigate to POS sessions using POS sessions.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Projects page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-    "locatorFile": "locators/projects.json",
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/pos_sessions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-252",
+    "id": "NX-UI-310",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "section": "Commerce",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "POS sessions · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
+    "steps": [
+      "Navigate to POS sessions using POS sessions.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/pos_sessions.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-312",
     "page": "Projects",
     "pageKey": "projects",
     "section": "Operations",
@@ -1152,17 +1692,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-259",
+    "id": "NX-UI-316",
+    "page": "Projects",
+    "pageKey": "projects",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Projects · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Projects using Projects.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/projects.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-320",
+    "page": "Projects",
+    "pageKey": "projects",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Projects · regression · Create validation and save",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Projects using Projects.",
+      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "locatorFile": "locators/projects.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-322",
     "page": "Timesheets",
     "pageKey": "timesheets",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Timesheets · regression · Search and clear",
+    "title": "Timesheets · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
     "steps": [
       "Navigate to Timesheets using Timesheets.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Timesheets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1170,35 +1746,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-260",
+    "id": "NX-UI-326",
     "page": "Timesheets",
     "pageKey": "timesheets",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Timesheets · regression · Create validation and save",
+    "title": "Timesheets · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
     "steps": [
       "Navigate to Timesheets using Timesheets.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Timesheets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/timesheets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-267",
+    "id": "NX-UI-330",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Timesheets · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Timesheets using Timesheets.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Timesheets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/timesheets.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-332",
     "page": "Service tickets",
     "pageKey": "service_tickets",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Service tickets · regression · Search and clear",
+    "title": "Service tickets · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
     "steps": [
       "Navigate to Service tickets using Service tickets.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Service tickets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1206,35 +1800,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-268",
+    "id": "NX-UI-336",
     "page": "Service tickets",
     "pageKey": "service_tickets",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Service tickets · regression · Create validation and save",
+    "title": "Service tickets · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
     "steps": [
       "Navigate to Service tickets using Service tickets.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Service tickets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/service_tickets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-275",
+    "id": "NX-UI-340",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Service tickets · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Service tickets using Service tickets.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Service tickets page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/service_tickets.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-342",
     "page": "Field jobs",
     "pageKey": "field_jobs",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Field jobs · regression · Search and clear",
+    "title": "Field jobs · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
     "steps": [
       "Navigate to Field jobs using Field jobs.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Field jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1242,35 +1854,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-276",
+    "id": "NX-UI-346",
     "page": "Field jobs",
     "pageKey": "field_jobs",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Field jobs · regression · Create validation and save",
+    "title": "Field jobs · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
     "steps": [
       "Navigate to Field jobs using Field jobs.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Field jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/field_jobs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-283",
+    "id": "NX-UI-350",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Field jobs · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Field jobs using Field jobs.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Field jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/field_jobs.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-352",
     "page": "Documents",
     "pageKey": "documents",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Documents · regression · Search and clear",
+    "title": "Documents · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
     "steps": [
       "Navigate to Documents using Documents.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1278,35 +1908,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-284",
+    "id": "NX-UI-356",
     "page": "Documents",
     "pageKey": "documents",
     "section": "Operations",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Documents · regression · Create validation and save",
+    "title": "Documents · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
     "steps": [
       "Navigate to Documents using Documents.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/documents.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-291",
+    "id": "NX-UI-360",
+    "page": "Documents",
+    "pageKey": "documents",
+    "section": "Operations",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Documents · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+    "steps": [
+      "Navigate to Documents using Documents.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Documents page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/documents.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-362",
     "page": "Workflow designer",
     "pageKey": "workflows",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workflow designer · regression · Search and clear",
+    "title": "Workflow designer · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
     "steps": [
       "Navigate to Workflow designer using Workflow designer.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Workflow designer page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1314,35 +1962,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-292",
+    "id": "NX-UI-366",
     "page": "Workflow designer",
     "pageKey": "workflows",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workflow designer · regression · Create validation and save",
+    "title": "Workflow designer · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
     "steps": [
       "Navigate to Workflow designer using Workflow designer.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Workflow designer page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/workflows.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-299",
+    "id": "NX-UI-370",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Workflow designer · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Workflow designer using Workflow designer.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Workflow designer page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/workflows.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-372",
     "page": "Workflow run history",
     "pageKey": "workflow_runs",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workflow run history · regression · Search and clear",
+    "title": "Workflow run history · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
     "steps": [
       "Navigate to Workflow run history using Workflow run history.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1350,35 +2016,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-300",
+    "id": "NX-UI-376",
     "page": "Workflow run history",
     "pageKey": "workflow_runs",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workflow run history · regression · Create validation and save",
+    "title": "Workflow run history · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
     "steps": [
       "Navigate to Workflow run history using Workflow run history.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/workflow_runs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-307",
+    "id": "NX-UI-380",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Workflow run history · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Workflow run history using Workflow run history.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Workflow run history page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/workflow_runs.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-382",
     "page": "Reports",
     "pageKey": "reports",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Reports · regression · Search and clear",
+    "title": "Reports · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
     "steps": [
       "Navigate to Reports using Reports.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1386,35 +2070,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-308",
+    "id": "NX-UI-386",
     "page": "Reports",
     "pageKey": "reports",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Reports · regression · Create validation and save",
+    "title": "Reports · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
     "steps": [
       "Navigate to Reports using Reports.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/reports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-315",
+    "id": "NX-UI-390",
+    "page": "Reports",
+    "pageKey": "reports",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Reports · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Reports using Reports.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/reports.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-392",
     "page": "Custom fields",
     "pageKey": "custom_fields",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Custom fields · regression · Search and clear",
+    "title": "Custom fields · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
     "steps": [
       "Navigate to Custom fields using Custom fields.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1422,35 +2124,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-316",
+    "id": "NX-UI-396",
     "page": "Custom fields",
     "pageKey": "custom_fields",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Custom fields · regression · Create validation and save",
+    "title": "Custom fields · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
     "steps": [
       "Navigate to Custom fields using Custom fields.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/custom_fields.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-323",
+    "id": "NX-UI-400",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Custom fields · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Custom fields using Custom fields.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Custom fields page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/custom_fields.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-402",
     "page": "API clients",
     "pageKey": "api_clients",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "API clients · regression · Search and clear",
+    "title": "API clients · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
     "steps": [
       "Navigate to API clients using API clients.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1458,35 +2178,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-324",
+    "id": "NX-UI-406",
     "page": "API clients",
     "pageKey": "api_clients",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "API clients · regression · Create validation and save",
+    "title": "API clients · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
     "steps": [
       "Navigate to API clients using API clients.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/api_clients.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-331",
+    "id": "NX-UI-410",
+    "page": "API clients",
+    "pageKey": "api_clients",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "API clients · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+    "steps": [
+      "Navigate to API clients using API clients.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The API clients page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/api_clients.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-412",
     "page": "Integration health",
     "pageKey": "integration_health",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Integration health · regression · Search and clear",
+    "title": "Integration health · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
     "steps": [
       "Navigate to Integration health using Integration health.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1494,35 +2232,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-332",
+    "id": "NX-UI-416",
     "page": "Integration health",
     "pageKey": "integration_health",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Integration health · regression · Create validation and save",
+    "title": "Integration health · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
     "steps": [
       "Navigate to Integration health using Integration health.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/integration_health.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-339",
+    "id": "NX-UI-420",
+    "page": "Integration health",
+    "pageKey": "integration_health",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Integration health · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Integration health using Integration health.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Integration health page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/integration_health.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-422",
     "page": "Import jobs",
     "pageKey": "imports",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Import jobs · regression · Search and clear",
+    "title": "Import jobs · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
     "steps": [
       "Navigate to Import jobs using Import jobs.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Import jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -1530,35 +2286,53 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-340",
+    "id": "NX-UI-426",
     "page": "Import jobs",
     "pageKey": "imports",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Import jobs · regression · Create validation and save",
+    "title": "Import jobs · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
     "steps": [
       "Navigate to Import jobs using Import jobs.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+    "expected": "The Import jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
     "locatorFile": "locators/imports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-347",
+    "id": "NX-UI-430",
+    "page": "Import jobs",
+    "pageKey": "imports",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Import jobs · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Import jobs using Import jobs.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Import jobs page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+    "locatorFile": "locators/imports.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-432",
     "page": "Workspace assistant",
     "pageKey": "assistant",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workspace assistant · regression · Search and clear",
+    "title": "Workspace assistant · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
     "steps": [
       "Navigate to Workspace assistant using Workspace assistant.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
@@ -1566,103 +2340,157 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-348",
+    "id": "NX-UI-436",
     "page": "Workspace assistant",
     "pageKey": "assistant",
     "section": "Automation & insights",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Workspace assistant · regression · Create validation and save",
+    "title": "Workspace assistant · regression · Reload persistence",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
     "steps": [
       "Navigate to Workspace assistant using Workspace assistant.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "A unique test record is saved once in the active workspace; the primary page content shows its submitted values.",
+    "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
     "locatorFile": "locators/assistant.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-355",
+    "id": "NX-UI-440",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "section": "Automation & insights",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Workspace assistant · regression · Reload persistence",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+    "steps": [
+      "Navigate to Workspace assistant using Workspace assistant.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the primary content and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Workspace assistant page shows its expected heading, active navigation and primary overview content without horizontal overflow.",
+    "locatorFile": "locators/assistant.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-442",
     "page": "Loading and session check",
     "pageKey": "auth_loading",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Loading and session check · regression · Search and clear",
+    "title": "Loading and session check · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
     "steps": [
       "Load the Nexora app entry route.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Loading and session check lifecycle screen behaves as expected: Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state. No unauthorized workspace data is displayed.",
+    "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
     "locatorFile": "locators/auth_loading.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-356",
+    "id": "NX-UI-446",
     "page": "Loading and session check",
     "pageKey": "auth_loading",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Loading and session check · regression · Create validation and save",
+    "title": "Loading and session check · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
     "steps": [
       "Load the Nexora app entry route.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Loading and session check lifecycle screen behaves as expected: Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values. No unauthorized workspace data is displayed.",
+    "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
     "locatorFile": "locators/auth_loading.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-363",
+    "id": "NX-UI-450",
+    "page": "Loading and session check",
+    "pageKey": "auth_loading",
+    "section": "Authentication",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Loading and session check · regression · Reload persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+    "steps": [
+      "Load the Nexora app entry route.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Loading and session check lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_loading.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-452",
     "page": "Identity service unavailable",
     "pageKey": "auth_error",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Identity service unavailable · regression · Search and clear",
+    "title": "Identity service unavailable · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
     "steps": [
       "Simulate an identity-provider initialization error.",
-      "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state. No unauthorized workspace data is displayed.",
+    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
     "locatorFile": "locators/auth_error.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-364",
+    "id": "NX-UI-456",
     "page": "Identity service unavailable",
     "pageKey": "auth_error",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Identity service unavailable · regression · Create validation and save",
+    "title": "Identity service unavailable · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
     "steps": [
       "Simulate an identity-provider initialization error.",
-      "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values. No unauthorized workspace data is displayed.",
+    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
     "locatorFile": "locators/auth_error.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-371",
+    "id": "NX-UI-460",
+    "page": "Identity service unavailable",
+    "pageKey": "auth_error",
+    "section": "Authentication",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Identity service unavailable · regression · Reload persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+    "steps": [
+      "Simulate an identity-provider initialization error.",
+      "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Reload after changing a seeded test record; verify the saved status and displayed values remain consistent. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_error.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-462",
     "page": "Sign in",
     "pageKey": "auth_sign_in",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Sign in · regression · Search and clear",
+    "title": "Sign in · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
     "steps": [
       "Reach the signed-out Nexora sign-in screen.",
@@ -1674,13 +2502,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-372",
+    "id": "NX-UI-466",
     "page": "Sign in",
     "pageKey": "auth_sign_in",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Sign in · regression · Create validation and save",
+    "title": "Sign in · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
     "steps": [
       "Reach the signed-out Nexora sign-in screen.",
@@ -1692,13 +2520,31 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-379",
+    "id": "NX-UI-470",
+    "page": "Sign in",
+    "pageKey": "auth_sign_in",
+    "section": "Authentication",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Sign in · regression · Reload persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+    "steps": [
+      "Reach the signed-out Nexora sign-in screen.",
+      "Select Forgot password and Sign up; verify each opens its configured identity flow.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Sign in lifecycle screen behaves as expected: Select Forgot password and Sign up; verify each opens its configured identity flow. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_in.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-472",
     "page": "Sign up",
     "pageKey": "auth_sign_up",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Sign up · regression · Search and clear",
+    "title": "Sign up · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
     "steps": [
       "Open Sign up from the signed-out page using a configured identity provider.",
@@ -1710,13 +2556,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-380",
+    "id": "NX-UI-476",
     "page": "Sign up",
     "pageKey": "auth_sign_up",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Sign up · regression · Create validation and save",
+    "title": "Sign up · regression · Reload persistence",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
     "steps": [
       "Open Sign up from the signed-out page using a configured identity provider.",
@@ -1728,7 +2574,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-387",
+    "id": "NX-UI-480",
+    "page": "Sign up",
+    "pageKey": "auth_sign_up",
+    "section": "Authentication",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Sign up · regression · Reload persistence",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+    "steps": [
+      "Open Sign up from the signed-out page using a configured identity provider.",
+      "Submit valid test identity data and verify the configured registration/verification response.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Sign up lifecycle screen behaves as expected: Submit valid test identity data and verify the configured registration/verification response. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_up.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-482",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
@@ -1746,13 +2610,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-388",
+    "id": "NX-UI-486",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Forgot/reset password · regression · Create validation and save",
+    "title": "Forgot/reset password · regression · Search and clear",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted forgot-credentials flow.",
     "steps": [
       "Open Forgot password from the signed-out page using a configured identity provider.",
@@ -1764,7 +2628,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-395",
+    "id": "NX-UI-490",
+    "page": "Forgot/reset password",
+    "pageKey": "auth_password_reset",
+    "section": "Authentication",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Forgot/reset password · regression · Search and clear",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted forgot-credentials flow.",
+    "steps": [
+      "Open Forgot password from the signed-out page using a configured identity provider.",
+      "Submit a valid test email and verify the reset confirmation.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Forgot/reset password lifecycle screen behaves as expected: Submit a valid test email and verify the reset confirmation. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_password_reset.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-492",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
@@ -1782,13 +2664,31 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-396",
+    "id": "NX-UI-496",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
     "category": "regression",
     "difficulty": "standard",
-    "title": "Create workspace · regression · Create validation and save",
+    "title": "Create workspace · regression · Search and clear",
+    "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
+    "steps": [
+      "Sign in locally and choose Create a demo workspace.",
+      "Select each industry option and verify the selected choice before submitting.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Create workspace lifecycle screen behaves as expected: Select each industry option and verify the selected choice before submitting. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/workspace_setup.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-500",
+    "page": "Create workspace",
+    "pageKey": "workspace_setup",
+    "section": "Workspace setup",
+    "category": "regression",
+    "difficulty": "standard",
+    "title": "Create workspace · regression · Search and clear",
     "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
     "steps": [
       "Sign in locally and choose Create a demo workspace.",

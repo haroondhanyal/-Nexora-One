@@ -10,85 +10,13 @@
     "memberships"
   ],
   "caseCounts": {
-    "ui": 9,
+    "ui": 11,
     "api": 5,
     "bdd": 5,
     "database": 24
   },
   "cases": {
     "ui": [
-      {
-        "id": "NX-UI-019",
-        "page": "Users & access",
-        "pageKey": "users",
-        "section": "Workspace",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Users & access · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
-        "steps": [
-          "Navigate to Users & access using Users & access.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/users.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-020",
-        "page": "Users & access",
-        "pageKey": "users",
-        "section": "Workspace",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Users & access · smoke · Primary data renders",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
-        "steps": [
-          "Navigate to Users & access using Users & access.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/users.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-021",
-        "page": "Users & access",
-        "pageKey": "users",
-        "section": "Workspace",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Users & access · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
-        "steps": [
-          "Navigate to Users & access using Users & access.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
-        "locatorFile": "locators/users.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-022",
-        "page": "Users & access",
-        "pageKey": "users",
-        "section": "Workspace",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Users & access · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
-        "steps": [
-          "Navigate to Users & access using Users & access.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Name column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Name shows its submitted values.",
-        "locatorFile": "locators/users.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
       {
         "id": "NX-UI-023",
         "page": "Users & access",
@@ -130,16 +58,16 @@
         "page": "Users & access",
         "pageKey": "users",
         "section": "Workspace",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Users & access · integration · UI to data persistence",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Users & access · smoke · Page entry and navigation",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
         "steps": [
           "Navigate to Users & access using Users & access.",
-          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
           "Check the Name column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
         "locatorFile": "locators/users.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
@@ -148,16 +76,16 @@
         "page": "Users & access",
         "pageKey": "users",
         "section": "Workspace",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Users & access · negative · Unauthenticated request",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Users & access · regression · Search and clear",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
         "steps": [
           "Navigate to Users & access using Users & access.",
-          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
           "Check the Name column and confirm no private data is exposed to the wrong account."
         ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
         "locatorFile": "locators/users.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
@@ -168,11 +96,119 @@
         "section": "Workspace",
         "category": "integration",
         "difficulty": "high",
-        "title": "Users & access · integration · Workspace isolation",
+        "title": "Users & access · integration · Page to API contract",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
         "steps": [
           "Navigate to Users & access using Users & access.",
-          "Switch to a second seeded workspace, reopen the page, and verify the first workspace records are not shown.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-028",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Users & access · negative · Required value omitted",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-029",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Users & access · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-030",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Users & access · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-031",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Users & access · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-032",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Users & access · regression · Search and clear",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
+          "Check the Name column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Users & access page shows its expected heading, active navigation and table headed “Name” without horizontal overflow.",
+        "locatorFile": "locators/users.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-033",
+        "page": "Users & access",
+        "pageKey": "users",
+        "section": "Workspace",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Users & access · integration · Page to API contract",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
+        "steps": [
+          "Navigate to Users & access using Users & access.",
+          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
           "Check the Name column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page result agrees with /api/v1/members and its mapped data source (memberships), scoped to the active workspace.",

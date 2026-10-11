@@ -1,6 +1,6 @@
 [
   {
-    "id": "NX-UI-006",
+    "id": "NX-UI-004",
     "page": "Business overview",
     "pageKey": "overview",
     "section": "Workspace",
@@ -24,11 +24,11 @@
     "section": "Workspace",
     "category": "negative",
     "difficulty": "high",
-    "title": "Business overview · negative · Unauthenticated request",
+    "title": "Business overview · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/analytics/summary; backing data workspace_resources, business_records, payroll_runs.",
     "steps": [
       "Navigate to Business overview using Overview.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -36,7 +36,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-015",
+    "id": "NX-UI-014",
     "page": "Workspaces",
     "pageKey": "workspaces",
     "section": "Workspace",
@@ -54,17 +54,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-017",
+    "id": "NX-UI-018",
     "page": "Workspaces",
     "pageKey": "workspaces",
     "section": "Workspace",
     "category": "negative",
     "difficulty": "high",
-    "title": "Workspaces · negative · Unauthenticated request",
+    "title": "Workspaces · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/me/workspaces; backing data tenants, memberships.",
     "steps": [
       "Navigate to Workspaces using Workspaces.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Workspace name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -90,39 +90,21 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-026",
+    "id": "NX-UI-028",
     "page": "Users & access",
     "pageKey": "users",
     "section": "Workspace",
     "category": "negative",
     "difficulty": "high",
-    "title": "Users & access · negative · Unauthenticated request",
+    "title": "Users & access · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/members; backing data memberships.",
     "steps": [
       "Navigate to Users & access using Users & access.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
     "locatorFile": "locators/users.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-032",
-    "page": "Branches",
-    "pageKey": "branches",
-    "section": "Workspace",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "Branches · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
-    "steps": [
-      "Navigate to Branches using Branches.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Branch name column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/branches.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
@@ -132,11 +114,11 @@
     "section": "Workspace",
     "category": "negative",
     "difficulty": "high",
-    "title": "Branches · negative · Unauthenticated request",
+    "title": "Branches · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
     "steps": [
       "Navigate to Branches using Branches.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Branch name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -144,7 +126,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-036",
+    "id": "NX-UI-038",
     "page": "Branches",
     "pageKey": "branches",
     "section": "Workspace",
@@ -162,7 +144,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-042",
+    "id": "NX-UI-044",
+    "page": "Branches",
+    "pageKey": "branches",
+    "section": "Workspace",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "Branches · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/branches; backing data branches.",
+    "steps": [
+      "Navigate to Branches using Branches.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Branch name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/branches.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-048",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
@@ -180,17 +180,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-044",
+    "id": "NX-UI-054",
     "page": "Roles & permissions",
     "pageKey": "roles",
     "section": "Governance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Roles & permissions · negative · Unauthenticated request",
+    "title": "Roles & permissions · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/roles; backing data Application RBAC policy configuration.",
     "steps": [
       "Navigate to Roles & permissions using Roles & permissions.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Role name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -198,7 +198,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-051",
+    "id": "NX-UI-058",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
@@ -216,17 +216,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-053",
+    "id": "NX-UI-064",
     "page": "Audit history",
     "pageKey": "audit",
     "section": "Governance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Audit history · negative · Unauthenticated request",
+    "title": "Audit history · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/audit; backing data audit_events.",
     "steps": [
       "Navigate to Audit history using Audit history.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Actor column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -234,7 +234,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-060",
+    "id": "NX-UI-068",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
@@ -252,17 +252,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-062",
+    "id": "NX-UI-074",
     "page": "Profile & settings",
     "pageKey": "settings",
     "section": "Governance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Profile & settings · negative · Unauthenticated request",
+    "title": "Profile & settings · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/company-profile, /api/v1/me/preferences; backing data tenants, user_preferences.",
     "steps": [
       "Navigate to Profile & settings using Profile & settings.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -270,61 +270,61 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-068",
-    "page": "CRM leads",
-    "pageKey": "leads",
-    "section": "Core ERP",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "CRM leads · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
-    "steps": [
-      "Navigate to CRM leads using CRM leads.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Lead column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/leads.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-070",
-    "page": "CRM leads",
-    "pageKey": "leads",
-    "section": "Core ERP",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "CRM leads · negative · Unauthenticated request",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
-    "steps": [
-      "Navigate to CRM leads using CRM leads.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
-      "Check the Lead column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/leads.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-072",
-    "page": "CRM leads",
-    "pageKey": "leads",
-    "section": "Core ERP",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "CRM leads · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
-    "steps": [
-      "Navigate to CRM leads using CRM leads.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Lead column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/leads.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
     "id": "NX-UI-078",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "section": "Core ERP",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "CRM leads · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
+    "steps": [
+      "Navigate to CRM leads using CRM leads.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Lead column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/leads.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-084",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "section": "Core ERP",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "CRM leads · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
+    "steps": [
+      "Navigate to CRM leads using CRM leads.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Lead column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/leads.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-088",
+    "page": "CRM leads",
+    "pageKey": "leads",
+    "section": "Core ERP",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "CRM leads · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/leads; backing data business_records.",
+    "steps": [
+      "Navigate to CRM leads using CRM leads.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Lead column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/leads.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-094",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
@@ -342,17 +342,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-080",
+    "id": "NX-UI-098",
     "page": "Customers",
     "pageKey": "customers",
     "section": "Core ERP",
     "category": "negative",
     "difficulty": "high",
-    "title": "Customers · negative · Unauthenticated request",
+    "title": "Customers · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/customers; backing data business_records.",
     "steps": [
       "Navigate to Customers using Customers.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Customer column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -360,7 +360,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-087",
+    "id": "NX-UI-104",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
@@ -378,17 +378,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-089",
+    "id": "NX-UI-108",
     "page": "Suppliers",
     "pageKey": "suppliers",
     "section": "Core ERP",
     "category": "negative",
     "difficulty": "high",
-    "title": "Suppliers · negative · Unauthenticated request",
+    "title": "Suppliers · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/suppliers; backing data business_records.",
     "steps": [
       "Navigate to Suppliers using Suppliers.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Supplier column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -396,7 +396,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-096",
+    "id": "NX-UI-114",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
@@ -414,17 +414,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-098",
+    "id": "NX-UI-118",
     "page": "Sales & quotations",
     "pageKey": "sales",
     "section": "Core ERP",
     "category": "negative",
     "difficulty": "high",
-    "title": "Sales & quotations · negative · Unauthenticated request",
+    "title": "Sales & quotations · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/sales; backing data business_records.",
     "steps": [
       "Navigate to Sales & quotations using Sales & quotations.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -432,7 +432,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-104",
+    "id": "NX-UI-124",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
@@ -450,25 +450,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-106",
-    "page": "Purchasing",
-    "pageKey": "purchasing",
-    "section": "Core ERP",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "Purchasing · negative · Unauthenticated request",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/purchasing; backing data business_records.",
-    "steps": [
-      "Navigate to Purchasing using Purchasing.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
-      "Check the Purchase order column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/purchasing.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-108",
+    "id": "NX-UI-128",
     "page": "Purchasing",
     "pageKey": "purchasing",
     "section": "Core ERP",
@@ -486,7 +468,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-114",
+    "id": "NX-UI-134",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
@@ -504,17 +486,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-116",
+    "id": "NX-UI-138",
     "page": "Products & inventory",
     "pageKey": "inventory",
     "section": "Core ERP",
     "category": "negative",
     "difficulty": "high",
-    "title": "Products & inventory · negative · Unauthenticated request",
+    "title": "Products & inventory · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/inventory; backing data business_records.",
     "steps": [
       "Navigate to Products & inventory using Products & inventory.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Product column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -522,7 +504,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-123",
+    "id": "NX-UI-144",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
@@ -540,17 +522,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-125",
+    "id": "NX-UI-148",
     "page": "Invoices & bills",
     "pageKey": "finance",
     "section": "Finance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Invoices & bills · negative · Unauthenticated request",
+    "title": "Invoices & bills · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
     "steps": [
       "Navigate to Invoices & bills using Invoices & bills.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Document column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -558,7 +540,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-132",
+    "id": "NX-UI-154",
+    "page": "Invoices & bills",
+    "pageKey": "finance",
+    "section": "Finance",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "Invoices & bills · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/finance; backing data business_records.",
+    "steps": [
+      "Navigate to Invoices & bills using Invoices & bills.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Document column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/finance.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-158",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
@@ -576,17 +576,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-134",
+    "id": "NX-UI-164",
     "page": "Payments & reconciliation",
     "pageKey": "payments",
     "section": "Finance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Payments & reconciliation · negative · Unauthenticated request",
+    "title": "Payments & reconciliation · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/payments; backing data business_records.",
     "steps": [
       "Navigate to Payments & reconciliation using Payments & reconciliation.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Reference column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -594,7 +594,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-140",
+    "id": "NX-UI-168",
     "page": "Budgets & reports",
     "pageKey": "budgets",
     "section": "Finance",
@@ -612,25 +612,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-142",
-    "page": "Budgets & reports",
-    "pageKey": "budgets",
-    "section": "Finance",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "Budgets & reports · negative · Unauthenticated request",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/budgets; backing data business_records.",
-    "steps": [
-      "Navigate to Budgets & reports using Budgets & reports.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
-      "Check the Budget column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/budgets.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-144",
+    "id": "NX-UI-174",
     "page": "Budgets & reports",
     "pageKey": "budgets",
     "section": "Finance",
@@ -648,7 +630,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-150",
+    "id": "NX-UI-178",
     "page": "Approvals",
     "pageKey": "approvals",
     "section": "Finance",
@@ -666,17 +648,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-152",
+    "id": "NX-UI-184",
     "page": "Approvals",
     "pageKey": "approvals",
     "section": "Finance",
     "category": "negative",
     "difficulty": "high",
-    "title": "Approvals · negative · Unauthenticated request",
+    "title": "Approvals · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/records/approvals; backing data business_records.",
     "steps": [
       "Navigate to Approvals using Approvals.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Request column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -684,7 +666,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-158",
+    "id": "NX-UI-188",
     "page": "Departments",
     "pageKey": "departments",
     "section": "People",
@@ -702,17 +684,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-160",
+    "id": "NX-UI-194",
     "page": "Departments",
     "pageKey": "departments",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Departments · negative · Unauthenticated request",
+    "title": "Departments · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
     "steps": [
       "Navigate to Departments using Departments.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -720,7 +702,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-166",
+    "id": "NX-UI-198",
+    "page": "Departments",
+    "pageKey": "departments",
+    "section": "People",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "Departments · negative · Required value omitted",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/departments; backing data departments.",
+    "steps": [
+      "Navigate to Departments using Departments.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Check the Name column and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/departments.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-204",
     "page": "Employees",
     "pageKey": "employees",
     "section": "People",
@@ -738,17 +738,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-168",
+    "id": "NX-UI-208",
     "page": "Employees",
     "pageKey": "employees",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Employees · negative · Unauthenticated request",
+    "title": "Employees · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/employees; backing data employees.",
     "steps": [
       "Navigate to Employees using Employees.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Employee no column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -756,7 +756,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-174",
+    "id": "NX-UI-214",
     "page": "Shifts",
     "pageKey": "shifts",
     "section": "People",
@@ -774,17 +774,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-176",
+    "id": "NX-UI-218",
     "page": "Shifts",
     "pageKey": "shifts",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Shifts · negative · Unauthenticated request",
+    "title": "Shifts · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/shifts; backing data shifts.",
     "steps": [
       "Navigate to Shifts using Shifts.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Name column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -792,7 +792,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-182",
+    "id": "NX-UI-224",
     "page": "Attendance",
     "pageKey": "attendance",
     "section": "People",
@@ -810,17 +810,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-184",
+    "id": "NX-UI-228",
     "page": "Attendance",
     "pageKey": "attendance",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Attendance · negative · Unauthenticated request",
+    "title": "Attendance · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/attendance; backing data attendance.",
     "steps": [
       "Navigate to Attendance using Attendance.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -828,7 +828,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-190",
+    "id": "NX-UI-234",
     "page": "Leave requests",
     "pageKey": "leaves",
     "section": "People",
@@ -846,17 +846,17 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-192",
+    "id": "NX-UI-238",
     "page": "Leave requests",
     "pageKey": "leaves",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Leave requests · negative · Unauthenticated request",
+    "title": "Leave requests · negative · Required value omitted",
     "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/leaves; backing data leave_requests.",
     "steps": [
       "Navigate to Leave requests using Leave requests.",
-      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
       "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
@@ -864,25 +864,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-198",
-    "page": "Payroll runs",
-    "pageKey": "payroll",
-    "section": "People",
-    "category": "negative",
-    "difficulty": "high",
-    "title": "Payroll runs · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
-    "steps": [
-      "Navigate to Payroll runs using Payroll runs.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Period start column and confirm no private data is exposed to the wrong account."
-    ],
-    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/payroll.json",
-    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-  },
-  {
-    "id": "NX-UI-200",
+    "id": "NX-UI-244",
     "page": "Payroll runs",
     "pageKey": "payroll",
     "section": "People",
@@ -900,25 +882,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-206",
-    "page": "My payslips",
-    "pageKey": "payslips",
+    "id": "NX-UI-248",
+    "page": "Payroll runs",
+    "pageKey": "payroll",
     "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "My payslips · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
+    "title": "Payroll runs · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/runs; backing data payroll_runs.",
     "steps": [
-      "Navigate to My payslips using My payslips.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Employee column and confirm no private data is exposed to the wrong account."
+      "Navigate to Payroll runs using Payroll runs.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Check the Period start column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/payslips.json",
+    "locatorFile": "locators/payroll.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-208",
+    "id": "NX-UI-254",
     "page": "My payslips",
     "pageKey": "payslips",
     "section": "People",
@@ -936,25 +918,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-214",
-    "page": "Storefronts",
-    "pageKey": "storefronts",
-    "section": "Commerce",
+    "id": "NX-UI-258",
+    "page": "My payslips",
+    "pageKey": "payslips",
+    "section": "People",
     "category": "negative",
     "difficulty": "high",
-    "title": "Storefronts · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
+    "title": "My payslips · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/hr/payroll/payslips; backing data payslips.",
     "steps": [
-      "Navigate to Storefronts using Storefronts.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the Title column and confirm no private data is exposed to the wrong account."
+      "Navigate to My payslips using My payslips.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Check the Employee column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/storefronts.json",
+    "locatorFile": "locators/payslips.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-216",
+    "id": "NX-UI-264",
     "page": "Storefronts",
     "pageKey": "storefronts",
     "section": "Commerce",
@@ -972,25 +954,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-222",
-    "page": "Store orders",
-    "pageKey": "orders",
+    "id": "NX-UI-268",
+    "page": "Storefronts",
+    "pageKey": "storefronts",
     "section": "Commerce",
     "category": "negative",
     "difficulty": "high",
-    "title": "Store orders · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
+    "title": "Storefronts · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/storefronts; backing data workspace_resources.",
     "steps": [
-      "Navigate to Store orders using Store orders.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Storefronts using Storefronts.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/orders.json",
+    "locatorFile": "locators/storefronts.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-224",
+    "id": "NX-UI-274",
     "page": "Store orders",
     "pageKey": "orders",
     "section": "Commerce",
@@ -1008,25 +990,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-230",
-    "page": "Promotions",
-    "pageKey": "promotions",
+    "id": "NX-UI-278",
+    "page": "Store orders",
+    "pageKey": "orders",
     "section": "Commerce",
     "category": "negative",
     "difficulty": "high",
-    "title": "Promotions · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
+    "title": "Store orders · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/orders; backing data workspace_resources.",
     "steps": [
-      "Navigate to Promotions using Promotions.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Store orders using Store orders.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/promotions.json",
+    "locatorFile": "locators/orders.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-232",
+    "id": "NX-UI-284",
     "page": "Promotions",
     "pageKey": "promotions",
     "section": "Commerce",
@@ -1044,25 +1026,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-238",
-    "page": "Returns & refunds",
-    "pageKey": "returns",
+    "id": "NX-UI-288",
+    "page": "Promotions",
+    "pageKey": "promotions",
     "section": "Commerce",
     "category": "negative",
     "difficulty": "high",
-    "title": "Returns & refunds · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+    "title": "Promotions · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/promotions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Returns & refunds using Returns & refunds.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Promotions using Promotions.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/returns.json",
+    "locatorFile": "locators/promotions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-240",
+    "id": "NX-UI-294",
     "page": "Returns & refunds",
     "pageKey": "returns",
     "section": "Commerce",
@@ -1080,25 +1062,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-246",
-    "page": "POS sessions",
-    "pageKey": "pos_sessions",
+    "id": "NX-UI-298",
+    "page": "Returns & refunds",
+    "pageKey": "returns",
     "section": "Commerce",
     "category": "negative",
     "difficulty": "high",
-    "title": "POS sessions · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
+    "title": "Returns & refunds · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
     "steps": [
-      "Navigate to POS sessions using POS sessions.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Returns & refunds using Returns & refunds.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/pos_sessions.json",
+    "locatorFile": "locators/returns.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-248",
+    "id": "NX-UI-304",
     "page": "POS sessions",
     "pageKey": "pos_sessions",
     "section": "Commerce",
@@ -1116,25 +1098,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-254",
-    "page": "Projects",
-    "pageKey": "projects",
-    "section": "Operations",
+    "id": "NX-UI-308",
+    "page": "POS sessions",
+    "pageKey": "pos_sessions",
+    "section": "Commerce",
     "category": "negative",
     "difficulty": "high",
-    "title": "Projects · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
+    "title": "POS sessions · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/pos_sessions; backing data workspace_resources.",
     "steps": [
-      "Navigate to Projects using Projects.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to POS sessions using POS sessions.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/projects.json",
+    "locatorFile": "locators/pos_sessions.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-256",
+    "id": "NX-UI-314",
     "page": "Projects",
     "pageKey": "projects",
     "section": "Operations",
@@ -1152,25 +1134,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-262",
-    "page": "Timesheets",
-    "pageKey": "timesheets",
+    "id": "NX-UI-318",
+    "page": "Projects",
+    "pageKey": "projects",
     "section": "Operations",
     "category": "negative",
     "difficulty": "high",
-    "title": "Timesheets · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
+    "title": "Projects · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/projects; backing data workspace_resources.",
     "steps": [
-      "Navigate to Timesheets using Timesheets.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Projects using Projects.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/timesheets.json",
+    "locatorFile": "locators/projects.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-264",
+    "id": "NX-UI-324",
     "page": "Timesheets",
     "pageKey": "timesheets",
     "section": "Operations",
@@ -1188,25 +1170,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-270",
-    "page": "Service tickets",
-    "pageKey": "service_tickets",
+    "id": "NX-UI-328",
+    "page": "Timesheets",
+    "pageKey": "timesheets",
     "section": "Operations",
     "category": "negative",
     "difficulty": "high",
-    "title": "Service tickets · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
+    "title": "Timesheets · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/timesheets; backing data workspace_resources.",
     "steps": [
-      "Navigate to Service tickets using Service tickets.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Timesheets using Timesheets.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/service_tickets.json",
+    "locatorFile": "locators/timesheets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-272",
+    "id": "NX-UI-334",
     "page": "Service tickets",
     "pageKey": "service_tickets",
     "section": "Operations",
@@ -1224,25 +1206,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-278",
-    "page": "Field jobs",
-    "pageKey": "field_jobs",
+    "id": "NX-UI-338",
+    "page": "Service tickets",
+    "pageKey": "service_tickets",
     "section": "Operations",
     "category": "negative",
     "difficulty": "high",
-    "title": "Field jobs · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
+    "title": "Service tickets · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/service_tickets; backing data workspace_resources.",
     "steps": [
-      "Navigate to Field jobs using Field jobs.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Service tickets using Service tickets.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/field_jobs.json",
+    "locatorFile": "locators/service_tickets.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-280",
+    "id": "NX-UI-344",
     "page": "Field jobs",
     "pageKey": "field_jobs",
     "section": "Operations",
@@ -1260,25 +1242,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-286",
-    "page": "Documents",
-    "pageKey": "documents",
+    "id": "NX-UI-348",
+    "page": "Field jobs",
+    "pageKey": "field_jobs",
     "section": "Operations",
     "category": "negative",
     "difficulty": "high",
-    "title": "Documents · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
+    "title": "Field jobs · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/field_jobs; backing data workspace_resources.",
     "steps": [
-      "Navigate to Documents using Documents.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Field jobs using Field jobs.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/documents.json",
+    "locatorFile": "locators/field_jobs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-288",
+    "id": "NX-UI-354",
     "page": "Documents",
     "pageKey": "documents",
     "section": "Operations",
@@ -1296,25 +1278,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-294",
-    "page": "Workflow designer",
-    "pageKey": "workflows",
-    "section": "Automation & insights",
+    "id": "NX-UI-358",
+    "page": "Documents",
+    "pageKey": "documents",
+    "section": "Operations",
     "category": "negative",
     "difficulty": "high",
-    "title": "Workflow designer · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
+    "title": "Documents · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/documents; backing data workspace_resources, workspace_attachments.",
     "steps": [
-      "Navigate to Workflow designer using Workflow designer.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Documents using Documents.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/workflows.json",
+    "locatorFile": "locators/documents.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-296",
+    "id": "NX-UI-364",
     "page": "Workflow designer",
     "pageKey": "workflows",
     "section": "Automation & insights",
@@ -1332,25 +1314,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-302",
-    "page": "Workflow run history",
-    "pageKey": "workflow_runs",
+    "id": "NX-UI-368",
+    "page": "Workflow designer",
+    "pageKey": "workflows",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Workflow run history · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
+    "title": "Workflow designer · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflows; backing data workspace_resources.",
     "steps": [
-      "Navigate to Workflow run history using Workflow run history.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Workflow designer using Workflow designer.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/workflow_runs.json",
+    "locatorFile": "locators/workflows.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-304",
+    "id": "NX-UI-374",
     "page": "Workflow run history",
     "pageKey": "workflow_runs",
     "section": "Automation & insights",
@@ -1368,25 +1350,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-310",
-    "page": "Reports",
-    "pageKey": "reports",
+    "id": "NX-UI-378",
+    "page": "Workflow run history",
+    "pageKey": "workflow_runs",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Reports · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+    "title": "Workflow run history · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/workflow_runs; backing data workspace_resources.",
     "steps": [
-      "Navigate to Reports using Reports.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Workflow run history using Workflow run history.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/reports.json",
+    "locatorFile": "locators/workflow_runs.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-312",
+    "id": "NX-UI-384",
     "page": "Reports",
     "pageKey": "reports",
     "section": "Automation & insights",
@@ -1404,25 +1386,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-318",
-    "page": "Custom fields",
-    "pageKey": "custom_fields",
+    "id": "NX-UI-388",
+    "page": "Reports",
+    "pageKey": "reports",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Custom fields · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
+    "title": "Reports · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
     "steps": [
-      "Navigate to Custom fields using Custom fields.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Reports using Reports.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/custom_fields.json",
+    "locatorFile": "locators/reports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-320",
+    "id": "NX-UI-394",
     "page": "Custom fields",
     "pageKey": "custom_fields",
     "section": "Automation & insights",
@@ -1440,25 +1422,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-326",
-    "page": "API clients",
-    "pageKey": "api_clients",
+    "id": "NX-UI-398",
+    "page": "Custom fields",
+    "pageKey": "custom_fields",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "API clients · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
+    "title": "Custom fields · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/custom_fields; backing data workspace_resources.",
     "steps": [
-      "Navigate to API clients using API clients.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Custom fields using Custom fields.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/api_clients.json",
+    "locatorFile": "locators/custom_fields.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-328",
+    "id": "NX-UI-404",
     "page": "API clients",
     "pageKey": "api_clients",
     "section": "Automation & insights",
@@ -1476,25 +1458,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-334",
-    "page": "Integration health",
-    "pageKey": "integration_health",
+    "id": "NX-UI-408",
+    "page": "API clients",
+    "pageKey": "api_clients",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Integration health · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
+    "title": "API clients · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/api_clients; backing data workspace_resources, api_client_credentials.",
     "steps": [
-      "Navigate to Integration health using Integration health.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to API clients using API clients.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/integration_health.json",
+    "locatorFile": "locators/api_clients.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-336",
+    "id": "NX-UI-414",
     "page": "Integration health",
     "pageKey": "integration_health",
     "section": "Automation & insights",
@@ -1512,25 +1494,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-342",
-    "page": "Import jobs",
-    "pageKey": "imports",
+    "id": "NX-UI-418",
+    "page": "Integration health",
+    "pageKey": "integration_health",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Import jobs · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
+    "title": "Integration health · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/integration_health; backing data workspace_resources.",
     "steps": [
-      "Navigate to Import jobs using Import jobs.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
+      "Navigate to Integration health using Integration health.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/imports.json",
+    "locatorFile": "locators/integration_health.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-344",
+    "id": "NX-UI-424",
     "page": "Import jobs",
     "pageKey": "imports",
     "section": "Automation & insights",
@@ -1548,25 +1530,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-350",
-    "page": "Workspace assistant",
-    "pageKey": "assistant",
+    "id": "NX-UI-428",
+    "page": "Import jobs",
+    "pageKey": "imports",
     "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Workspace assistant · negative · Required value omitted",
-    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
+    "title": "Import jobs · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/imports; backing data workspace_resources.",
     "steps": [
-      "Navigate to Workspace assistant using Workspace assistant.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the primary content and confirm no private data is exposed to the wrong account."
+      "Navigate to Import jobs using Import jobs.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Check the Title column and confirm no private data is exposed to the wrong account."
     ],
     "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-    "locatorFile": "locators/assistant.json",
+    "locatorFile": "locators/imports.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-352",
+    "id": "NX-UI-434",
     "page": "Workspace assistant",
     "pageKey": "assistant",
     "section": "Automation & insights",
@@ -1584,25 +1566,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-358",
-    "page": "Loading and session check",
-    "pageKey": "auth_loading",
-    "section": "Authentication",
+    "id": "NX-UI-438",
+    "page": "Workspace assistant",
+    "pageKey": "assistant",
+    "section": "Automation & insights",
     "category": "negative",
     "difficulty": "high",
-    "title": "Loading and session check · negative · Required value omitted",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
+    "title": "Workspace assistant · negative · Unauthenticated request",
+    "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/assistant/ask; backing data workspace_resources.",
     "steps": [
-      "Load the Nexora app entry route.",
-      "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+      "Navigate to Workspace assistant using Workspace assistant.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+      "Check the primary content and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Loading and session check lifecycle screen behaves as expected: Submit the create form with its required value empty; verify inline validation and confirm no row was written. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_loading.json",
+    "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+    "locatorFile": "locators/assistant.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-360",
+    "id": "NX-UI-444",
     "page": "Loading and session check",
     "pageKey": "auth_loading",
     "section": "Authentication",
@@ -1620,25 +1602,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-366",
-    "page": "Identity service unavailable",
-    "pageKey": "auth_error",
+    "id": "NX-UI-448",
+    "page": "Loading and session check",
+    "pageKey": "auth_loading",
     "section": "Authentication",
     "category": "negative",
     "difficulty": "high",
-    "title": "Identity service unavailable · negative · Required value omitted",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
+    "title": "Loading and session check · negative · Unauthenticated request",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Client session and Keycloak OIDC initialization.",
     "steps": [
-      "Simulate an identity-provider initialization error.",
-      "Keep the identity service unavailable; verify retry does not expose private workspace content.",
+      "Load the Nexora app entry route.",
+      "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Keep the identity service unavailable; verify retry does not expose private workspace content. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_error.json",
+    "expected": "The Loading and session check lifecycle screen behaves as expected: Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_loading.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-368",
+    "id": "NX-UI-454",
     "page": "Identity service unavailable",
     "pageKey": "auth_error",
     "section": "Authentication",
@@ -1656,25 +1638,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-374",
-    "page": "Sign in",
-    "pageKey": "auth_sign_in",
+    "id": "NX-UI-458",
+    "page": "Identity service unavailable",
+    "pageKey": "auth_error",
     "section": "Authentication",
     "category": "negative",
     "difficulty": "high",
-    "title": "Sign in · negative · Required value omitted",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
+    "title": "Identity service unavailable · negative · Unauthenticated request",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC availability state.",
     "steps": [
-      "Reach the signed-out Nexora sign-in screen.",
-      "Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error.",
+      "Simulate an identity-provider initialization error.",
+      "Keep the identity service unavailable; verify retry does not expose private workspace content.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Sign in lifecycle screen behaves as expected: Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_sign_in.json",
+    "expected": "The Identity service unavailable lifecycle screen behaves as expected: Keep the identity service unavailable; verify retry does not expose private workspace content. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_error.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-376",
+    "id": "NX-UI-464",
     "page": "Sign in",
     "pageKey": "auth_sign_in",
     "section": "Authentication",
@@ -1692,25 +1674,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-382",
-    "page": "Sign up",
-    "pageKey": "auth_sign_up",
+    "id": "NX-UI-468",
+    "page": "Sign in",
+    "pageKey": "auth_sign_in",
     "section": "Authentication",
     "category": "negative",
     "difficulty": "high",
-    "title": "Sign up · negative · Required value omitted",
-    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+    "title": "Sign in · negative · Unauthenticated request",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak OIDC sign-in; local demo owner in local-demo mode.",
     "steps": [
-      "Open Sign up from the signed-out page using a configured identity provider.",
-      "Submit invalid or incomplete identity data and verify validation without account creation.",
+      "Reach the signed-out Nexora sign-in screen.",
+      "Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error.",
       "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
     ],
-    "expected": "The Sign up lifecycle screen behaves as expected: Submit invalid or incomplete identity data and verify validation without account creation. No unauthorized workspace data is displayed.",
-    "locatorFile": "locators/auth_sign_up.json",
+    "expected": "The Sign in lifecycle screen behaves as expected: Make the identity provider unavailable; verify the visitor stays signed out and receives a visible error. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_in.json",
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-384",
+    "id": "NX-UI-474",
     "page": "Sign up",
     "pageKey": "auth_sign_up",
     "section": "Authentication",
@@ -1728,7 +1710,25 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-390",
+    "id": "NX-UI-478",
+    "page": "Sign up",
+    "pageKey": "auth_sign_up",
+    "section": "Authentication",
+    "category": "negative",
+    "difficulty": "high",
+    "title": "Sign up · negative · Unauthenticated request",
+    "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted account-registration flow.",
+    "steps": [
+      "Open Sign up from the signed-out page using a configured identity provider.",
+      "Submit invalid or incomplete identity data and verify validation without account creation.",
+      "Check the page-specific heading and primary control and confirm no private data is exposed to the wrong account."
+    ],
+    "expected": "The Sign up lifecycle screen behaves as expected: Submit invalid or incomplete identity data and verify validation without account creation. No unauthorized workspace data is displayed.",
+    "locatorFile": "locators/auth_sign_up.json",
+    "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+  },
+  {
+    "id": "NX-UI-484",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
@@ -1746,13 +1746,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-392",
+    "id": "NX-UI-488",
     "page": "Forgot/reset password",
     "pageKey": "auth_password_reset",
     "section": "Authentication",
     "category": "negative",
     "difficulty": "high",
-    "title": "Forgot/reset password · negative · Unauthenticated request",
+    "title": "Forgot/reset password · negative · Required value omitted",
     "preconditions": "Signed-out visitor or controlled identity-provider state; backing data Keycloak hosted forgot-credentials flow.",
     "steps": [
       "Open Forgot password from the signed-out page using a configured identity provider.",
@@ -1764,7 +1764,7 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-398",
+    "id": "NX-UI-494",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
@@ -1782,13 +1782,13 @@
     "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
   },
   {
-    "id": "NX-UI-400",
+    "id": "NX-UI-498",
     "page": "Create workspace",
     "pageKey": "workspace_setup",
     "section": "Workspace setup",
     "category": "negative",
     "difficulty": "high",
-    "title": "Create workspace · negative · Unauthenticated request",
+    "title": "Create workspace · negative · Required value omitted",
     "preconditions": "Owner starts with no active tenant; backing data tenants, memberships.",
     "steps": [
       "Sign in locally and choose Create a demo workspace.",

@@ -17,7 +17,7 @@ export class ScreenPage {
 
   locator(name) {
     if (name === 'pageHeading') return this.page.getByRole('heading', { level: 1 });
-    if (name === 'pageTitle') return this.page.getByRole('heading').first();
+    if (name === 'pageTitle' && !this.contract.selectors.pageTitle) return this.page.getByRole('heading').first();
     if (name === 'sidebarItem') return this.page.getByRole('button', { name: navigationButtonName(this.contract.navigationLabel) });
     if (name === 'tableHeader') return this.page.getByRole('columnheader');
     if (name === 'table') return this.page.getByRole('table');

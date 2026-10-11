@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 23
@@ -18,7 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-305",
+        "id": "NX-UI-381",
         "page": "Reports",
         "pageKey": "reports",
         "section": "Automation & insights",
@@ -36,17 +36,17 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-306",
+        "id": "NX-UI-382",
         "page": "Reports",
         "pageKey": "reports",
         "section": "Automation & insights",
-        "category": "smoke",
+        "category": "regression",
         "difficulty": "standard",
-        "title": "Reports · smoke · Primary data renders",
+        "title": "Reports · regression · Reload persistence",
         "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
         "steps": [
           "Navigate to Reports using Reports.",
-          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
@@ -54,79 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-307",
-        "page": "Reports",
-        "pageKey": "reports",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Reports · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Reports using Reports.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/reports.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-308",
-        "page": "Reports",
-        "pageKey": "reports",
-        "section": "Automation & insights",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Reports · regression · Create validation and save",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Reports using Reports.",
-          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
-        "locatorFile": "locators/reports.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-309",
-        "page": "Reports",
-        "pageKey": "reports",
-        "section": "Automation & insights",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Reports · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Reports using Reports.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/reports and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/reports.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-310",
-        "page": "Reports",
-        "pageKey": "reports",
-        "section": "Automation & insights",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Reports · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Reports using Reports.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/reports.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-311",
+        "id": "NX-UI-383",
         "page": "Reports",
         "pageKey": "reports",
         "section": "Automation & insights",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-312",
+        "id": "NX-UI-384",
         "page": "Reports",
         "pageKey": "reports",
         "section": "Automation & insights",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-385",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Reports · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-386",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Reports · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-387",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Reports · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/reports and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-388",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Reports · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-389",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Reports · smoke · Page entry and navigation",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/reports.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-390",
+        "page": "Reports",
+        "pageKey": "reports",
+        "section": "Automation & insights",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Reports · regression · Reload persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/reports; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Reports using Reports.",
+          "Reload after changing a seeded test record; verify the saved status and displayed values remain consistent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Reports page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
         "locatorFile": "locators/reports.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }

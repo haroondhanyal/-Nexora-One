@@ -10,7 +10,7 @@
     "workspace_resources"
   ],
   "caseCounts": {
-    "ui": 8,
+    "ui": 10,
     "api": 4,
     "bdd": 4,
     "database": 24
@@ -18,25 +18,7 @@
   "cases": {
     "ui": [
       {
-        "id": "NX-UI-233",
-        "page": "Returns & refunds",
-        "pageKey": "returns",
-        "section": "Commerce",
-        "category": "smoke",
-        "difficulty": "standard",
-        "title": "Returns & refunds · smoke · Page entry and navigation",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Returns & refunds using Returns & refunds.",
-          "Open the page from its navigation item; check the H1, selected navigation entry, workspace selector, and primary content.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/returns.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-234",
+        "id": "NX-UI-291",
         "page": "Returns & refunds",
         "pageKey": "returns",
         "section": "Commerce",
@@ -54,25 +36,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-235",
-        "page": "Returns & refunds",
-        "pageKey": "returns",
-        "section": "Commerce",
-        "category": "regression",
-        "difficulty": "standard",
-        "title": "Returns & refunds · regression · Search and clear",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Returns & refunds using Returns & refunds.",
-          "Search for a seeded value, search for an unmatched value, then clear the search; verify the rows return to their initial state.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
-        "locatorFile": "locators/returns.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-236",
+        "id": "NX-UI-292",
         "page": "Returns & refunds",
         "pageKey": "returns",
         "section": "Commerce",
@@ -90,43 +54,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-237",
-        "page": "Returns & refunds",
-        "pageKey": "returns",
-        "section": "Commerce",
-        "category": "integration",
-        "difficulty": "high",
-        "title": "Returns & refunds · integration · Page to API contract",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Returns & refunds using Returns & refunds.",
-          "Open the page and verify its API contract is mapped to the screen and returns data for the selected workspace.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
-        "locatorFile": "locators/returns.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-238",
-        "page": "Returns & refunds",
-        "pageKey": "returns",
-        "section": "Commerce",
-        "category": "negative",
-        "difficulty": "high",
-        "title": "Returns & refunds · negative · Required value omitted",
-        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
-        "steps": [
-          "Navigate to Returns & refunds using Returns & refunds.",
-          "Submit the create form with its required value empty; verify inline validation and confirm no row was written.",
-          "Check the Title column and confirm no private data is exposed to the wrong account."
-        ],
-        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
-        "locatorFile": "locators/returns.json",
-        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
-      },
-      {
-        "id": "NX-UI-239",
+        "id": "NX-UI-293",
         "page": "Returns & refunds",
         "pageKey": "returns",
         "section": "Commerce",
@@ -144,7 +72,7 @@
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       },
       {
-        "id": "NX-UI-240",
+        "id": "NX-UI-294",
         "page": "Returns & refunds",
         "pageKey": "returns",
         "section": "Commerce",
@@ -158,6 +86,114 @@
           "Check the Title column and confirm no private data is exposed to the wrong account."
         ],
         "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-295",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Returns & refunds · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-296",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Returns & refunds · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-297",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "integration",
+        "difficulty": "high",
+        "title": "Returns & refunds · integration · UI to data persistence",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Change a test record through the page; reload its mapped API data and confirm the same value is returned.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page result agrees with /api/v1/workspace/returns and its mapped data source (workspace_resources), scoped to the active workspace.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-298",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "negative",
+        "difficulty": "high",
+        "title": "Returns & refunds · negative · Unauthenticated request",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the mapped screen request without an owner session; verify access is rejected and private workspace data is absent.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The page shows an actionable validation or authorization error; no invalid record is persisted and no private tenant data is rendered.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-299",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "smoke",
+        "difficulty": "standard",
+        "title": "Returns & refunds · smoke · Primary data renders",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page in a fresh owner session; check its primary content and the expected first table header or overview widget.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "The Returns & refunds page shows its expected heading, active navigation and table headed “Title” without horizontal overflow.",
+        "locatorFile": "locators/returns.json",
+        "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
+      },
+      {
+        "id": "NX-UI-300",
+        "page": "Returns & refunds",
+        "pageKey": "returns",
+        "section": "Commerce",
+        "category": "regression",
+        "difficulty": "standard",
+        "title": "Returns & refunds · regression · Create validation and save",
+        "preconditions": "Owner session; seeded test workspace; page API /api/v1/workspace/returns; backing data workspace_resources.",
+        "steps": [
+          "Navigate to Returns & refunds using Returns & refunds.",
+          "Open the page primary action; verify required fields, save a uniquely named test record, and confirm the row and saved values.",
+          "Check the Title column and confirm no private data is exposed to the wrong account."
+        ],
+        "expected": "A unique test record is saved once in the active workspace; the Title shows its submitted values.",
         "locatorFile": "locators/returns.json",
         "evidence": "Capture screenshot on failure; retain Playwright video and trace on failure."
       }
